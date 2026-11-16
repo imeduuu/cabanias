@@ -1,0 +1,52 @@
+name: cabanias-local
+
+services:
+  postgres:
+    image: postgres:17-bookworm
+    environment:
+      POSTGRES_USER: cabanias_local
+      POSTGRES_DB: cabanias_dev
+      POSTGRES_PASSWORD_FILE: /run/secrets/dev_password
+      TZ: America/Santiago
+    command: ["postgres", "-c", "timezone=America/Santiago"]
+    ports:
+      - "127.0.0.1:54329:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    secrets:
+      - dev_password
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cabanias_local -d cabanias_dev"]
+      interval: 2s
+      timeout: 5s
+      retries: 30
+
+  postgres-test:
+    image: postgres:17-bookworm
+    profiles: ["test"]
+    environment:
+      POSTGRES_USER: cabanias_local
+      POSTGRES_DB: cabanias_test
+      POSTGRES_PASSWORD_FILE: /run/secrets/test_password
+      TZ: America/Santiago
+    command: ["postgres", "-c", "timezone=America/Santiago"]
+    ports:
+      - "127.0.0.1:54330:5432"
+    tmpfs:
+      - /var/lib/postgresql/data
+    secrets:
+      - test_password
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cabanias_local -d cabanias_test"]
+      interval: 2s
+      timeout: 5s
+      retries: 30
+
+volumes:
+  postgres_data:
+
+secrets:
+  dev_password:
+    file: ./.local/dev-password
+  test_password:
+    file: ./.local/test-password

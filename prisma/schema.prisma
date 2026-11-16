@@ -1,0 +1,236 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// Explicit one-time development fixtures; never loaded automatically.
+model DevelopmentSeed {
+  id        String   @id
+  appliedAt DateTime @default(now()) @db.Timestamptz(3)
+}
+
+enum RentalMode {
+  NIGHTLY
+  HOURLY
+}
+
+enum PublicationStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum BookingStatus {
+  PENDING
+  CONFIRMED
+  REJECTED
+  CANCELLED
+}
+
+model BusinessSettings {
+  id                 Int      @id @default(1)
+  name               String
+  tagline            String
+  description        String
+  location           String
+  logoUrl            String?
+  contactEmail       String
+  contactPhone       String?
+  primaryColor       String
+  accentColor        String
+  backgroundColor    String
+  homeTexts          Json
+  cancellationPolicy String
+  timezone           String   @default("America/Santiago")
+  currency           String   @default("CLP")
+  checkInHour        Int      @default(15)
+  checkOutHour       Int      @default(11)
+  updatedAt          DateTime @updatedAt @db.Timestamptz(3)
+}
+
+model Administrator {
+  id            String    @id @default(uuid()) @db.Uuid
+  email         String    @unique
+  name          String
+  emailVerified Boolean   @default(false)
+  image         String?
+  singleton     Int       @unique @default(1)
+  sessions      Session[]
+  accounts      Account[]
+  active        Boolean   @default(true)
+  createdAt     DateTime  @default(now()) @db.Timestamptz(3)
+  updatedAt     DateTime  @updatedAt @db.Timestamptz(3)
+}
+
+model Session {
+  id        String        @id @default(uuid()) @db.Uuid
+  expiresAt DateTime      @db.Timestamptz(3)
+  token     String        @unique
+  createdAt DateTime      @default(now()) @db.Timestamptz(3)
+  updatedAt DateTime      @updatedAt @db.Timestamptz(3)
+  ipAddress String?
+  userAgent String?
+  userId    String        @db.Uuid
+  user      Administrator @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model Account {
+  id                    String        @id @default(uuid()) @db.Uuid
+  accountId             String
+  providerId            String
+  userId                String        @db.Uuid
+  user                  Administrator @relation(fields: [userId], references: [id], onDelete: Cascade)
+  accessToken           String?
+  refreshToken          String?
+  idToken               String?
+  accessTokenExpiresAt  DateTime?     @db.Timestamptz(3)
+  refreshTokenExpiresAt DateTime?     @db.Timestamptz(3)
+  scope                 String?
+  password              String?
+  createdAt             DateTime      @default(now()) @db.Timestamptz(3)
+  updatedAt             DateTime      @updatedAt @db.Timestamptz(3)
+
+  @@unique([providerId, accountId])
+  @@index([userId])
+}
+
+model Verification {
+  id         String   @id @default(uuid()) @db.Uuid
+  identifier String
+  value      String
+  expiresAt  DateTime @db.Timestamptz(3)
+  createdAt  DateTime @default(now()) @db.Timestamptz(3)
+  updatedAt  DateTime @updatedAt @db.Timestamptz(3)
+
+  @@index([identifier])
+}
+
+model RateLimit {
+  id          String @id @default(uuid()) @db.Uuid
+  key         String @unique
+  count       Int
+  lastRequest BigInt
+}
+
+model Cabin {
+  id                String            @id @default(uuid()) @db.Uuid
+  slug              String            @unique
+  name              String
+  description       String
+  mode              RentalMode
+  capacity          Int
+  bedrooms          Int
+  publicationStatus PublicationStatus @default(DRAFT)
+  baseRateClp       Int
+  images            CabinImage[]
+  amenities         CabinAmenity[]
+  seasonalRates     SeasonalRate[]
+  requests          BookingRequest[]
+  blocks            ManualBlock[]
+  occupancies       Occupancy[]
+  createdAt         DateTime          @default(now()) @db.Timestamptz(3)
+  updatedAt         DateTime          @updatedAt @db.Timestamptz(3)
+}
+
+model CabinImage {
+  id       String @id @default(uuid()) @db.Uuid
+  cabinId  String @db.Uuid
+  cabin    Cabin  @relation(fields: [cabinId], references: [id], onDelete: Cascade)
+  url      String
+  alt      String
+  position Int    @default(0)
+
+  @@unique([cabinId, position])
+}
+
+model Amenity {
+  id     String         @id @default(uuid()) @db.Uuid
+  name   String         @unique
+  cabins CabinAmenity[]
+}
+
+model CabinAmenity {
+  cabinId   String  @db.Uuid
+  amenityId String  @db.Uuid
+  cabin     Cabin   @relation(fields: [cabinId], references: [id], onDelete: Cascade)
+  amenity   Amenity @relation(fields: [amenityId], references: [id], onDelete: Cascade)
+
+  @@id([cabinId, amenityId])
+}
+
+model SeasonalRate {
+  id        String   @id @default(uuid()) @db.Uuid
+  cabinId   String   @db.Uuid
+  cabin     Cabin    @relation(fields: [cabinId], references: [id], onDelete: Cascade)
+  name      String
+  startDate DateTime @db.Date
+  endDate   DateTime @db.Date
+  rateClp   Int
+
+  @@index([cabinId, startDate, endDate])
+}
+
+model BookingRequest {
+  submission        BookingSubmission?
+  id                String             @id @default(uuid()) @db.Uuid
+  cabinId           String             @db.Uuid
+  cabin             Cabin              @relation(fields: [cabinId], references: [id], onDelete: Restrict)
+  mode              RentalMode
+  startsAt          DateTime           @db.Timestamptz(3)
+  endsAt            DateTime           @db.Timestamptz(3)
+  guestName         String
+  guestEmail        String
+  guestPhone        String?
+  guests            Int
+  estimatedTotalClp Int
+  pricingSnapshot   Json
+  currency          String             @default("CLP")
+  status            BookingStatus      @default(PENDING)
+  occupancy         Occupancy?
+  createdAt         DateTime           @default(now()) @db.Timestamptz(3)
+  updatedAt         DateTime           @updatedAt @db.Timestamptz(3)
+
+  @@index([cabinId, status, startsAt, endsAt])
+}
+
+model BookingSubmission {
+  keyHash     String         @id
+  payloadHash String
+  requestId   String         @unique @db.Uuid
+  request     BookingRequest @relation(fields: [requestId], references: [id], onDelete: Restrict)
+  createdAt   DateTime       @default(now()) @db.Timestamptz(3)
+}
+
+model ManualBlock {
+  id        String     @id @default(uuid()) @db.Uuid
+  cabinId   String     @db.Uuid
+  cabin     Cabin      @relation(fields: [cabinId], references: [id], onDelete: Restrict)
+  startsAt  DateTime   @db.Timestamptz(3)
+  endsAt    DateTime   @db.Timestamptz(3)
+  reason    String
+  occupancy Occupancy?
+  createdAt DateTime   @default(now()) @db.Timestamptz(3)
+
+  @@index([cabinId, startsAt, endsAt])
+}
+
+// Internal projection maintained by SQL triggers; never write directly.
+model Occupancy {
+  id        String          @id @default(uuid()) @db.Uuid
+  cabinId   String          @db.Uuid
+  cabin     Cabin           @relation(fields: [cabinId], references: [id], onDelete: Restrict)
+  startsAt  DateTime        @db.Timestamptz(3)
+  endsAt    DateTime        @db.Timestamptz(3)
+  requestId String?         @unique @db.Uuid
+  request   BookingRequest? @relation(fields: [requestId], references: [id], onDelete: Cascade)
+  blockId   String?         @unique @db.Uuid
+  block     ManualBlock?    @relation(fields: [blockId], references: [id], onDelete: Cascade)
+
+  @@index([cabinId, startsAt, endsAt])
+}

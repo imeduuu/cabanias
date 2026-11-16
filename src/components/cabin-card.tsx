@@ -1,0 +1,4 @@
+import Link from "next/link";
+import type { Cabin } from "@/modules/cabins/data";
+import { money, modeLabel } from "@/lib/format";
+export function CabinCard({ cabin }: { cabin: Cabin }) { return <article className="cabin-card"><Link href={`/cabanas/${cabin.slug}`} className="card-image"><img src={cabin.image} alt={`Ilustración de ${cabin.name}`} width="800" height="600"/><span className="badge">Por {modeLabel(cabin.mode)}</span></Link><div className="card-body"><p className="muted">Hasta {cabin.guests} personas · {cabin.beds} dormitorios</p><h3><Link href={`/cabanas/${cabin.slug}`}>{cabin.name}</Link></h3><p>{cabin.subtitle}</p><div className="card-bottom"><span><strong>{money(cabin.price)}</strong> / {modeLabel(cabin.mode)}</span><Link href={`/cabanas/${cabin.slug}`} aria-label={`Ver ${cabin.name}`}>Explorar ↗</Link></div></div></article>; }

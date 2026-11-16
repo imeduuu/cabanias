@@ -1,0 +1,46 @@
+{
+  "name": "cabanias",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "db:validate": "prisma validate",
+    "db:generate": "prisma generate",
+    "test": "tsx --conditions=react-server --test tests/domain.test.ts tests/local-db-safety.test.ts",
+    "db:deploy": "prisma migrate deploy",
+    "postinstall": "prisma generate",
+    "db:local:setup": "node scripts/local-db.mjs setup",
+    "db:local:up": "node scripts/local-db.mjs up",
+    "db:local:down": "node scripts/local-db.mjs down",
+    "db:local:migrate": "node scripts/local-db.mjs migrate",
+    "test:postgres": "node scripts/local-db.mjs test",
+    "auth:setup": "node scripts/auth-setup.mjs",
+    "admin:create": "tsx scripts/create-admin.ts",
+    "db:seed:demo": "tsx scripts/seed-demo.ts"
+  },
+  "dependencies": {
+    "@better-auth/prisma-adapter": "^1.7.23",
+    "@inquirer/prompts": "^8.7.5",
+    "@js-temporal/polyfill": "^0.5.1",
+    "@prisma/adapter-pg": "^7.10.1",
+    "@prisma/client": "7.10.1",
+    "better-auth": "^1.7.23",
+    "dotenv": "^17.0.0",
+    "next": "^16.4.6",
+    "pg": "^8.23.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "server-only": "^0.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "prisma": "7.10.1",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.0"
+  }
+}
