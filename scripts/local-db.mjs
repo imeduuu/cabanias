@@ -1,8 +1,9 @@
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
-import { randomBytes } from "node:crypto";
-import { spawnSync } from "node:child_process";
+import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { randomBytes, randomUUID } from "node:crypto";
+import { spawn, spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import { resolve } from "node:path";
+import { setTimeout as delay } from "node:timers/promises";
 import { parse } from "dotenv";
 import pg from "pg";
 import { assertLocalUrl } from "./local-db-safety.mjs";
@@ -59,6 +60,76 @@ async function verify(value, kind) {
 function migrate(value) {
   run(process.execPath, [resolve("node_modules/prisma/build/index.js"), "migrate", "deploy"], { ...process.env, DATABASE_URL: value });
 }
+function runE2e(value) {
+  const buildDir = resolve(".local/next-e2e");
+  const artifactsDir = resolve(".local/playwright-e2e");
+  const localDir = resolve(".local");
+  for (const target of [buildDir, artifactsDir]) {
+    if (!target.startsWith(`${localDir}/`) && !target.startsWith(`${localDir}\\`)) throw new Error("Una carpeta temporal E2E salió de .local.");
+  }
+  let server;
+  const rootConfigSnapshot = readFileSync("tsconfig.json");
+  const nextEnvSnapshot = readFileSync("next-env.d.ts");
+  const secret = randomBytes(48).toString("hex");
+  const password = randomBytes(32).toString("base64url");
+  const env = { ...process.env, DATABASE_URL: value, TEST_DATABASE_URL: value,
+    BETTER_AUTH_SECRET: secret, BETTER_AUTH_URL: "http://127.0.0.1:3102",
+    E2E_ADMIN_EMAIL: `e2e-${randomUUID()}@example.test`, E2E_ADMIN_PASSWORD: password,
+    E2E_TEST: "1", NODE_ENV: "production" };
+  const stopServer = () => {
+    if (!server || server.exitCode !== null) return;
+    if (process.platform === "win32") {
+      spawnSync("taskkill", ["/PID", String(server.pid), "/T", "/F"], { stdio: "ignore" });
+    } else {
+      try { process.kill(-server.pid, "SIGTERM"); } catch { server.kill("SIGTERM"); }
+    }
+  };
+  return (async () => {
+    try {
+      rmSync(buildDir, { recursive: true, force: true });
+      rmSync(artifactsDir, { recursive: true, force: true });
+      mkdirSync(localDir, { recursive: true });
+      compose("--profile", "test", "up", "-d", "--wait", "--force-recreate", "postgres-test");
+      await verify(value, "test");
+      migrate(value);
+      run(process.execPath, [resolve("node_modules/tsx/dist/cli.mjs"), resolve("scripts/seed-e2e.ts")], env);
+      run(process.execPath, [resolve("node_modules/next/dist/bin/next"), "build"], env);
+
+      server = spawn(process.execPath, [resolve("node_modules/next/dist/bin/next"), "start", "--hostname", "127.0.0.1", "--port", "3102"], {
+        cwd: process.cwd(), env, stdio: "inherit", detached: process.platform !== "win32",
+      });
+      const deadline = Date.now() + 90_000;
+      let ready = false;
+      while (Date.now() < deadline) {
+        if (server.exitCode !== null) throw new Error("El servidor Next terminó antes de aceptar conexiones.");
+        try {
+          const response = await fetch("http://127.0.0.1:3102/");
+          if (response.ok) { ready = true; break; }
+        } catch { /* The server is still starting. */ }
+        await delay(500);
+      }
+      if (!ready) throw new Error("Next no respondió en 127.0.0.1:3102 dentro del plazo.");
+      run(process.execPath, [resolve("node_modules/@playwright/test/cli.js"), "test", "--config", "playwright.config.ts"], env);
+    } finally {
+      if (server && server.exitCode === null) {
+        const exited = new Promise(resolveExit => server.once("exit", resolveExit));
+        stopServer();
+        await exited;
+      }
+      try { compose("--profile", "test", "stop", "postgres-test"); } finally {
+        try { compose("--profile", "test", "rm", "-f", "postgres-test"); } finally {
+          try {
+            rmSync(buildDir, { recursive: true, force: true });
+            rmSync(artifactsDir, { recursive: true, force: true });
+          } finally {
+            writeFileSync("tsconfig.json", rootConfigSnapshot);
+            writeFileSync("next-env.d.ts", nextEnvSnapshot);
+          }
+        }
+      }
+    }
+  })();
+}
 async function main() {
   if (action === "setup") {
     const existing = existsSync(".env") ? readFileSync(".env", "utf8") : "";
@@ -95,6 +166,9 @@ async function main() {
       compose("--profile", "test", "stop", "postgres-test");
       compose("--profile", "test", "rm", "-f", "postgres-test");
     }
-  } else throw new Error("Usa setup, up, down, migrate o test.");
+  } else if (action === "e2e") {
+    const value = configuredUrl("test");
+    await runE2e(value);
+  } else throw new Error("Usa setup, up, down, migrate, test o e2e.");
 }
 main().catch(error => { console.error(error.message); process.exitCode = 1; });

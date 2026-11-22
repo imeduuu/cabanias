@@ -19,6 +19,7 @@
     "db:local:down": "node scripts/local-db.mjs down",
     "db:local:migrate": "node scripts/local-db.mjs migrate",
     "test:postgres": "node scripts/local-db.mjs test",
+    "test:e2e": "node scripts/local-db.mjs e2e",
     "auth:setup": "node scripts/auth-setup.mjs",
     "admin:create": "tsx scripts/create-admin.ts",
     "db:seed:demo": "tsx scripts/seed-demo.ts"
@@ -38,6 +39,7 @@
     "server-only": "^0.0.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.65.1",
     "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",

@@ -1,5 +1,17 @@
 # Archivos y verificaciones
 
+## Etapa 13: pruebas E2E con Playwright (22 de noviembre de 2026)
+
+Se agrega `npm run test:e2e` como flujo aislado para verificar las páginas públicas en Chromium de escritorio (1280 px) y móvil (360 px). `scripts/local-db.mjs` recrea únicamente el servicio `postgres-test`, verifica su identidad, despliega migraciones, carga un fixture E2E separado y levanta Next en `127.0.0.1:3102`. El build usa `.local/next-e2e` y se elimina junto con el servidor y el contenedor al finalizar, incluso ante fallos.
+
+`scripts/seed-e2e.ts` valida `TEST_DATABASE_URL` contra `cabanias_test`, carga las tres cabañas ficticias y crea un administrador aleatorio. Su contraseña y el secreto de autenticación viven solo en variables de entorno del proceso; el fixture no llama `db:seed:demo` ni relaja su protección de `cabanias_dev`. `tests/e2e/public-pages.spec.ts` verifica portada, catálogo, los tres detalles y errores de consola/página.
+
+Archivos: `package.json`, `package-lock.json`, `next.config.ts`, `playwright.config.ts`, `scripts/local-db.mjs`, `scripts/seed-e2e.ts`, `tests/e2e/public-pages.spec.ts`, README e IMPLEMENTACION.
+
+Verificaciones: `npm run test:e2e` aprobó las dos pruebas, Chromium escritorio y móvil; las páginas públicas cargaron sin errores de consola ni de ejecución. `npm test` aprobó 11 pruebas; `npm run typecheck` y `npm run build` finalizaron correctamente. `npm run test:postgres` aplicó las cinco migraciones en `cabanias_test` y aprobó 21 pruebas; el contenedor se eliminó al terminar. `npm run lint` terminó sin errores y con ocho advertencias preexistentes de `<img>` y `window.location.assign()`. `git diff --check` no encontró errores de espacios.
+
+Límites: requiere Docker, variables locales válidas para `cabanias_test` y Chromium instalado con `npx playwright install chromium`. La cuenta y los datos solo existen en la base desechable; no se toca `cabanias_dev`.
+
 ## Etapa 12: CI con PostgreSQL efímero (22 de noviembre de 2026)
 
 Se agregó GitHub Actions para pull requests y push a `main`, con Node 22 y caché npm. `check` ejecuta `npm ci` y `npm run check` con una URL PostgreSQL ficticia que no se conecta. `postgres` crea contraseñas y secreto de autenticación aleatorios en `RUNNER_TEMP`, configura un override temporal de Compose y ejecuta `npm run test:postgres`.
