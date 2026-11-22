@@ -7,5 +7,4 @@ src/generated/
 *.tsbuildinfo
 .local/
 
-IMPLEMENTATION.md/
-AGENTS.md/
+CLAUDE.md

@@ -1,5 +1,15 @@
 # Archivos y verificaciones
 
+## Etapa 10: reglas de trabajo para Claude (22 de noviembre de 2026)
+
+Se creó `CLAUDE.md` en la raíz con `@AGENTS.md` como primera línea para cargar las reglas de Next.js existentes. La sección «Reglas de trabajo» fija las restricciones de Git, bases de datos, secretos, dependencias y dominio, además de las verificaciones y documentación requeridas al cerrar cada tarea. Se agregó `CLAUDE.md` a `.gitignore`, según lo solicitado.
+
+Archivos: `CLAUDE.md`, `.gitignore` e `IMPLEMENTACION.md`. No cambió el uso de la aplicación; README sin cambios.
+
+Verificaciones: `npm test` (11 aprobadas), `npm run typecheck` y `npm run build` finalizaron correctamente. No se ejecutó `npm run test:postgres` porque no se tocaron base de datos, acciones ni autenticación.
+
+Límites: no se modificó código de aplicación, esquema, migraciones, acciones ni autenticación; no se accedió a archivos de entorno ni a bases de datos.
+
 ## Etapa 9: idempotencia y cuotas por visitante (14 de noviembre de 2026)
 
 Se sustituyó el límite público compartido de 40 consultas / 5 envíos por cuotas independientes por visitante, y se agregó reconocimiento persistente de envíos. Las pruebas y migraciones de esta etapa se ejecutaron **solo en `cabanias_test` desechable**. No se aplicó la quinta migración en desarrollo ni se modificaron sus registros.
