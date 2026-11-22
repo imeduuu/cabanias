@@ -1,6 +1,14 @@
 import { randomBytes } from "node:crypto";
 import { readFileSync, writeFileSync } from "node:fs";
 import { parse } from "dotenv";
+if (process.env.CI === "true") {
+  if (!process.env.BETTER_AUTH_SECRET || process.env.BETTER_AUTH_SECRET.length < 32) {
+    throw new Error("En CI se requiere un BETTER_AUTH_SECRET efímero de al menos 32 caracteres.");
+  }
+  process.env.BETTER_AUTH_URL ||= "http://localhost:3000";
+  console.log("Configuración efímera de autenticación para CI validada; no se escribió ningún archivo.");
+  process.exit(0);
+}
 const contents = readFileSync(".env", "utf8");
 const config = parse(contents);
 let next = contents;

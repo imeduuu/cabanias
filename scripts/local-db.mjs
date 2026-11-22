@@ -13,14 +13,24 @@ function run(command, args, env = process.env) {
   const result = spawnSync(command, args, { stdio: "inherit", env, shell: false });
   if (result.error || result.status !== 0) throw new Error(`Falló ${command} (salida ${result.status ?? "sin proceso"}).`);
 }
-function compose(...args) { run("docker", ["compose", ...args]); }
+function composeFiles() {
+  if (process.env.CI !== "true") return [];
+  if (!process.env.CI_COMPOSE_OVERRIDE) throw new Error("Falta el override temporal de Compose para CI.");
+  return ["-f", "compose.yaml", "-f", process.env.CI_COMPOSE_OVERRIDE];
+}
+function compose(...args) { run("docker", ["compose", ...composeFiles(), ...args]); }
 function urlFor(kind) {
+  if (process.env.CI === "true") {
+    const value = process.env[kind === "test" ? "TEST_DATABASE_URL" : "DATABASE_URL"];
+    assertLocalUrl(value, kind);
+    return value;
+  }
   const password = readFileSync(`.local/${kind}-password`, "utf8").trim();
   return `postgresql://cabanias_local:${password}@127.0.0.1:${kind === "test" ? 54330 : 54329}/cabanias_${kind === "test" ? "test" : "dev"}?schema=public`;
 }
 function configuredUrl(kind) {
   const key = kind === "test" ? "TEST_DATABASE_URL" : "DATABASE_URL";
-  const envFile = existsSync(".env") ? parse(readFileSync(".env")) : {};
+  const envFile = process.env.CI === "true" ? {} : (existsSync(".env") ? parse(readFileSync(".env")) : {});
   const value = process.env[key] ?? envFile[key];
   assertLocalUrl(value, kind);
   if (value !== urlFor(kind)) throw new Error(`${key} no coincide con las credenciales locales generadas. No se modificó la base.`);
@@ -37,7 +47,7 @@ async function verify(value, kind) {
     }
     const service = kind === "test" ? "postgres-test" : "postgres";
     const identitySql = "SELECT system_identifier::text FROM pg_control_system()";
-    const containerIdentity = spawnSync("docker", ["compose", "--profile", "test", "exec", "-T", service,
+    const containerIdentity = spawnSync("docker", ["compose", ...composeFiles(), "--profile", "test", "exec", "-T", service,
       "psql", "-U", "cabanias_local", "-d", expected.database, "-Atc", identitySql], { encoding: "utf8" });
     const { rows: [identity] } = await client.query(identitySql);
     if (containerIdentity.status !== 0 || containerIdentity.stdout.trim() !== identity.system_identifier) {

@@ -1,5 +1,7 @@
 # Cabañas · base reutilizable
 
+[![CI](https://github.com/quesucede/cabanias/actions/workflows/ci.yml/badge.svg)](https://github.com/quesucede/cabanias/actions/workflows/ci.yml)
+
 Aplicación Next.js, React y TypeScript con App Router, PostgreSQL y Prisma. Permite publicar un catálogo de cabañas, recibir solicitudes de reserva y administrarlas desde un panel autenticado. La carga de desarrollo conserva la identidad ficticia «Refugio Claro» y sus ilustraciones SVG; no representa un negocio real.
 
 ## Requisitos

@@ -1,5 +1,15 @@
 # Archivos y verificaciones
 
+## Etapa 12: CI con PostgreSQL efímero (22 de noviembre de 2026)
+
+Se agregó GitHub Actions para pull requests y push a `main`, con Node 22 y caché npm. `check` ejecuta `npm ci` y `npm run check` con una URL PostgreSQL ficticia que no se conecta. `postgres` crea contraseñas y secreto de autenticación aleatorios en `RUNNER_TEMP`, configura un override temporal de Compose y ejecuta `npm run test:postgres`.
+
+Archivos: `.github/workflows/ci.yml`, `scripts/local-db.mjs`, `scripts/auth-setup.mjs`, `README.md` e `IMPLEMENTACION.md`. El modo CI evita leer `.env` y los archivos `.local/`; las URL continúan restringidas por `assertLocalUrl` a 127.0.0.1 y sus puertos/bases autorizados. La identidad del servidor y del contenedor se comprueba igual que en local. Las contraseñas no se escriben en logs. El badge de Actions se agregó al README.
+
+Verificaciones: `npm test` (11 aprobadas), `npm run typecheck` y `npm run check` correctos; este último también completó lint sin errores (ocho avisos existentes), validación Prisma y build. `npm run auth:setup` en CI validó el secreto sin escribir archivos. `npm run test:postgres` en modo CI aplicó cinco migraciones y aprobó 21 pruebas en `cabanias_test`; identidad de servidor y contenedor verificadas y servicio eliminado. `actionlint` no está instalado en el entorno, así que no se pudo ejecutar.
+
+Límites: se conserva el rechazo de destinos remotos y el servicio PostgreSQL de pruebas efímero sobre `127.0.0.1:54330/cabanias_test`; no se inicia ni escribe en la base de desarrollo.
+
 ## Etapa 11: ESLint y chequeo integrado (22 de noviembre de 2026)
 
 Se configura ESLint mediante la CLI compatible con Next.js 16; `next lint` ya no existe. La guía instalada recomienda `eslint` y `eslint-config-next`, con `core-web-vitals` y `typescript` en la configuración flat. Se instalaron `eslint@^10.15.0` y `eslint-config-next@^16.4.6` como dependencias de desarrollo.
