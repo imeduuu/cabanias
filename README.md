@@ -25,6 +25,8 @@ Abre http://localhost:3000. Para cargar el catálogo ficticio de desarrollo, eje
 - `npm run dev`: servidor de desarrollo.
 - `npm run build` y `npm start`: compilar y servir producción.
 - `npm run typecheck`: comprobar tipos.
+- `npm run lint`: revisar el código con ESLint y las reglas oficiales de Next.js.
+- `npm run check`: ejecutar lint, tipos, pruebas, validación de Prisma y compilación.
 - `npm test`: pruebas puras y protecciones de destino.
 - `npm run test:postgres`: suite de integración en la base desechable `cabanias_test`.
 - `npm run db:seed:demo`: cargar datos ficticios de desarrollo de forma explícita.

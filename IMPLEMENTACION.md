@@ -1,5 +1,13 @@
 # Archivos y verificaciones
 
+## Etapa 11: ESLint y chequeo integrado (22 de noviembre de 2026)
+
+Se configura ESLint mediante la CLI compatible con Next.js 16; `next lint` ya no existe. La guía instalada recomienda `eslint` y `eslint-config-next`, con `core-web-vitals` y `typescript` en la configuración flat. Se instalaron `eslint@^10.15.0` y `eslint-config-next@^16.4.6` como dependencias de desarrollo.
+
+Archivos modificados: `eslint.config.mjs` usa la configuración oficial y excluye `.next`, `.local`, `src/generated` y `node_modules` (además de las salidas estándar de Next). `package.json` agrega `lint` y `check`; README documenta ambos comandos. `tests/auth.test.ts` cambia una variable no reasignada de `let` a `const`, sin alterar el comportamiento.
+
+Verificaciones: `npm run check` completo; ESLint terminó con cero errores y ocho advertencias existentes por `<img>` y `window.location.assign()`. Se conservaron esas implementaciones para evitar cambios de comportamiento. Typecheck, 11 pruebas, validación Prisma y build terminaron correctamente. npm informó tres vulnerabilidades altas en el árbol instalado; no se aplicó una actualización forzada de dependencias. No se modificaron reglas de dominio ni bases de datos.
+
 ## Etapa 10: reglas de trabajo para Claude (22 de noviembre de 2026)
 
 Se creó `CLAUDE.md` en la raíz con `@AGENTS.md` como primera línea para cargar las reglas de Next.js existentes. La sección «Reglas de trabajo» fija las restricciones de Git, bases de datos, secretos, dependencias y dominio, además de las verificaciones y documentación requeridas al cerrar cada tarea. Se agregó `CLAUDE.md` a `.gitignore`, según lo solicitado.

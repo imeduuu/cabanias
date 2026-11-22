@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "lint": "eslint .",
+    "check": "npm run lint && npm run typecheck && npm test && npm run db:validate && npm run build",
     "start": "next start",
     "typecheck": "tsc --noEmit",
     "db:validate": "prisma validate",
@@ -39,6 +41,8 @@
     "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
+    "eslint": "^10.15.0",
+    "eslint-config-next": "^16.4.6",
     "prisma": "7.10.1",
     "tsx": "^4.23.15",
     "typescript": "^5.9.0"

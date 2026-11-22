@@ -130,7 +130,7 @@ test("admin authentication over HTTP and direct server access", { skip: !process
     assert.equal((await request(editPath)).status, 307);
     const edited = await submit(editPath, fill(nativeForm(await pageHtml(editPath), "cabin"), { ...fields, name: "Cabaña HTTP editada", mode: "HOURLY", publicationStatus: "PUBLISHED" }));
     assert.equal(edited.status, 303);
-    let detail = await request(`/cabanas/${fields.slug}`);
+    const detail = await request(`/cabanas/${fields.slug}`);
     assert.equal(detail.status, 200);
     let detailHtml = (await detail.text()).replace(/<!--[\s\S]*?-->/g, "");
     for (const value of ["Cabaña HTTP editada", "42.000", "Galería HTTP", "Terraza HTTP", "Arriendo por hora"]) assert.ok(detailHtml.includes(value), `Public detail missing ${value}`);
