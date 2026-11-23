@@ -1,5 +1,15 @@
 # Archivos y verificaciones
 
+## Etapa 15: flujos E2E del panel administrativo (23 de noviembre de 2026)
+
+Se amplía Playwright con siete escenarios del panel usando la cuenta efímera y PostgreSQL aislado: protección de rutas sin sesión, inicio/recarga/cierre de sesión, confirmación concurrente de solicitudes A y B, cancelación y disponibilidad restaurada, creación/consulta/eliminación de bloqueos, actualización del nombre público y ciclo de borrador/publicación con imagen. La suite administrativa autentica una vez en Chromium de escritorio; los siete escenarios se omiten en móvil para respetar el límite de intentos de acceso de la cuenta temporal. Las pruebas públicas existentes continúan ejecutándose en escritorio y móvil.
+
+Archivos: `tests/e2e/admin-panel.spec.ts`, `playwright.config.ts`, `IMPLEMENTACION.md`.
+
+Verificaciones: `npm run test:e2e` aprobó 21 pruebas y omitió los siete escenarios administrativos en móvil; cubrió todos los siete en escritorio y las siete pruebas públicas en ambos perfiles. `npm test` aprobó 11 pruebas, `npm run typecheck` y `npm run build` terminaron correctamente, y `npm run test:postgres` aprobó 21 pruebas en `cabanias_test`.
+
+Límites: solicitudes, configuración, cabaña, bloqueo y administrador existen solo en `cabanias_test` efímera. Los intervalos E2E son fijos en 2030 y se separan por perfil.
+
 ## Etapa 14: flujo público de solicitudes E2E (23 de noviembre de 2026)
 
 Se amplían las pruebas Playwright del flujo público para cubrir cotización y solicitud NIGHTLY, consulta HOURLY, exceso de capacidad, bloqueo manual, invalidación del estimado al cambiar la selección y reinicio intencional del formulario. Los datos de contacto usan un nombre ficticio y `@example.test`. El fixture crea un bloqueo sobre Refugio Bosque; el trigger SQL existente mantiene su ocupación sincronizada.

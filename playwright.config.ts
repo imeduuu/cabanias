@@ -4,6 +4,7 @@ export default defineConfig({
   testDir: "./tests/e2e",
   outputDir: ".local/playwright-e2e",
   fullyParallel: true,
+  workers: 1,
   reporter: "list",
   use: { baseURL: "http://127.0.0.1:3102", trace: "retain-on-failure" },
   projects: [
