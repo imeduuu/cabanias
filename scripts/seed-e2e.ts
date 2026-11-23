@@ -33,6 +33,10 @@ async function main() {
           endDate: new Date("2030-03-01T00:00:00Z"), rateClp: cabin.price + 10000 } },
       } });
     }
+    const blockedCabin = await db.cabin.findUniqueOrThrow({ where: { slug: "bosque" }, select: { id: true } });
+    await db.manualBlock.create({ data: { cabinId: blockedCabin.id,
+      startsAt: new Date("2030-02-10T18:00:00.000Z"), endsAt: new Date("2030-02-12T15:00:00.000Z"),
+      reason: "Bloqueo ficticio para pruebas E2E" } });
     await createInitialAdministrator(db, { email: adminEmail, name: "Administrador E2E", password: adminPassword });
   } finally { await db.$disconnect(); }
 }

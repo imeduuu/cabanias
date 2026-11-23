@@ -1,5 +1,15 @@
 # Archivos y verificaciones
 
+## Etapa 14: flujo público de solicitudes E2E (23 de noviembre de 2026)
+
+Se amplían las pruebas Playwright del flujo público para cubrir cotización y solicitud NIGHTLY, consulta HOURLY, exceso de capacidad, bloqueo manual, invalidación del estimado al cambiar la selección y reinicio intencional del formulario. Los datos de contacto usan un nombre ficticio y `@example.test`. El fixture crea un bloqueo sobre Refugio Bosque; el trigger SQL existente mantiene su ocupación sincronizada.
+
+Archivos: `scripts/seed-e2e.ts`, `tests/e2e/public-pages.spec.ts`, `IMPLEMENTACION.md`.
+
+Verificaciones: `npm run test:e2e` aprobó las 14 ejecuciones de escritorio y móvil (siete escenarios en cada perfil); `npm test` aprobó 11 pruebas; `npm run typecheck` y `npm run build` finalizaron correctamente.
+
+Límites: el bloqueo y la solicitud solo se cargan en `cabanias_test`, dentro del flujo E2E aislado; el período E2E es fijo en 2030.
+
 ## Etapa 13: pruebas E2E con Playwright (22 de noviembre de 2026)
 
 Se agrega `npm run test:e2e` como flujo aislado para verificar las páginas públicas en Chromium de escritorio (1280 px) y móvil (360 px). `scripts/local-db.mjs` recrea únicamente el servicio `postgres-test`, verifica su identidad, despliega migraciones, carga un fixture E2E separado y levanta Next en `127.0.0.1:3102`. El build usa `.local/next-e2e` y se elimina junto con el servidor y el contenedor al finalizar, incluso ante fallos.
