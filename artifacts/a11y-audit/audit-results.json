@@ -1,0 +1,5620 @@
+{
+  "generatedAt": "2026-11-23T22:03:40.653Z",
+  "widths": [
+    360,
+    768,
+    1280
+  ],
+  "publicRoutes": [
+    "/",
+    "/login",
+    "/cabanas",
+    "/cabanas/bosque",
+    "/cabanas/rio",
+    "/cabanas/cerro"
+  ],
+  "adminRouteCount": 10,
+  "routeCount": 16,
+  "pages": [
+    {
+      "route": "/",
+      "width": 360,
+      "screenshot": "360px-home.png",
+      "status": null,
+      "viewport": 360,
+      "documentWidth": 360,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Cabañas",
+          "className": "",
+          "width": 51,
+          "height": 21
+        },
+        {
+          "tag": "a",
+          "text": "Contacto",
+          "className": "",
+          "width": 51,
+          "height": 21
+        },
+        {
+          "tag": "a",
+          "text": "Administración ↗",
+          "className": "nav-admin",
+          "width": 97,
+          "height": 34
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Bosque",
+          "className": "",
+          "width": 182,
+          "height": 30
+        },
+        {
+          "tag": "a",
+          "text": "Explorar ↗",
+          "className": "",
+          "width": 58,
+          "height": 26
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Río",
+          "className": "",
+          "width": 137,
+          "height": 30
+        },
+        {
+          "tag": "a",
+          "text": "Explorar ↗",
+          "className": "",
+          "width": 58,
+          "height": 26
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Cerro",
+          "className": "",
+          "width": 162,
+          "height": 30
+        },
+        {
+          "tag": "a",
+          "text": "Explorar ↗",
+          "className": "",
+          "width": 58,
+          "height": 26
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 324,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "hola@refugioclaro.example",
+          "className": "",
+          "width": 195,
+          "height": 17
+        }
+      ],
+      "focusables": 18
+    },
+    {
+      "route": "/login",
+      "width": 360,
+      "screenshot": "360px-login.png",
+      "status": null,
+      "viewport": 360,
+      "documentWidth": 360,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Cabañas",
+          "className": "",
+          "width": 51,
+          "height": 21
+        },
+        {
+          "tag": "a",
+          "text": "Contacto",
+          "className": "",
+          "width": 51,
+          "height": 21
+        },
+        {
+          "tag": "a",
+          "text": "Administración ↗",
+          "className": "nav-admin",
+          "width": 97,
+          "height": 34
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 324,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "hola@refugioclaro.example",
+          "className": "",
+          "width": 195,
+          "height": 17
+        }
+      ],
+      "focusables": 10
+    },
+    {
+      "route": "/cabanas",
+      "width": 360,
+      "screenshot": "360px-cabanas.png",
+      "status": null,
+      "viewport": 360,
+      "documentWidth": 360,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Cabañas",
+          "className": "",
+          "width": 51,
+          "height": 21
+        },
+        {
+          "tag": "a",
+          "text": "Contacto",
+          "className": "",
+          "width": 51,
+          "height": 21
+        },
+        {
+          "tag": "a",
+          "text": "Administración ↗",
+          "className": "nav-admin",
+          "width": 97,
+          "height": 34
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Bosque",
+          "className": "",
+          "width": 182,
+          "height": 30
+        },
+        {
+          "tag": "a",
+          "text": "Explorar ↗",
+          "className": "",
+          "width": 58,
+          "height": 26
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Río",
+          "className": "",
+          "width": 137,
+          "height": 30
+        },
+        {
+          "tag": "a",
+          "text": "Explorar ↗",
+          "className": "",
+          "width": 58,
+          "height": 26
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Cerro",
+          "className": "",
+          "width": 162,
+          "height": 30
+        },
+        {
+          "tag": "a",
+          "text": "Explorar ↗",
+          "className": "",
+          "width": 58,
+          "height": 26
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 324,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "hola@refugioclaro.example",
+          "className": "",
+          "width": 195,
+          "height": 17
+        }
+      ],
+      "focusables": 19
+    },
+    {
+      "route": "/cabanas/bosque",
+      "width": 360,
+      "screenshot": "360px-cabanas_bosque.png",
+      "status": null,
+      "viewport": 360,
+      "documentWidth": 360,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Cabañas",
+          "className": "",
+          "width": 51,
+          "height": 21
+        },
+        {
+          "tag": "a",
+          "text": "Contacto",
+          "className": "",
+          "width": 51,
+          "height": 21
+        },
+        {
+          "tag": "a",
+          "text": "Administración ↗",
+          "className": "nav-admin",
+          "width": 97,
+          "height": 34
+        },
+        {
+          "tag": "a",
+          "text": "← Todas las cabañas",
+          "className": "back-link",
+          "width": 130,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 324,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "hola@refugioclaro.example",
+          "className": "",
+          "width": 195,
+          "height": 17
+        }
+      ],
+      "focusables": 20
+    },
+    {
+      "route": "/cabanas/rio",
+      "width": 360,
+      "screenshot": "360px-cabanas_rio.png",
+      "status": null,
+      "viewport": 360,
+      "documentWidth": 360,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Cabañas",
+          "className": "",
+          "width": 51,
+          "height": 21
+        },
+        {
+          "tag": "a",
+          "text": "Contacto",
+          "className": "",
+          "width": 51,
+          "height": 21
+        },
+        {
+          "tag": "a",
+          "text": "Administración ↗",
+          "className": "nav-admin",
+          "width": 97,
+          "height": 34
+        },
+        {
+          "tag": "a",
+          "text": "← Todas las cabañas",
+          "className": "back-link",
+          "width": 130,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 324,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "hola@refugioclaro.example",
+          "className": "",
+          "width": 195,
+          "height": 17
+        }
+      ],
+      "focusables": 21
+    },
+    {
+      "route": "/cabanas/cerro",
+      "width": 360,
+      "screenshot": "360px-cabanas_cerro.png",
+      "status": null,
+      "viewport": 360,
+      "documentWidth": 360,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Cabañas",
+          "className": "",
+          "width": 51,
+          "height": 21
+        },
+        {
+          "tag": "a",
+          "text": "Contacto",
+          "className": "",
+          "width": 51,
+          "height": 21
+        },
+        {
+          "tag": "a",
+          "text": "Administración ↗",
+          "className": "nav-admin",
+          "width": 97,
+          "height": 34
+        },
+        {
+          "tag": "a",
+          "text": "← Todas las cabañas",
+          "className": "back-link",
+          "width": 130,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 324,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "hola@refugioclaro.example",
+          "className": "",
+          "width": 195,
+          "height": 17
+        }
+      ],
+      "focusables": 20
+    },
+    {
+      "route": "/admin",
+      "width": 360,
+      "screenshot": "360px-admin.png",
+      "status": null,
+      "viewport": 360,
+      "documentWidth": 360,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 324,
+          "height": 34
+        },
+        {
+          "tag": "a",
+          "text": "◇\nResumen",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nCabañas",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nSolicitudes",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nCalendario",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nConfiguración",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "← Ver sitio público",
+          "className": "back-link",
+          "width": 113,
+          "height": 22
+        }
+      ],
+      "focusables": 15
+    },
+    {
+      "route": "/admin/cabanas",
+      "width": 360,
+      "screenshot": "360px-admin_cabanas.png",
+      "status": null,
+      "viewport": 360,
+      "documentWidth": 360,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 324,
+          "height": 34
+        },
+        {
+          "tag": "a",
+          "text": "◇\nResumen",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nCabañas",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nSolicitudes",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nCalendario",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nConfiguración",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "← Ver sitio público",
+          "className": "back-link",
+          "width": 113,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "Ver ficha pública ↗",
+          "className": "",
+          "width": 120,
+          "height": 16
+        },
+        {
+          "tag": "input",
+          "text": "",
+          "className": "",
+          "width": 20,
+          "height": 20
+        },
+        {
+          "tag": "a",
+          "text": "Ver ficha pública ↗",
+          "className": "",
+          "width": 120,
+          "height": 16
+        },
+        {
+          "tag": "input",
+          "text": "",
+          "className": "",
+          "width": 20,
+          "height": 20
+        },
+        {
+          "tag": "a",
+          "text": "Ver ficha pública ↗",
+          "className": "",
+          "width": 120,
+          "height": 16
+        },
+        {
+          "tag": "input",
+          "text": "",
+          "className": "",
+          "width": 20,
+          "height": 20
+        }
+      ],
+      "focusables": 59
+    },
+    {
+      "route": "/admin/cabanas/nueva",
+      "width": 360,
+      "screenshot": "360px-admin_cabanas_nueva.png",
+      "status": null,
+      "viewport": 360,
+      "documentWidth": 360,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 324,
+          "height": 34
+        },
+        {
+          "tag": "a",
+          "text": "◇\nResumen",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nCabañas",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nSolicitudes",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nCalendario",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nConfiguración",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "← Ver sitio público",
+          "className": "back-link",
+          "width": 113,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "← Cabañas",
+          "className": "back-link",
+          "width": 72,
+          "height": 22
+        }
+      ],
+      "focusables": 27
+    },
+    {
+      "route": "/admin/cabanas/22222222-2222-4222-8222-000000000001",
+      "width": 360,
+      "screenshot": "360px-admin_cabanas_22222222_2222_4222_8222_000000000001.png",
+      "status": null,
+      "viewport": 360,
+      "documentWidth": 360,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 324,
+          "height": 34
+        },
+        {
+          "tag": "a",
+          "text": "◇\nResumen",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nCabañas",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nSolicitudes",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nCalendario",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nConfiguración",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "← Ver sitio público",
+          "className": "back-link",
+          "width": 113,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "← Cabañas",
+          "className": "back-link",
+          "width": 72,
+          "height": 22
+        }
+      ],
+      "focusables": 56
+    },
+    {
+      "route": "/admin/cabanas/22222222-2222-4222-8222-000000000002",
+      "width": 360,
+      "screenshot": "360px-admin_cabanas_22222222_2222_4222_8222_000000000002.png",
+      "status": null,
+      "viewport": 360,
+      "documentWidth": 360,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 324,
+          "height": 34
+        },
+        {
+          "tag": "a",
+          "text": "◇\nResumen",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nCabañas",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nSolicitudes",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nCalendario",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nConfiguración",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "← Ver sitio público",
+          "className": "back-link",
+          "width": 113,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "← Cabañas",
+          "className": "back-link",
+          "width": 72,
+          "height": 22
+        }
+      ],
+      "focusables": 56
+    },
+    {
+      "route": "/admin/cabanas/22222222-2222-4222-8222-000000000003",
+      "width": 360,
+      "screenshot": "360px-admin_cabanas_22222222_2222_4222_8222_000000000003.png",
+      "status": null,
+      "viewport": 360,
+      "documentWidth": 360,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 324,
+          "height": 34
+        },
+        {
+          "tag": "a",
+          "text": "◇\nResumen",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nCabañas",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nSolicitudes",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nCalendario",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nConfiguración",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "← Ver sitio público",
+          "className": "back-link",
+          "width": 113,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "← Cabañas",
+          "className": "back-link",
+          "width": 72,
+          "height": 22
+        }
+      ],
+      "focusables": 56
+    },
+    {
+      "route": "/admin/solicitudes",
+      "width": 360,
+      "screenshot": "360px-admin_solicitudes.png",
+      "status": null,
+      "viewport": 360,
+      "documentWidth": 360,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 324,
+          "height": 34
+        },
+        {
+          "tag": "a",
+          "text": "◇\nResumen",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nCabañas",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nSolicitudes",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nCalendario",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nConfiguración",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "← Ver sitio público",
+          "className": "back-link",
+          "width": 113,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Bosque",
+          "className": "",
+          "width": 161,
+          "height": 29
+        }
+      ],
+      "focusables": 17
+    },
+    {
+      "route": "/admin/solicitudes/5ccf69ff-5e0b-42e9-b072-e9091ad06464",
+      "width": 360,
+      "screenshot": "360px-admin_solicitudes_5ccf69ff_5e0b_42e9_b072_e9091ad06464.png",
+      "status": null,
+      "viewport": 360,
+      "documentWidth": 360,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 324,
+          "height": 34
+        },
+        {
+          "tag": "a",
+          "text": "◇\nResumen",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nCabañas",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nSolicitudes",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nCalendario",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nConfiguración",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "← Ver sitio público",
+          "className": "back-link",
+          "width": 113,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "← Todas las solicitudes",
+          "className": "back-link",
+          "width": 142,
+          "height": 22
+        }
+      ],
+      "focusables": 25
+    },
+    {
+      "route": "/admin/calendario?date=2030-02-10",
+      "width": 360,
+      "screenshot": "360px-admin_calendario_date_2030_02_10.png",
+      "status": null,
+      "viewport": 360,
+      "documentWidth": 360,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 324,
+          "height": 34
+        },
+        {
+          "tag": "a",
+          "text": "◇\nResumen",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nCabañas",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nSolicitudes",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nCalendario",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nConfiguración",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "← Ver sitio público",
+          "className": "back-link",
+          "width": 113,
+          "height": 22
+        },
+        {
+          "tag": "input",
+          "text": "",
+          "className": "",
+          "width": 17,
+          "height": 20
+        }
+      ],
+      "focusables": 43
+    },
+    {
+      "route": "/admin/configuracion",
+      "width": 360,
+      "screenshot": "360px-admin_configuracion.png",
+      "status": null,
+      "viewport": 360,
+      "documentWidth": 360,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 324,
+          "height": 34
+        },
+        {
+          "tag": "a",
+          "text": "◇\nResumen",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nCabañas",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nSolicitudes",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nCalendario",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "◇\nConfiguración",
+          "className": "",
+          "width": 159,
+          "height": 40
+        },
+        {
+          "tag": "a",
+          "text": "← Ver sitio público",
+          "className": "back-link",
+          "width": 113,
+          "height": 22
+        }
+      ],
+      "focusables": 33
+    },
+    {
+      "route": "/",
+      "width": 768,
+      "screenshot": "768px-home.png",
+      "status": null,
+      "viewport": 768,
+      "documentWidth": 768,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Cabañas",
+          "className": "",
+          "width": 56,
+          "height": 23
+        },
+        {
+          "tag": "a",
+          "text": "Contacto",
+          "className": "",
+          "width": 56,
+          "height": 23
+        },
+        {
+          "tag": "a",
+          "text": "Administración ↗",
+          "className": "nav-admin",
+          "width": 107,
+          "height": 36
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Bosque",
+          "className": "",
+          "width": 182,
+          "height": 30
+        },
+        {
+          "tag": "a",
+          "text": "Explorar ↗",
+          "className": "",
+          "width": 223,
+          "height": 19
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Río",
+          "className": "",
+          "width": 137,
+          "height": 30
+        },
+        {
+          "tag": "a",
+          "text": "Explorar ↗",
+          "className": "",
+          "width": 223,
+          "height": 19
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Cerro",
+          "className": "",
+          "width": 162,
+          "height": 30
+        },
+        {
+          "tag": "a",
+          "text": "Explorar ↗",
+          "className": "",
+          "width": 223,
+          "height": 19
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 446,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "hola@refugioclaro.example",
+          "className": "",
+          "width": 195,
+          "height": 17
+        }
+      ],
+      "focusables": 18
+    },
+    {
+      "route": "/login",
+      "width": 768,
+      "screenshot": "768px-login.png",
+      "status": null,
+      "viewport": 768,
+      "documentWidth": 768,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Cabañas",
+          "className": "",
+          "width": 56,
+          "height": 23
+        },
+        {
+          "tag": "a",
+          "text": "Contacto",
+          "className": "",
+          "width": 56,
+          "height": 23
+        },
+        {
+          "tag": "a",
+          "text": "Administración ↗",
+          "className": "nav-admin",
+          "width": 107,
+          "height": 36
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 446,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "hola@refugioclaro.example",
+          "className": "",
+          "width": 195,
+          "height": 17
+        }
+      ],
+      "focusables": 10
+    },
+    {
+      "route": "/cabanas",
+      "width": 768,
+      "screenshot": "768px-cabanas.png",
+      "status": null,
+      "viewport": 768,
+      "documentWidth": 768,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Cabañas",
+          "className": "",
+          "width": 56,
+          "height": 23
+        },
+        {
+          "tag": "a",
+          "text": "Contacto",
+          "className": "",
+          "width": 56,
+          "height": 23
+        },
+        {
+          "tag": "a",
+          "text": "Administración ↗",
+          "className": "nav-admin",
+          "width": 107,
+          "height": 36
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Bosque",
+          "className": "",
+          "width": 182,
+          "height": 30
+        },
+        {
+          "tag": "a",
+          "text": "Explorar ↗",
+          "className": "",
+          "width": 223,
+          "height": 19
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Río",
+          "className": "",
+          "width": 137,
+          "height": 30
+        },
+        {
+          "tag": "a",
+          "text": "Explorar ↗",
+          "className": "",
+          "width": 223,
+          "height": 19
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Cerro",
+          "className": "",
+          "width": 162,
+          "height": 30
+        },
+        {
+          "tag": "a",
+          "text": "Explorar ↗",
+          "className": "",
+          "width": 223,
+          "height": 19
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 446,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "hola@refugioclaro.example",
+          "className": "",
+          "width": 195,
+          "height": 17
+        }
+      ],
+      "focusables": 19
+    },
+    {
+      "route": "/cabanas/bosque",
+      "width": 768,
+      "screenshot": "768px-cabanas_bosque.png",
+      "status": null,
+      "viewport": 768,
+      "documentWidth": 768,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Cabañas",
+          "className": "",
+          "width": 56,
+          "height": 23
+        },
+        {
+          "tag": "a",
+          "text": "Contacto",
+          "className": "",
+          "width": 56,
+          "height": 23
+        },
+        {
+          "tag": "a",
+          "text": "Administración ↗",
+          "className": "nav-admin",
+          "width": 107,
+          "height": 36
+        },
+        {
+          "tag": "a",
+          "text": "← Todas las cabañas",
+          "className": "back-link",
+          "width": 130,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 446,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "hola@refugioclaro.example",
+          "className": "",
+          "width": 195,
+          "height": 17
+        }
+      ],
+      "focusables": 20
+    },
+    {
+      "route": "/cabanas/rio",
+      "width": 768,
+      "screenshot": "768px-cabanas_rio.png",
+      "status": null,
+      "viewport": 768,
+      "documentWidth": 768,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Cabañas",
+          "className": "",
+          "width": 56,
+          "height": 23
+        },
+        {
+          "tag": "a",
+          "text": "Contacto",
+          "className": "",
+          "width": 56,
+          "height": 23
+        },
+        {
+          "tag": "a",
+          "text": "Administración ↗",
+          "className": "nav-admin",
+          "width": 107,
+          "height": 36
+        },
+        {
+          "tag": "a",
+          "text": "← Todas las cabañas",
+          "className": "back-link",
+          "width": 130,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 446,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "hola@refugioclaro.example",
+          "className": "",
+          "width": 195,
+          "height": 17
+        }
+      ],
+      "focusables": 21
+    },
+    {
+      "route": "/cabanas/cerro",
+      "width": 768,
+      "screenshot": "768px-cabanas_cerro.png",
+      "status": null,
+      "viewport": 768,
+      "documentWidth": 768,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Cabañas",
+          "className": "",
+          "width": 56,
+          "height": 23
+        },
+        {
+          "tag": "a",
+          "text": "Contacto",
+          "className": "",
+          "width": 56,
+          "height": 23
+        },
+        {
+          "tag": "a",
+          "text": "Administración ↗",
+          "className": "nav-admin",
+          "width": 107,
+          "height": 36
+        },
+        {
+          "tag": "a",
+          "text": "← Todas las cabañas",
+          "className": "back-link",
+          "width": 130,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 446,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "hola@refugioclaro.example",
+          "className": "",
+          "width": 195,
+          "height": 17
+        }
+      ],
+      "focusables": 20
+    },
+    {
+      "route": "/admin",
+      "width": 768,
+      "screenshot": "768px-admin.png",
+      "status": null,
+      "viewport": 768,
+      "documentWidth": 768,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 165,
+          "height": 34
+        },
+        {
+          "tag": "a",
+          "text": "← Ver sitio público",
+          "className": "back-link",
+          "width": 113,
+          "height": 22
+        }
+      ],
+      "focusables": 15
+    },
+    {
+      "route": "/admin/cabanas",
+      "width": 768,
+      "screenshot": "768px-admin_cabanas.png",
+      "status": null,
+      "viewport": 768,
+      "documentWidth": 768,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 165,
+          "height": 34
+        },
+        {
+          "tag": "a",
+          "text": "← Ver sitio público",
+          "className": "back-link",
+          "width": 113,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "Ver ficha pública ↗",
+          "className": "",
+          "width": 120,
+          "height": 16
+        },
+        {
+          "tag": "input",
+          "text": "",
+          "className": "",
+          "width": 20,
+          "height": 20
+        },
+        {
+          "tag": "a",
+          "text": "Ver ficha pública ↗",
+          "className": "",
+          "width": 120,
+          "height": 16
+        },
+        {
+          "tag": "input",
+          "text": "",
+          "className": "",
+          "width": 20,
+          "height": 20
+        },
+        {
+          "tag": "a",
+          "text": "Ver ficha pública ↗",
+          "className": "",
+          "width": 120,
+          "height": 16
+        },
+        {
+          "tag": "input",
+          "text": "",
+          "className": "",
+          "width": 20,
+          "height": 20
+        }
+      ],
+      "focusables": 59
+    },
+    {
+      "route": "/admin/cabanas/nueva",
+      "width": 768,
+      "screenshot": "768px-admin_cabanas_nueva.png",
+      "status": null,
+      "viewport": 768,
+      "documentWidth": 768,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 165,
+          "height": 34
+        },
+        {
+          "tag": "a",
+          "text": "← Ver sitio público",
+          "className": "back-link",
+          "width": 113,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "← Cabañas",
+          "className": "back-link",
+          "width": 72,
+          "height": 22
+        }
+      ],
+      "focusables": 27
+    },
+    {
+      "route": "/admin/cabanas/22222222-2222-4222-8222-000000000001",
+      "width": 768,
+      "screenshot": "768px-admin_cabanas_22222222_2222_4222_8222_000000000001.png",
+      "status": null,
+      "viewport": 768,
+      "documentWidth": 768,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 165,
+          "height": 34
+        },
+        {
+          "tag": "a",
+          "text": "← Ver sitio público",
+          "className": "back-link",
+          "width": 113,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "← Cabañas",
+          "className": "back-link",
+          "width": 72,
+          "height": 22
+        }
+      ],
+      "focusables": 56
+    },
+    {
+      "route": "/admin/cabanas/22222222-2222-4222-8222-000000000002",
+      "width": 768,
+      "screenshot": "768px-admin_cabanas_22222222_2222_4222_8222_000000000002.png",
+      "status": null,
+      "viewport": 768,
+      "documentWidth": 768,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 165,
+          "height": 34
+        },
+        {
+          "tag": "a",
+          "text": "← Ver sitio público",
+          "className": "back-link",
+          "width": 113,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "← Cabañas",
+          "className": "back-link",
+          "width": 72,
+          "height": 22
+        }
+      ],
+      "focusables": 56
+    },
+    {
+      "route": "/admin/cabanas/22222222-2222-4222-8222-000000000003",
+      "width": 768,
+      "screenshot": "768px-admin_cabanas_22222222_2222_4222_8222_000000000003.png",
+      "status": null,
+      "viewport": 768,
+      "documentWidth": 768,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 165,
+          "height": 34
+        },
+        {
+          "tag": "a",
+          "text": "← Ver sitio público",
+          "className": "back-link",
+          "width": 113,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "← Cabañas",
+          "className": "back-link",
+          "width": 72,
+          "height": 22
+        }
+      ],
+      "focusables": 56
+    },
+    {
+      "route": "/admin/solicitudes",
+      "width": 768,
+      "screenshot": "768px-admin_solicitudes.png",
+      "status": null,
+      "viewport": 768,
+      "documentWidth": 768,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 165,
+          "height": 34
+        },
+        {
+          "tag": "a",
+          "text": "← Ver sitio público",
+          "className": "back-link",
+          "width": 113,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Bosque",
+          "className": "",
+          "width": 161,
+          "height": 29
+        }
+      ],
+      "focusables": 17
+    },
+    {
+      "route": "/admin/solicitudes/5ccf69ff-5e0b-42e9-b072-e9091ad06464",
+      "width": 768,
+      "screenshot": "768px-admin_solicitudes_5ccf69ff_5e0b_42e9_b072_e9091ad06464.png",
+      "status": null,
+      "viewport": 768,
+      "documentWidth": 768,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 165,
+          "height": 34
+        },
+        {
+          "tag": "a",
+          "text": "← Ver sitio público",
+          "className": "back-link",
+          "width": 113,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "← Todas las solicitudes",
+          "className": "back-link",
+          "width": 142,
+          "height": 22
+        }
+      ],
+      "focusables": 25
+    },
+    {
+      "route": "/admin/calendario?date=2030-02-10",
+      "width": 768,
+      "screenshot": "768px-admin_calendario_date_2030_02_10.png",
+      "status": null,
+      "viewport": 768,
+      "documentWidth": 768,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 165,
+          "height": 34
+        },
+        {
+          "tag": "a",
+          "text": "← Ver sitio público",
+          "className": "back-link",
+          "width": 113,
+          "height": 22
+        },
+        {
+          "tag": "input",
+          "text": "",
+          "className": "",
+          "width": 20,
+          "height": 20
+        }
+      ],
+      "focusables": 43
+    },
+    {
+      "route": "/admin/configuracion",
+      "width": 768,
+      "screenshot": "768px-admin_configuracion.png",
+      "status": null,
+      "viewport": 768,
+      "documentWidth": 768,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 165,
+          "height": 34
+        },
+        {
+          "tag": "a",
+          "text": "← Ver sitio público",
+          "className": "back-link",
+          "width": 113,
+          "height": 22
+        }
+      ],
+      "focusables": 33
+    },
+    {
+      "route": "/",
+      "width": 1280,
+      "screenshot": "1280px-home.png",
+      "status": null,
+      "viewport": 1280,
+      "documentWidth": 1280,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Cabañas",
+          "className": "",
+          "width": 56,
+          "height": 23
+        },
+        {
+          "tag": "a",
+          "text": "Contacto",
+          "className": "",
+          "width": 56,
+          "height": 23
+        },
+        {
+          "tag": "a",
+          "text": "Administración ↗",
+          "className": "nav-admin",
+          "width": 107,
+          "height": 36
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Bosque",
+          "className": "",
+          "width": 182,
+          "height": 30
+        },
+        {
+          "tag": "a",
+          "text": "Explorar ↗",
+          "className": "",
+          "width": 58,
+          "height": 26
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Río",
+          "className": "",
+          "width": 137,
+          "height": 30
+        },
+        {
+          "tag": "a",
+          "text": "Explorar ↗",
+          "className": "",
+          "width": 58,
+          "height": 26
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Cerro",
+          "className": "",
+          "width": 162,
+          "height": 30
+        },
+        {
+          "tag": "a",
+          "text": "Explorar ↗",
+          "className": "",
+          "width": 58,
+          "height": 26
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 777,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "hola@refugioclaro.example",
+          "className": "",
+          "width": 195,
+          "height": 17
+        }
+      ],
+      "focusables": 18
+    },
+    {
+      "route": "/login",
+      "width": 1280,
+      "screenshot": "1280px-login.png",
+      "status": null,
+      "viewport": 1280,
+      "documentWidth": 1280,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Cabañas",
+          "className": "",
+          "width": 56,
+          "height": 23
+        },
+        {
+          "tag": "a",
+          "text": "Contacto",
+          "className": "",
+          "width": 56,
+          "height": 23
+        },
+        {
+          "tag": "a",
+          "text": "Administración ↗",
+          "className": "nav-admin",
+          "width": 107,
+          "height": 36
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 777,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "hola@refugioclaro.example",
+          "className": "",
+          "width": 195,
+          "height": 17
+        }
+      ],
+      "focusables": 10
+    },
+    {
+      "route": "/cabanas",
+      "width": 1280,
+      "screenshot": "1280px-cabanas.png",
+      "status": null,
+      "viewport": 1280,
+      "documentWidth": 1280,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Cabañas",
+          "className": "",
+          "width": 56,
+          "height": 23
+        },
+        {
+          "tag": "a",
+          "text": "Contacto",
+          "className": "",
+          "width": 56,
+          "height": 23
+        },
+        {
+          "tag": "a",
+          "text": "Administración ↗",
+          "className": "nav-admin",
+          "width": 107,
+          "height": 36
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Bosque",
+          "className": "",
+          "width": 182,
+          "height": 30
+        },
+        {
+          "tag": "a",
+          "text": "Explorar ↗",
+          "className": "",
+          "width": 58,
+          "height": 26
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Río",
+          "className": "",
+          "width": 137,
+          "height": 30
+        },
+        {
+          "tag": "a",
+          "text": "Explorar ↗",
+          "className": "",
+          "width": 58,
+          "height": 26
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Cerro",
+          "className": "",
+          "width": 162,
+          "height": 30
+        },
+        {
+          "tag": "a",
+          "text": "Explorar ↗",
+          "className": "",
+          "width": 58,
+          "height": 26
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 777,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "hola@refugioclaro.example",
+          "className": "",
+          "width": 195,
+          "height": 17
+        }
+      ],
+      "focusables": 19
+    },
+    {
+      "route": "/cabanas/bosque",
+      "width": 1280,
+      "screenshot": "1280px-cabanas_bosque.png",
+      "status": null,
+      "viewport": 1280,
+      "documentWidth": 1280,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Cabañas",
+          "className": "",
+          "width": 56,
+          "height": 23
+        },
+        {
+          "tag": "a",
+          "text": "Contacto",
+          "className": "",
+          "width": 56,
+          "height": 23
+        },
+        {
+          "tag": "a",
+          "text": "Administración ↗",
+          "className": "nav-admin",
+          "width": 107,
+          "height": 36
+        },
+        {
+          "tag": "a",
+          "text": "← Todas las cabañas",
+          "className": "back-link",
+          "width": 130,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 777,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "hola@refugioclaro.example",
+          "className": "",
+          "width": 195,
+          "height": 17
+        }
+      ],
+      "focusables": 20
+    },
+    {
+      "route": "/cabanas/rio",
+      "width": 1280,
+      "screenshot": "1280px-cabanas_rio.png",
+      "status": null,
+      "viewport": 1280,
+      "documentWidth": 1280,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Cabañas",
+          "className": "",
+          "width": 56,
+          "height": 23
+        },
+        {
+          "tag": "a",
+          "text": "Contacto",
+          "className": "",
+          "width": 56,
+          "height": 23
+        },
+        {
+          "tag": "a",
+          "text": "Administración ↗",
+          "className": "nav-admin",
+          "width": 107,
+          "height": 36
+        },
+        {
+          "tag": "a",
+          "text": "← Todas las cabañas",
+          "className": "back-link",
+          "width": 130,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 777,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "hola@refugioclaro.example",
+          "className": "",
+          "width": 195,
+          "height": 17
+        }
+      ],
+      "focusables": 21
+    },
+    {
+      "route": "/cabanas/cerro",
+      "width": 1280,
+      "screenshot": "1280px-cabanas_cerro.png",
+      "status": null,
+      "viewport": 1280,
+      "documentWidth": 1280,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Cabañas",
+          "className": "",
+          "width": 56,
+          "height": 23
+        },
+        {
+          "tag": "a",
+          "text": "Contacto",
+          "className": "",
+          "width": 56,
+          "height": 23
+        },
+        {
+          "tag": "a",
+          "text": "Administración ↗",
+          "className": "nav-admin",
+          "width": 107,
+          "height": 36
+        },
+        {
+          "tag": "a",
+          "text": "← Todas las cabañas",
+          "className": "back-link",
+          "width": 130,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 777,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "hola@refugioclaro.example",
+          "className": "",
+          "width": 195,
+          "height": 17
+        }
+      ],
+      "focusables": 20
+    },
+    {
+      "route": "/admin",
+      "width": 1280,
+      "screenshot": "1280px-admin.png",
+      "status": null,
+      "viewport": 1280,
+      "documentWidth": 1280,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 205,
+          "height": 34
+        },
+        {
+          "tag": "a",
+          "text": "← Ver sitio público",
+          "className": "back-link",
+          "width": 113,
+          "height": 22
+        }
+      ],
+      "focusables": 15
+    },
+    {
+      "route": "/admin/cabanas",
+      "width": 1280,
+      "screenshot": "1280px-admin_cabanas.png",
+      "status": null,
+      "viewport": 1280,
+      "documentWidth": 1280,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 205,
+          "height": 34
+        },
+        {
+          "tag": "a",
+          "text": "← Ver sitio público",
+          "className": "back-link",
+          "width": 113,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "Ver ficha pública ↗",
+          "className": "",
+          "width": 120,
+          "height": 16
+        },
+        {
+          "tag": "input",
+          "text": "",
+          "className": "",
+          "width": 20,
+          "height": 20
+        },
+        {
+          "tag": "a",
+          "text": "Ver ficha pública ↗",
+          "className": "",
+          "width": 120,
+          "height": 16
+        },
+        {
+          "tag": "input",
+          "text": "",
+          "className": "",
+          "width": 20,
+          "height": 20
+        },
+        {
+          "tag": "a",
+          "text": "Ver ficha pública ↗",
+          "className": "",
+          "width": 120,
+          "height": 16
+        },
+        {
+          "tag": "input",
+          "text": "",
+          "className": "",
+          "width": 20,
+          "height": 20
+        }
+      ],
+      "focusables": 59
+    },
+    {
+      "route": "/admin/cabanas/nueva",
+      "width": 1280,
+      "screenshot": "1280px-admin_cabanas_nueva.png",
+      "status": null,
+      "viewport": 1280,
+      "documentWidth": 1280,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 205,
+          "height": 34
+        },
+        {
+          "tag": "a",
+          "text": "← Ver sitio público",
+          "className": "back-link",
+          "width": 113,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "← Cabañas",
+          "className": "back-link",
+          "width": 72,
+          "height": 22
+        }
+      ],
+      "focusables": 27
+    },
+    {
+      "route": "/admin/cabanas/22222222-2222-4222-8222-000000000001",
+      "width": 1280,
+      "screenshot": "1280px-admin_cabanas_22222222_2222_4222_8222_000000000001.png",
+      "status": null,
+      "viewport": 1280,
+      "documentWidth": 1280,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 205,
+          "height": 34
+        },
+        {
+          "tag": "a",
+          "text": "← Ver sitio público",
+          "className": "back-link",
+          "width": 113,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "← Cabañas",
+          "className": "back-link",
+          "width": 72,
+          "height": 22
+        }
+      ],
+      "focusables": 56
+    },
+    {
+      "route": "/admin/cabanas/22222222-2222-4222-8222-000000000002",
+      "width": 1280,
+      "screenshot": "1280px-admin_cabanas_22222222_2222_4222_8222_000000000002.png",
+      "status": null,
+      "viewport": 1280,
+      "documentWidth": 1280,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 205,
+          "height": 34
+        },
+        {
+          "tag": "a",
+          "text": "← Ver sitio público",
+          "className": "back-link",
+          "width": 113,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "← Cabañas",
+          "className": "back-link",
+          "width": 72,
+          "height": 22
+        }
+      ],
+      "focusables": 56
+    },
+    {
+      "route": "/admin/cabanas/22222222-2222-4222-8222-000000000003",
+      "width": 1280,
+      "screenshot": "1280px-admin_cabanas_22222222_2222_4222_8222_000000000003.png",
+      "status": null,
+      "viewport": 1280,
+      "documentWidth": 1280,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 205,
+          "height": 34
+        },
+        {
+          "tag": "a",
+          "text": "← Ver sitio público",
+          "className": "back-link",
+          "width": 113,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "← Cabañas",
+          "className": "back-link",
+          "width": 72,
+          "height": 22
+        }
+      ],
+      "focusables": 56
+    },
+    {
+      "route": "/admin/solicitudes",
+      "width": 1280,
+      "screenshot": "1280px-admin_solicitudes.png",
+      "status": null,
+      "viewport": 1280,
+      "documentWidth": 1280,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 205,
+          "height": 34
+        },
+        {
+          "tag": "a",
+          "text": "← Ver sitio público",
+          "className": "back-link",
+          "width": 113,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "Refugio Bosque",
+          "className": "",
+          "width": 161,
+          "height": 29
+        }
+      ],
+      "focusables": 17
+    },
+    {
+      "route": "/admin/solicitudes/5ccf69ff-5e0b-42e9-b072-e9091ad06464",
+      "width": 1280,
+      "screenshot": "1280px-admin_solicitudes_5ccf69ff_5e0b_42e9_b072_e9091ad06464.png",
+      "status": null,
+      "viewport": 1280,
+      "documentWidth": 1280,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 205,
+          "height": 34
+        },
+        {
+          "tag": "a",
+          "text": "← Ver sitio público",
+          "className": "back-link",
+          "width": 113,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "← Todas las solicitudes",
+          "className": "back-link",
+          "width": 142,
+          "height": 22
+        }
+      ],
+      "focusables": 25
+    },
+    {
+      "route": "/admin/calendario?date=2030-02-10",
+      "width": 1280,
+      "screenshot": "1280px-admin_calendario_date_2030_02_10.png",
+      "status": null,
+      "viewport": 1280,
+      "documentWidth": 1280,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 205,
+          "height": 34
+        },
+        {
+          "tag": "a",
+          "text": "← Ver sitio público",
+          "className": "back-link",
+          "width": 113,
+          "height": 22
+        },
+        {
+          "tag": "input",
+          "text": "",
+          "className": "",
+          "width": 20,
+          "height": 20
+        }
+      ],
+      "focusables": 43
+    },
+    {
+      "route": "/admin/configuracion",
+      "width": 1280,
+      "screenshot": "1280px-admin_configuracion.png",
+      "status": null,
+      "viewport": 1280,
+      "documentWidth": 1280,
+      "horizontalOverflow": false,
+      "clipped": [],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Refugio Claro",
+          "className": "brand",
+          "width": 205,
+          "height": 34
+        },
+        {
+          "tag": "a",
+          "text": "← Ver sitio público",
+          "className": "back-link",
+          "width": 113,
+          "height": 22
+        }
+      ],
+      "focusables": 33
+    }
+  ],
+  "violations": [
+    {
+      "route": "/",
+      "width": 360,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            ".hero-copy > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "p > small"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.45 (foreground color: #6c766b, background color: #faf8f2, font size: 9.4pt (12.48px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".section-heading > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "a[aria-label=\"Ver Refugio Bosque\"]"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "a[aria-label=\"Ver Refugio Río\"]"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "a[aria-label=\"Ver Refugio Cerro\"]"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".story > div:nth-child(2) > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.72 (foreground color: #bb5c37, background color: #e8ecdf, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".story > div:nth-child(2) > p:nth-child(3)"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.3 (foreground color: #667064, background color: #e8ecdf, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".footer-grid > div:nth-child(2) > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.73 (foreground color: #bb5c37, background color: #e9ecdf, font size: 10.2pt (13.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".footer-bottom"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.34 (foreground color: #65705f, background color: #e9ecdf, font size: 8.4pt (11.2px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "width": 360,
+      "id": "label-content-name-mismatch",
+      "impact": "serious",
+      "help": "Elements must have their visible text as part of their accessible name",
+      "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+      "nodes": [
+        {
+          "target": [
+            "a[aria-label=\"Ver Refugio Bosque\"]"
+          ],
+          "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+        },
+        {
+          "target": [
+            "a[aria-label=\"Ver Refugio Río\"]"
+          ],
+          "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+        },
+        {
+          "target": [
+            "a[aria-label=\"Ver Refugio Cerro\"]"
+          ],
+          "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+        }
+      ]
+    },
+    {
+      "route": "/login",
+      "width": 360,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            "section > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.46 (foreground color: #bb5c37, background color: #ffffff, font size: 10.2pt (13.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "div:nth-child(2) > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.73 (foreground color: #bb5c37, background color: #e9ecdf, font size: 10.2pt (13.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".footer-bottom"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.34 (foreground color: #65705f, background color: #e9ecdf, font size: 8.4pt (11.2px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/cabanas",
+      "width": 360,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            "#contenido > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "a[aria-label=\"Ver Refugio Bosque\"]"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "a[aria-label=\"Ver Refugio Río\"]"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "a[aria-label=\"Ver Refugio Cerro\"]"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "div:nth-child(2) > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.73 (foreground color: #bb5c37, background color: #e9ecdf, font size: 10.2pt (13.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".footer-bottom"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.34 (foreground color: #65705f, background color: #e9ecdf, font size: 8.4pt (11.2px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/cabanas",
+      "width": 360,
+      "id": "heading-order",
+      "impact": "moderate",
+      "help": "Heading levels should only increase by one",
+      "description": "Ensure the order of headings is semantically correct",
+      "nodes": [
+        {
+          "target": [
+            "article:nth-child(1) > .card-body > h3"
+          ],
+          "summary": "Fix any of the following:\n  Heading order invalid"
+        }
+      ]
+    },
+    {
+      "route": "/cabanas",
+      "width": 360,
+      "id": "label-content-name-mismatch",
+      "impact": "serious",
+      "help": "Elements must have their visible text as part of their accessible name",
+      "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+      "nodes": [
+        {
+          "target": [
+            "a[aria-label=\"Ver Refugio Bosque\"]"
+          ],
+          "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+        },
+        {
+          "target": [
+            "a[aria-label=\"Ver Refugio Río\"]"
+          ],
+          "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+        },
+        {
+          "target": [
+            "a[aria-label=\"Ver Refugio Cerro\"]"
+          ],
+          "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+        }
+      ]
+    },
+    {
+      "route": "/cabanas/bosque",
+      "width": 360,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            "#contenido > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "aside > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.46 (foreground color: #bb5c37, background color: #ffffff, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "div:nth-child(2) > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.73 (foreground color: #bb5c37, background color: #e9ecdf, font size: 10.2pt (13.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".footer-bottom"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.34 (foreground color: #65705f, background color: #e9ecdf, font size: 8.4pt (11.2px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/cabanas/rio",
+      "width": 360,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            "#contenido > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "aside > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.46 (foreground color: #bb5c37, background color: #ffffff, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "div:nth-child(2) > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.73 (foreground color: #bb5c37, background color: #e9ecdf, font size: 10.2pt (13.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".footer-bottom"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.34 (foreground color: #65705f, background color: #e9ecdf, font size: 8.4pt (11.2px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/cabanas/cerro",
+      "width": 360,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            "#contenido > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "aside > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.46 (foreground color: #bb5c37, background color: #ffffff, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "div:nth-child(2) > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.73 (foreground color: #bb5c37, background color: #e9ecdf, font size: 10.2pt (13.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".footer-bottom"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.34 (foreground color: #65705f, background color: #e9ecdf, font size: 8.4pt (11.2px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/admin",
+      "width": 360,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            "#contenido > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/admin",
+      "width": 360,
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "description": "Ensure all page content is contained by landmarks",
+      "nodes": [
+        {
+          "target": [
+            ".admin-disclaimer"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        }
+      ]
+    },
+    {
+      "route": "/admin/cabanas",
+      "width": 360,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            "#contenido > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/admin/cabanas",
+      "width": 360,
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "description": "Ensure all page content is contained by landmarks",
+      "nodes": [
+        {
+          "target": [
+            ".admin-disclaimer"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        }
+      ]
+    },
+    {
+      "route": "/admin/cabanas/nueva",
+      "width": 360,
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "description": "Ensure all page content is contained by landmarks",
+      "nodes": [
+        {
+          "target": [
+            ".admin-disclaimer"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        }
+      ]
+    },
+    {
+      "route": "/admin/cabanas/22222222-2222-4222-8222-000000000001",
+      "width": 360,
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "description": "Ensure all page content is contained by landmarks",
+      "nodes": [
+        {
+          "target": [
+            ".admin-disclaimer"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        }
+      ]
+    },
+    {
+      "route": "/admin/cabanas/22222222-2222-4222-8222-000000000002",
+      "width": 360,
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "description": "Ensure all page content is contained by landmarks",
+      "nodes": [
+        {
+          "target": [
+            ".admin-disclaimer"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        }
+      ]
+    },
+    {
+      "route": "/admin/cabanas/22222222-2222-4222-8222-000000000003",
+      "width": 360,
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "description": "Ensure all page content is contained by landmarks",
+      "nodes": [
+        {
+          "target": [
+            ".admin-disclaimer"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        }
+      ]
+    },
+    {
+      "route": "/admin/solicitudes",
+      "width": 360,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            "#contenido > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/admin/solicitudes",
+      "width": 360,
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "description": "Ensure all page content is contained by landmarks",
+      "nodes": [
+        {
+          "target": [
+            ".admin-disclaimer"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        }
+      ]
+    },
+    {
+      "route": "/admin/solicitudes/5ccf69ff-5e0b-42e9-b072-e9091ad06464",
+      "width": 360,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            "#contenido > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/admin/solicitudes/5ccf69ff-5e0b-42e9-b072-e9091ad06464",
+      "width": 360,
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "description": "Ensure all page content is contained by landmarks",
+      "nodes": [
+        {
+          "target": [
+            ".admin-disclaimer"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        }
+      ]
+    },
+    {
+      "route": "/admin/calendario?date=2030-02-10",
+      "width": 360,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            "#contenido > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/admin/calendario?date=2030-02-10",
+      "width": 360,
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "description": "Ensure all page content is contained by landmarks",
+      "nodes": [
+        {
+          "target": [
+            ".admin-disclaimer"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        }
+      ]
+    },
+    {
+      "route": "/admin/configuracion",
+      "width": 360,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            "#contenido > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/admin/configuracion",
+      "width": 360,
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "description": "Ensure all page content is contained by landmarks",
+      "nodes": [
+        {
+          "target": [
+            ".admin-disclaimer"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "width": 768,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            ".hero-copy > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "p > small"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.45 (foreground color: #6c766b, background color: #faf8f2, font size: 9.4pt (12.48px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".section-heading > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "a[aria-label=\"Ver Refugio Bosque\"]"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "a[aria-label=\"Ver Refugio Río\"]"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "a[aria-label=\"Ver Refugio Cerro\"]"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".story > div:nth-child(2) > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.72 (foreground color: #bb5c37, background color: #e8ecdf, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".story > div:nth-child(2) > p:nth-child(3)"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.3 (foreground color: #667064, background color: #e8ecdf, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".footer-grid > div:nth-child(2) > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.73 (foreground color: #bb5c37, background color: #e9ecdf, font size: 10.2pt (13.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".footer-bottom"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.34 (foreground color: #65705f, background color: #e9ecdf, font size: 8.4pt (11.2px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "width": 768,
+      "id": "label-content-name-mismatch",
+      "impact": "serious",
+      "help": "Elements must have their visible text as part of their accessible name",
+      "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+      "nodes": [
+        {
+          "target": [
+            "a[aria-label=\"Ver Refugio Bosque\"]"
+          ],
+          "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+        },
+        {
+          "target": [
+            "a[aria-label=\"Ver Refugio Río\"]"
+          ],
+          "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+        },
+        {
+          "target": [
+            "a[aria-label=\"Ver Refugio Cerro\"]"
+          ],
+          "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+        }
+      ]
+    },
+    {
+      "route": "/login",
+      "width": 768,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            "section > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.46 (foreground color: #bb5c37, background color: #ffffff, font size: 10.2pt (13.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "div:nth-child(2) > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.73 (foreground color: #bb5c37, background color: #e9ecdf, font size: 10.2pt (13.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".footer-bottom"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.34 (foreground color: #65705f, background color: #e9ecdf, font size: 8.4pt (11.2px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/cabanas",
+      "width": 768,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            "#contenido > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "a[aria-label=\"Ver Refugio Bosque\"]"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "a[aria-label=\"Ver Refugio Río\"]"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "a[aria-label=\"Ver Refugio Cerro\"]"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "div:nth-child(2) > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.73 (foreground color: #bb5c37, background color: #e9ecdf, font size: 10.2pt (13.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".footer-bottom"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.34 (foreground color: #65705f, background color: #e9ecdf, font size: 8.4pt (11.2px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/cabanas",
+      "width": 768,
+      "id": "heading-order",
+      "impact": "moderate",
+      "help": "Heading levels should only increase by one",
+      "description": "Ensure the order of headings is semantically correct",
+      "nodes": [
+        {
+          "target": [
+            "article:nth-child(1) > .card-body > h3"
+          ],
+          "summary": "Fix any of the following:\n  Heading order invalid"
+        }
+      ]
+    },
+    {
+      "route": "/cabanas",
+      "width": 768,
+      "id": "label-content-name-mismatch",
+      "impact": "serious",
+      "help": "Elements must have their visible text as part of their accessible name",
+      "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+      "nodes": [
+        {
+          "target": [
+            "a[aria-label=\"Ver Refugio Bosque\"]"
+          ],
+          "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+        },
+        {
+          "target": [
+            "a[aria-label=\"Ver Refugio Río\"]"
+          ],
+          "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+        },
+        {
+          "target": [
+            "a[aria-label=\"Ver Refugio Cerro\"]"
+          ],
+          "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+        }
+      ]
+    },
+    {
+      "route": "/cabanas/bosque",
+      "width": 768,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            "#contenido > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "aside > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.46 (foreground color: #bb5c37, background color: #ffffff, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "div:nth-child(2) > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.73 (foreground color: #bb5c37, background color: #e9ecdf, font size: 10.2pt (13.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".footer-bottom"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.34 (foreground color: #65705f, background color: #e9ecdf, font size: 8.4pt (11.2px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/cabanas/rio",
+      "width": 768,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            "#contenido > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "aside > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.46 (foreground color: #bb5c37, background color: #ffffff, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "div:nth-child(2) > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.73 (foreground color: #bb5c37, background color: #e9ecdf, font size: 10.2pt (13.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".footer-bottom"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.34 (foreground color: #65705f, background color: #e9ecdf, font size: 8.4pt (11.2px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/cabanas/cerro",
+      "width": 768,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            "#contenido > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "aside > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.46 (foreground color: #bb5c37, background color: #ffffff, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "div:nth-child(2) > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.73 (foreground color: #bb5c37, background color: #e9ecdf, font size: 10.2pt (13.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".footer-bottom"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.34 (foreground color: #65705f, background color: #e9ecdf, font size: 8.4pt (11.2px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/admin",
+      "width": 768,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            "aside > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.75 (foreground color: #bb5c37, background color: #e9eddf, font size: 7.2pt (9.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "#contenido > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/admin",
+      "width": 768,
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "description": "Ensure all page content is contained by landmarks",
+      "nodes": [
+        {
+          "target": [
+            ".admin-disclaimer"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        }
+      ]
+    },
+    {
+      "route": "/admin/cabanas",
+      "width": 768,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            "aside > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.75 (foreground color: #bb5c37, background color: #e9eddf, font size: 7.2pt (9.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "#contenido > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/admin/cabanas",
+      "width": 768,
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "description": "Ensure all page content is contained by landmarks",
+      "nodes": [
+        {
+          "target": [
+            ".admin-disclaimer"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        }
+      ]
+    },
+    {
+      "route": "/admin/cabanas/nueva",
+      "width": 768,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            ".eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.75 (foreground color: #bb5c37, background color: #e9eddf, font size: 7.2pt (9.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/admin/cabanas/nueva",
+      "width": 768,
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "description": "Ensure all page content is contained by landmarks",
+      "nodes": [
+        {
+          "target": [
+            ".admin-disclaimer"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        }
+      ]
+    },
+    {
+      "route": "/admin/cabanas/22222222-2222-4222-8222-000000000001",
+      "width": 768,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            ".eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.75 (foreground color: #bb5c37, background color: #e9eddf, font size: 7.2pt (9.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/admin/cabanas/22222222-2222-4222-8222-000000000001",
+      "width": 768,
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "description": "Ensure all page content is contained by landmarks",
+      "nodes": [
+        {
+          "target": [
+            ".admin-disclaimer"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        }
+      ]
+    },
+    {
+      "route": "/admin/cabanas/22222222-2222-4222-8222-000000000002",
+      "width": 768,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            ".eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.75 (foreground color: #bb5c37, background color: #e9eddf, font size: 7.2pt (9.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/admin/cabanas/22222222-2222-4222-8222-000000000002",
+      "width": 768,
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "description": "Ensure all page content is contained by landmarks",
+      "nodes": [
+        {
+          "target": [
+            ".admin-disclaimer"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        }
+      ]
+    },
+    {
+      "route": "/admin/cabanas/22222222-2222-4222-8222-000000000003",
+      "width": 768,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            ".eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.75 (foreground color: #bb5c37, background color: #e9eddf, font size: 7.2pt (9.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/admin/cabanas/22222222-2222-4222-8222-000000000003",
+      "width": 768,
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "description": "Ensure all page content is contained by landmarks",
+      "nodes": [
+        {
+          "target": [
+            ".admin-disclaimer"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        }
+      ]
+    },
+    {
+      "route": "/admin/solicitudes",
+      "width": 768,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            "aside > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.75 (foreground color: #bb5c37, background color: #e9eddf, font size: 7.2pt (9.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "#contenido > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/admin/solicitudes",
+      "width": 768,
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "description": "Ensure all page content is contained by landmarks",
+      "nodes": [
+        {
+          "target": [
+            ".admin-disclaimer"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        }
+      ]
+    },
+    {
+      "route": "/admin/solicitudes/5ccf69ff-5e0b-42e9-b072-e9091ad06464",
+      "width": 768,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            "aside > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.75 (foreground color: #bb5c37, background color: #e9eddf, font size: 7.2pt (9.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "#contenido > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/admin/solicitudes/5ccf69ff-5e0b-42e9-b072-e9091ad06464",
+      "width": 768,
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "description": "Ensure all page content is contained by landmarks",
+      "nodes": [
+        {
+          "target": [
+            ".admin-disclaimer"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        }
+      ]
+    },
+    {
+      "route": "/admin/calendario?date=2030-02-10",
+      "width": 768,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            "aside > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.75 (foreground color: #bb5c37, background color: #e9eddf, font size: 7.2pt (9.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "#contenido > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/admin/calendario?date=2030-02-10",
+      "width": 768,
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "description": "Ensure all page content is contained by landmarks",
+      "nodes": [
+        {
+          "target": [
+            ".admin-disclaimer"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        }
+      ]
+    },
+    {
+      "route": "/admin/configuracion",
+      "width": 768,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            "aside > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.75 (foreground color: #bb5c37, background color: #e9eddf, font size: 7.2pt (9.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "#contenido > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/admin/configuracion",
+      "width": 768,
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "description": "Ensure all page content is contained by landmarks",
+      "nodes": [
+        {
+          "target": [
+            ".admin-disclaimer"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "width": 1280,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            ".hero-copy > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "p > small"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.45 (foreground color: #6c766b, background color: #faf8f2, font size: 9.4pt (12.48px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".section-heading > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "a[aria-label=\"Ver Refugio Bosque\"]"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "a[aria-label=\"Ver Refugio Río\"]"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "a[aria-label=\"Ver Refugio Cerro\"]"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".story > div:nth-child(2) > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.72 (foreground color: #bb5c37, background color: #e8ecdf, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".story > div:nth-child(2) > p:nth-child(3)"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.3 (foreground color: #667064, background color: #e8ecdf, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".footer-grid > div:nth-child(2) > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.73 (foreground color: #bb5c37, background color: #e9ecdf, font size: 10.2pt (13.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".footer-bottom"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.34 (foreground color: #65705f, background color: #e9ecdf, font size: 8.4pt (11.2px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "width": 1280,
+      "id": "label-content-name-mismatch",
+      "impact": "serious",
+      "help": "Elements must have their visible text as part of their accessible name",
+      "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+      "nodes": [
+        {
+          "target": [
+            "a[aria-label=\"Ver Refugio Bosque\"]"
+          ],
+          "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+        },
+        {
+          "target": [
+            "a[aria-label=\"Ver Refugio Río\"]"
+          ],
+          "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+        },
+        {
+          "target": [
+            "a[aria-label=\"Ver Refugio Cerro\"]"
+          ],
+          "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+        }
+      ]
+    },
+    {
+      "route": "/login",
+      "width": 1280,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            "section > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.46 (foreground color: #bb5c37, background color: #ffffff, font size: 10.2pt (13.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "div:nth-child(2) > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.73 (foreground color: #bb5c37, background color: #e9ecdf, font size: 10.2pt (13.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".footer-bottom"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.34 (foreground color: #65705f, background color: #e9ecdf, font size: 8.4pt (11.2px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/cabanas",
+      "width": 1280,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            "#contenido > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "a[aria-label=\"Ver Refugio Bosque\"]"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "a[aria-label=\"Ver Refugio Río\"]"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "a[aria-label=\"Ver Refugio Cerro\"]"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "div:nth-child(2) > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.73 (foreground color: #bb5c37, background color: #e9ecdf, font size: 10.2pt (13.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".footer-bottom"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.34 (foreground color: #65705f, background color: #e9ecdf, font size: 8.4pt (11.2px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/cabanas",
+      "width": 1280,
+      "id": "heading-order",
+      "impact": "moderate",
+      "help": "Heading levels should only increase by one",
+      "description": "Ensure the order of headings is semantically correct",
+      "nodes": [
+        {
+          "target": [
+            "article:nth-child(1) > .card-body > h3"
+          ],
+          "summary": "Fix any of the following:\n  Heading order invalid"
+        }
+      ]
+    },
+    {
+      "route": "/cabanas",
+      "width": 1280,
+      "id": "label-content-name-mismatch",
+      "impact": "serious",
+      "help": "Elements must have their visible text as part of their accessible name",
+      "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+      "nodes": [
+        {
+          "target": [
+            "a[aria-label=\"Ver Refugio Bosque\"]"
+          ],
+          "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+        },
+        {
+          "target": [
+            "a[aria-label=\"Ver Refugio Río\"]"
+          ],
+          "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+        },
+        {
+          "target": [
+            "a[aria-label=\"Ver Refugio Cerro\"]"
+          ],
+          "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+        }
+      ]
+    },
+    {
+      "route": "/cabanas/bosque",
+      "width": 1280,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            "#contenido > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "aside > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.46 (foreground color: #bb5c37, background color: #ffffff, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "div:nth-child(2) > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.73 (foreground color: #bb5c37, background color: #e9ecdf, font size: 10.2pt (13.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".footer-bottom"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.34 (foreground color: #65705f, background color: #e9ecdf, font size: 8.4pt (11.2px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/cabanas/rio",
+      "width": 1280,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            "#contenido > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "aside > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.46 (foreground color: #bb5c37, background color: #ffffff, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "div:nth-child(2) > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.73 (foreground color: #bb5c37, background color: #e9ecdf, font size: 10.2pt (13.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".footer-bottom"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.34 (foreground color: #65705f, background color: #e9ecdf, font size: 8.4pt (11.2px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/cabanas/cerro",
+      "width": 1280,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            "#contenido > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "aside > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.46 (foreground color: #bb5c37, background color: #ffffff, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "div:nth-child(2) > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.73 (foreground color: #bb5c37, background color: #e9ecdf, font size: 10.2pt (13.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".footer-bottom"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.34 (foreground color: #65705f, background color: #e9ecdf, font size: 8.4pt (11.2px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/admin",
+      "width": 1280,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            "aside > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.75 (foreground color: #bb5c37, background color: #e9eddf, font size: 7.2pt (9.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "#contenido > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/admin",
+      "width": 1280,
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "description": "Ensure all page content is contained by landmarks",
+      "nodes": [
+        {
+          "target": [
+            ".admin-disclaimer"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        }
+      ]
+    },
+    {
+      "route": "/admin/cabanas",
+      "width": 1280,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            "aside > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.75 (foreground color: #bb5c37, background color: #e9eddf, font size: 7.2pt (9.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "#contenido > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/admin/cabanas",
+      "width": 1280,
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "description": "Ensure all page content is contained by landmarks",
+      "nodes": [
+        {
+          "target": [
+            ".admin-disclaimer"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        }
+      ]
+    },
+    {
+      "route": "/admin/cabanas/nueva",
+      "width": 1280,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            ".eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.75 (foreground color: #bb5c37, background color: #e9eddf, font size: 7.2pt (9.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/admin/cabanas/nueva",
+      "width": 1280,
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "description": "Ensure all page content is contained by landmarks",
+      "nodes": [
+        {
+          "target": [
+            ".admin-disclaimer"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        }
+      ]
+    },
+    {
+      "route": "/admin/cabanas/22222222-2222-4222-8222-000000000001",
+      "width": 1280,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            ".eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.75 (foreground color: #bb5c37, background color: #e9eddf, font size: 7.2pt (9.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/admin/cabanas/22222222-2222-4222-8222-000000000001",
+      "width": 1280,
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "description": "Ensure all page content is contained by landmarks",
+      "nodes": [
+        {
+          "target": [
+            ".admin-disclaimer"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        }
+      ]
+    },
+    {
+      "route": "/admin/cabanas/22222222-2222-4222-8222-000000000002",
+      "width": 1280,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            ".eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.75 (foreground color: #bb5c37, background color: #e9eddf, font size: 7.2pt (9.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/admin/cabanas/22222222-2222-4222-8222-000000000002",
+      "width": 1280,
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "description": "Ensure all page content is contained by landmarks",
+      "nodes": [
+        {
+          "target": [
+            ".admin-disclaimer"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        }
+      ]
+    },
+    {
+      "route": "/admin/cabanas/22222222-2222-4222-8222-000000000003",
+      "width": 1280,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            ".eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.75 (foreground color: #bb5c37, background color: #e9eddf, font size: 7.2pt (9.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/admin/cabanas/22222222-2222-4222-8222-000000000003",
+      "width": 1280,
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "description": "Ensure all page content is contained by landmarks",
+      "nodes": [
+        {
+          "target": [
+            ".admin-disclaimer"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        }
+      ]
+    },
+    {
+      "route": "/admin/solicitudes",
+      "width": 1280,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            "aside > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.75 (foreground color: #bb5c37, background color: #e9eddf, font size: 7.2pt (9.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "#contenido > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/admin/solicitudes",
+      "width": 1280,
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "description": "Ensure all page content is contained by landmarks",
+      "nodes": [
+        {
+          "target": [
+            ".admin-disclaimer"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        }
+      ]
+    },
+    {
+      "route": "/admin/solicitudes/5ccf69ff-5e0b-42e9-b072-e9091ad06464",
+      "width": 1280,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            "aside > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.75 (foreground color: #bb5c37, background color: #e9eddf, font size: 7.2pt (9.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "#contenido > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/admin/solicitudes/5ccf69ff-5e0b-42e9-b072-e9091ad06464",
+      "width": 1280,
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "description": "Ensure all page content is contained by landmarks",
+      "nodes": [
+        {
+          "target": [
+            ".admin-disclaimer"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        }
+      ]
+    },
+    {
+      "route": "/admin/calendario?date=2030-02-10",
+      "width": 1280,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            "aside > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.75 (foreground color: #bb5c37, background color: #e9eddf, font size: 7.2pt (9.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "#contenido > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/admin/calendario?date=2030-02-10",
+      "width": 1280,
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "description": "Ensure all page content is contained by landmarks",
+      "nodes": [
+        {
+          "target": [
+            ".admin-disclaimer"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        }
+      ]
+    },
+    {
+      "route": "/admin/configuracion",
+      "width": 1280,
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            "aside > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.75 (foreground color: #bb5c37, background color: #e9eddf, font size: 7.2pt (9.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "#contenido > .eyebrow"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #bb5c37, background color: #faf8f2, font size: 8.2pt (10.88px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "route": "/admin/configuracion",
+      "width": 1280,
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "description": "Ensure all page content is contained by landmarks",
+      "nodes": [
+        {
+          "target": [
+            ".admin-disclaimer"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        }
+      ]
+    }
+  ],
+  "tabReports": [
+    {
+      "route": "/",
+      "width": 360,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro CABAÑAS & NATURALEZA",
+        "a: Cabañas",
+        "a: Contacto",
+        "a: Administración ↗",
+        "a: Descubre las cabañas ↗",
+        "a: Ver todas ↗",
+        "a: Por noche",
+        "a: Refugio Bosque",
+        "a: Ver Refugio Bosque",
+        "a: Por hora",
+        "a: Refugio Río",
+        "a: Ver Refugio Río"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/login",
+      "width": 360,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro CABAÑAS & NATURALEZA",
+        "a: Cabañas",
+        "a: Contacto",
+        "a: Administración ↗",
+        "input: Correo electrónico",
+        "input: Contraseña",
+        "button: Iniciar sesión",
+        "a: Refugio Claro",
+        "a: hola@refugioclaro.example"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/cabanas",
+      "width": 360,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro CABAÑAS & NATURALEZA",
+        "a: Cabañas",
+        "a: Contacto",
+        "a: Administración ↗",
+        "button: Todas",
+        "button: Por noche",
+        "button: Por hora",
+        "a: Por noche",
+        "a: Refugio Bosque",
+        "a: Ver Refugio Bosque",
+        "a: Por hora",
+        "a: Refugio Río",
+        "a: Ver Refugio Río"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/cabanas/bosque",
+      "width": 360,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro CABAÑAS & NATURALEZA",
+        "a: Cabañas",
+        "a: Contacto",
+        "a: Administración ↗",
+        "a: ← Todas las cabañas",
+        "input: Llegada"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/cabanas/rio",
+      "width": 360,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro CABAÑAS & NATURALEZA",
+        "a: Cabañas",
+        "a: Contacto",
+        "a: Administración ↗",
+        "a: ← Todas las cabañas",
+        "input: Fecha"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/cabanas/cerro",
+      "width": 360,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro CABAÑAS & NATURALEZA",
+        "a: Cabañas",
+        "a: Contacto",
+        "a: Administración ↗",
+        "a: ← Todas las cabañas",
+        "input: Llegada"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/admin",
+      "width": 360,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro",
+        "a: ◇ Resumen",
+        "a: ◇ Cabañas",
+        "a: ◇ Solicitudes",
+        "a: ◇ Calendario",
+        "a: ◇ Configuración",
+        "a: ← Ver sitio público",
+        "button: Cerrar sesión",
+        "a: Solicitudes pendientes 1 Esperan revisión",
+        "a: Reservas confirmadas 0 Ocupan su período",
+        "a: Cabañas y tarifas ↗ Gestiona fichas, imágenes, servicios y temporadas.",
+        "a: La identidad de tu negocio ↗ Edita textos, contacto, colores, horarios y políticas.",
+        "a: Revisar solicitudes"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/admin/cabanas",
+      "width": 360,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro",
+        "a: ◇ Resumen",
+        "a: ◇ Cabañas",
+        "a: ◇ Solicitudes",
+        "a: ◇ Calendario",
+        "a: ◇ Configuración",
+        "a: ← Ver sitio público",
+        "button: Cerrar sesión",
+        "a: Crear cabaña",
+        "a: Editar cabaña y tarifas",
+        "a: Ver ficha pública ↗",
+        "button: Despublicar",
+        "input: yes",
+        "button: Eliminar cabaña"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/admin/cabanas/nueva",
+      "width": 360,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro",
+        "a: ◇ Resumen",
+        "a: ◇ Cabañas",
+        "a: ◇ Solicitudes",
+        "a: ◇ Calendario",
+        "a: ◇ Configuración",
+        "a: ← Ver sitio público",
+        "button: Cerrar sesión",
+        "a: ← Cabañas",
+        "input: Nombre",
+        "input: Ruta (ejemplo: refugio-bosque)",
+        "select: Por noche Por hora",
+        "select: Borrador / despublicada Publicada Archivada",
+        "input: 2",
+        "input: 1",
+        "input: 0",
+        "textarea: Descripción",
+        "textarea: Servicios (uno por línea)",
+        "textarea: Imágenes (una por línea: URL | texto alternativo)",
+        "button: Guardar cabaña"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/admin/cabanas/22222222-2222-4222-8222-000000000001",
+      "width": 360,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro",
+        "a: ◇ Resumen",
+        "a: ◇ Cabañas",
+        "a: ◇ Solicitudes",
+        "a: ◇ Calendario",
+        "a: ◇ Configuración",
+        "a: ← Ver sitio público",
+        "button: Cerrar sesión",
+        "a: ← Cabañas",
+        "input: Refugio Bosque",
+        "input: bosque",
+        "select: Por noche Por hora",
+        "select: Borrador / despublicada Publicada Archivada",
+        "input: 4",
+        "input: 2",
+        "input: 85000",
+        "textarea: Un espacio cálido con ventanales al bosque, cocina integrada y una terraza para disfrutar sin apuro.",
+        "textarea: Cocina equipada Estacionamiento Calefacción Terraza privada",
+        "textarea: /images/bosque.svg | Ilustración ficticia de Refugio Bosque",
+        "button: Guardar cabaña",
+        "input: Temporada ficticia E2E",
+        "input: 95000",
+        "input: 2030-01-01"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/admin/cabanas/22222222-2222-4222-8222-000000000002",
+      "width": 360,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro",
+        "a: ◇ Resumen",
+        "a: ◇ Cabañas",
+        "a: ◇ Solicitudes",
+        "a: ◇ Calendario",
+        "a: ◇ Configuración",
+        "a: ← Ver sitio público",
+        "button: Cerrar sesión",
+        "a: ← Cabañas",
+        "input: Refugio Río",
+        "input: rio",
+        "select: Por noche Por hora",
+        "select: Borrador / despublicada Publicada Archivada",
+        "input: 2",
+        "input: 1",
+        "input: 18000",
+        "textarea: Una cabaña íntima pensada para desconectar durante unas horas. Luz suave, una pequeña terraza y todo",
+        "textarea: Terraza privada Estacionamiento Calefacción Zona de descanso",
+        "textarea: /images/rio.svg | Ilustración ficticia de Refugio Río",
+        "button: Guardar cabaña",
+        "input: Temporada ficticia E2E",
+        "input: 28000",
+        "input: 2030-01-01"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/admin/cabanas/22222222-2222-4222-8222-000000000003",
+      "width": 360,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro",
+        "a: ◇ Resumen",
+        "a: ◇ Cabañas",
+        "a: ◇ Solicitudes",
+        "a: ◇ Calendario",
+        "a: ◇ Configuración",
+        "a: ← Ver sitio público",
+        "button: Cerrar sesión",
+        "a: ← Cabañas",
+        "input: Refugio Cerro",
+        "input: cerro",
+        "select: Por noche Por hora",
+        "select: Borrador / despublicada Publicada Archivada",
+        "input: 6",
+        "input: 3",
+        "input: 110000",
+        "textarea: Una cabaña amplia con espacios para reunirse, cocinar y disfrutar la vista. El punto de partida para",
+        "textarea: Cocina equipada Estacionamiento Terraza privada Comedor familiar",
+        "textarea: /images/cerro.svg | Ilustración ficticia de Refugio Cerro",
+        "button: Guardar cabaña",
+        "input: Temporada ficticia E2E",
+        "input: 120000",
+        "input: 2030-01-01"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/admin/solicitudes",
+      "width": 360,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro",
+        "a: ◇ Resumen",
+        "a: ◇ Cabañas",
+        "a: ◇ Solicitudes",
+        "a: ◇ Calendario",
+        "a: ◇ Configuración",
+        "a: ← Ver sitio público",
+        "button: Cerrar sesión",
+        "select: Todos los estados Pendiente Confirmada Rechazada Cancelada",
+        "input: Desde (fecha local)"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/admin/solicitudes/5ccf69ff-5e0b-42e9-b072-e9091ad06464",
+      "width": 360,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro",
+        "a: ◇ Resumen",
+        "a: ◇ Cabañas",
+        "a: ◇ Solicitudes",
+        "a: ◇ Calendario",
+        "a: ◇ Configuración",
+        "a: ← Ver sitio público",
+        "button: Cerrar sesión",
+        "a: ← Todas las solicitudes",
+        "button: Confirmar solicitud",
+        "button: Rechazar solicitud"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/admin/calendario?date=2030-02-10",
+      "width": 360,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro",
+        "a: ◇ Resumen",
+        "a: ◇ Cabañas",
+        "a: ◇ Solicitudes",
+        "a: ◇ Calendario",
+        "a: ◇ Configuración",
+        "a: ← Ver sitio público",
+        "button: Cerrar sesión",
+        "select: Refugio Bosque · Por noche Refugio Cerro · Por noche Refugio Río · Por hora",
+        "input: 2030-02-10"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/admin/configuracion",
+      "width": 360,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro",
+        "a: ◇ Resumen",
+        "a: ◇ Cabañas",
+        "a: ◇ Solicitudes",
+        "a: ◇ Calendario",
+        "a: ◇ Configuración",
+        "a: ← Ver sitio público",
+        "button: Cerrar sesión",
+        "input: Refugio Claro",
+        "input: Un lugar para bajar el ritmo.",
+        "input: Valle del Claro · ubicación ficticia",
+        "input: /images/logo.svg",
+        "input: hola@refugioclaro.example",
+        "input: Teléfono de contacto",
+        "input: #244d40",
+        "input: #bb5c37",
+        "input: #faf8f2",
+        "textarea: Cabañas entre árboles, tardes largas y pequeños momentos que se quedan contigo.",
+        "textarea: MENOS PRISA, MÁS NATURALEZA",
+        "textarea: Encuentra tu propio refugio",
+        "textarea: Para una escapada de días o una pausa de unas horas. Tú eliges cómo descansar.",
+        "textarea: Lo simple también puede ser extraordinario.",
+        "textarea: Un café en la terraza, una conversación sin reloj y un espacio solo para ti. Imaginamos refugios peq",
+        "input: 15",
+        "input: 11",
+        "textarea: Las condiciones de cancelación se acuerdan directamente con el dueño. Este texto de ejemplo podrá ed",
+        "button: Guardar configuración"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/",
+      "width": 768,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro CABAÑAS & NATURALEZA",
+        "a: Cabañas",
+        "a: Contacto",
+        "a: Administración ↗",
+        "a: Descubre las cabañas ↗",
+        "a: Ver todas ↗",
+        "a: Por noche",
+        "a: Refugio Bosque",
+        "a: Ver Refugio Bosque",
+        "a: Por hora",
+        "a: Refugio Río",
+        "a: Ver Refugio Río"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/login",
+      "width": 768,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro CABAÑAS & NATURALEZA",
+        "a: Cabañas",
+        "a: Contacto",
+        "a: Administración ↗",
+        "input: Correo electrónico",
+        "input: Contraseña",
+        "button: Iniciar sesión",
+        "a: Refugio Claro",
+        "a: hola@refugioclaro.example"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/cabanas",
+      "width": 768,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro CABAÑAS & NATURALEZA",
+        "a: Cabañas",
+        "a: Contacto",
+        "a: Administración ↗",
+        "button: Todas",
+        "button: Por noche",
+        "button: Por hora",
+        "a: Por noche",
+        "a: Refugio Bosque",
+        "a: Ver Refugio Bosque",
+        "a: Por hora",
+        "a: Refugio Río",
+        "a: Ver Refugio Río"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/cabanas/bosque",
+      "width": 768,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro CABAÑAS & NATURALEZA",
+        "a: Cabañas",
+        "a: Contacto",
+        "a: Administración ↗",
+        "a: ← Todas las cabañas",
+        "input: Llegada"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/cabanas/rio",
+      "width": 768,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro CABAÑAS & NATURALEZA",
+        "a: Cabañas",
+        "a: Contacto",
+        "a: Administración ↗",
+        "a: ← Todas las cabañas",
+        "input: Fecha"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/cabanas/cerro",
+      "width": 768,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro CABAÑAS & NATURALEZA",
+        "a: Cabañas",
+        "a: Contacto",
+        "a: Administración ↗",
+        "a: ← Todas las cabañas",
+        "input: Llegada"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/admin",
+      "width": 768,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro",
+        "a: ◇ Resumen",
+        "a: ◇ Cabañas",
+        "a: ◇ Solicitudes",
+        "a: ◇ Calendario",
+        "a: ◇ Configuración",
+        "a: ← Ver sitio público",
+        "button: Cerrar sesión",
+        "a: Solicitudes pendientes 1 Esperan revisión",
+        "a: Reservas confirmadas 0 Ocupan su período",
+        "a: Cabañas y tarifas ↗ Gestiona fichas, imágenes, servicios y temporadas.",
+        "a: La identidad de tu negocio ↗ Edita textos, contacto, colores, horarios y políticas.",
+        "a: Revisar solicitudes"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/admin/cabanas",
+      "width": 768,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro",
+        "a: ◇ Resumen",
+        "a: ◇ Cabañas",
+        "a: ◇ Solicitudes",
+        "a: ◇ Calendario",
+        "a: ◇ Configuración",
+        "a: ← Ver sitio público",
+        "button: Cerrar sesión",
+        "a: Crear cabaña",
+        "a: Editar cabaña y tarifas",
+        "a: Ver ficha pública ↗",
+        "button: Despublicar",
+        "input: yes",
+        "button: Eliminar cabaña"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/admin/cabanas/nueva",
+      "width": 768,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro",
+        "a: ◇ Resumen",
+        "a: ◇ Cabañas",
+        "a: ◇ Solicitudes",
+        "a: ◇ Calendario",
+        "a: ◇ Configuración",
+        "a: ← Ver sitio público",
+        "button: Cerrar sesión",
+        "a: ← Cabañas",
+        "input: Nombre",
+        "input: Ruta (ejemplo: refugio-bosque)",
+        "select: Por noche Por hora",
+        "select: Borrador / despublicada Publicada Archivada",
+        "input: 2",
+        "input: 1",
+        "input: 0",
+        "textarea: Descripción",
+        "textarea: Servicios (uno por línea)",
+        "textarea: Imágenes (una por línea: URL | texto alternativo)",
+        "button: Guardar cabaña"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/admin/cabanas/22222222-2222-4222-8222-000000000001",
+      "width": 768,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro",
+        "a: ◇ Resumen",
+        "a: ◇ Cabañas",
+        "a: ◇ Solicitudes",
+        "a: ◇ Calendario",
+        "a: ◇ Configuración",
+        "a: ← Ver sitio público",
+        "button: Cerrar sesión",
+        "a: ← Cabañas",
+        "input: Refugio Bosque",
+        "input: bosque",
+        "select: Por noche Por hora",
+        "select: Borrador / despublicada Publicada Archivada",
+        "input: 4",
+        "input: 2",
+        "input: 85000",
+        "textarea: Un espacio cálido con ventanales al bosque, cocina integrada y una terraza para disfrutar sin apuro.",
+        "textarea: Cocina equipada Estacionamiento Calefacción Terraza privada",
+        "textarea: /images/bosque.svg | Ilustración ficticia de Refugio Bosque",
+        "button: Guardar cabaña",
+        "input: Temporada ficticia E2E",
+        "input: 95000",
+        "input: 2030-01-01"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/admin/cabanas/22222222-2222-4222-8222-000000000002",
+      "width": 768,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro",
+        "a: ◇ Resumen",
+        "a: ◇ Cabañas",
+        "a: ◇ Solicitudes",
+        "a: ◇ Calendario",
+        "a: ◇ Configuración",
+        "a: ← Ver sitio público",
+        "button: Cerrar sesión",
+        "a: ← Cabañas",
+        "input: Refugio Río",
+        "input: rio",
+        "select: Por noche Por hora",
+        "select: Borrador / despublicada Publicada Archivada",
+        "input: 2",
+        "input: 1",
+        "input: 18000",
+        "textarea: Una cabaña íntima pensada para desconectar durante unas horas. Luz suave, una pequeña terraza y todo",
+        "textarea: Terraza privada Estacionamiento Calefacción Zona de descanso",
+        "textarea: /images/rio.svg | Ilustración ficticia de Refugio Río",
+        "button: Guardar cabaña",
+        "input: Temporada ficticia E2E",
+        "input: 28000",
+        "input: 2030-01-01"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/admin/cabanas/22222222-2222-4222-8222-000000000003",
+      "width": 768,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro",
+        "a: ◇ Resumen",
+        "a: ◇ Cabañas",
+        "a: ◇ Solicitudes",
+        "a: ◇ Calendario",
+        "a: ◇ Configuración",
+        "a: ← Ver sitio público",
+        "button: Cerrar sesión",
+        "a: ← Cabañas",
+        "input: Refugio Cerro",
+        "input: cerro",
+        "select: Por noche Por hora",
+        "select: Borrador / despublicada Publicada Archivada",
+        "input: 6",
+        "input: 3",
+        "input: 110000",
+        "textarea: Una cabaña amplia con espacios para reunirse, cocinar y disfrutar la vista. El punto de partida para",
+        "textarea: Cocina equipada Estacionamiento Terraza privada Comedor familiar",
+        "textarea: /images/cerro.svg | Ilustración ficticia de Refugio Cerro",
+        "button: Guardar cabaña",
+        "input: Temporada ficticia E2E",
+        "input: 120000",
+        "input: 2030-01-01"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/admin/solicitudes",
+      "width": 768,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro",
+        "a: ◇ Resumen",
+        "a: ◇ Cabañas",
+        "a: ◇ Solicitudes",
+        "a: ◇ Calendario",
+        "a: ◇ Configuración",
+        "a: ← Ver sitio público",
+        "button: Cerrar sesión",
+        "select: Todos los estados Pendiente Confirmada Rechazada Cancelada",
+        "input: Desde (fecha local)"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/admin/solicitudes/5ccf69ff-5e0b-42e9-b072-e9091ad06464",
+      "width": 768,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro",
+        "a: ◇ Resumen",
+        "a: ◇ Cabañas",
+        "a: ◇ Solicitudes",
+        "a: ◇ Calendario",
+        "a: ◇ Configuración",
+        "a: ← Ver sitio público",
+        "button: Cerrar sesión",
+        "a: ← Todas las solicitudes",
+        "button: Confirmar solicitud",
+        "button: Rechazar solicitud"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/admin/calendario?date=2030-02-10",
+      "width": 768,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro",
+        "a: ◇ Resumen",
+        "a: ◇ Cabañas",
+        "a: ◇ Solicitudes",
+        "a: ◇ Calendario",
+        "a: ◇ Configuración",
+        "a: ← Ver sitio público",
+        "button: Cerrar sesión",
+        "select: Refugio Bosque · Por noche Refugio Cerro · Por noche Refugio Río · Por hora",
+        "input: 2030-02-10"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/admin/configuracion",
+      "width": 768,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro",
+        "a: ◇ Resumen",
+        "a: ◇ Cabañas",
+        "a: ◇ Solicitudes",
+        "a: ◇ Calendario",
+        "a: ◇ Configuración",
+        "a: ← Ver sitio público",
+        "button: Cerrar sesión",
+        "input: Refugio Claro",
+        "input: Un lugar para bajar el ritmo.",
+        "input: Valle del Claro · ubicación ficticia",
+        "input: /images/logo.svg",
+        "input: hola@refugioclaro.example",
+        "input: Teléfono de contacto",
+        "input: #244d40",
+        "input: #bb5c37",
+        "input: #faf8f2",
+        "textarea: Cabañas entre árboles, tardes largas y pequeños momentos que se quedan contigo.",
+        "textarea: MENOS PRISA, MÁS NATURALEZA",
+        "textarea: Encuentra tu propio refugio",
+        "textarea: Para una escapada de días o una pausa de unas horas. Tú eliges cómo descansar.",
+        "textarea: Lo simple también puede ser extraordinario.",
+        "textarea: Un café en la terraza, una conversación sin reloj y un espacio solo para ti. Imaginamos refugios peq",
+        "input: 15",
+        "input: 11",
+        "textarea: Las condiciones de cancelación se acuerdan directamente con el dueño. Este texto de ejemplo podrá ed",
+        "button: Guardar configuración"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/",
+      "width": 1280,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro CABAÑAS & NATURALEZA",
+        "a: Cabañas",
+        "a: Contacto",
+        "a: Administración ↗",
+        "a: Descubre las cabañas ↗",
+        "a: Ver todas ↗",
+        "a: Por noche",
+        "a: Refugio Bosque",
+        "a: Ver Refugio Bosque",
+        "a: Por hora",
+        "a: Refugio Río",
+        "a: Ver Refugio Río"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/login",
+      "width": 1280,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro CABAÑAS & NATURALEZA",
+        "a: Cabañas",
+        "a: Contacto",
+        "a: Administración ↗",
+        "input: Correo electrónico",
+        "input: Contraseña",
+        "button: Iniciar sesión",
+        "a: Refugio Claro",
+        "a: hola@refugioclaro.example"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/cabanas",
+      "width": 1280,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro CABAÑAS & NATURALEZA",
+        "a: Cabañas",
+        "a: Contacto",
+        "a: Administración ↗",
+        "button: Todas",
+        "button: Por noche",
+        "button: Por hora",
+        "a: Por noche",
+        "a: Refugio Bosque",
+        "a: Ver Refugio Bosque",
+        "a: Por hora",
+        "a: Refugio Río",
+        "a: Ver Refugio Río"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/cabanas/bosque",
+      "width": 1280,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro CABAÑAS & NATURALEZA",
+        "a: Cabañas",
+        "a: Contacto",
+        "a: Administración ↗",
+        "a: ← Todas las cabañas",
+        "input: Llegada"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/cabanas/rio",
+      "width": 1280,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro CABAÑAS & NATURALEZA",
+        "a: Cabañas",
+        "a: Contacto",
+        "a: Administración ↗",
+        "a: ← Todas las cabañas",
+        "input: Fecha"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/cabanas/cerro",
+      "width": 1280,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro CABAÑAS & NATURALEZA",
+        "a: Cabañas",
+        "a: Contacto",
+        "a: Administración ↗",
+        "a: ← Todas las cabañas",
+        "input: Llegada"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/admin",
+      "width": 1280,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro",
+        "a: ◇ Resumen",
+        "a: ◇ Cabañas",
+        "a: ◇ Solicitudes",
+        "a: ◇ Calendario",
+        "a: ◇ Configuración",
+        "a: ← Ver sitio público",
+        "button: Cerrar sesión",
+        "a: Solicitudes pendientes 1 Esperan revisión",
+        "a: Reservas confirmadas 0 Ocupan su período",
+        "a: Cabañas y tarifas ↗ Gestiona fichas, imágenes, servicios y temporadas.",
+        "a: La identidad de tu negocio ↗ Edita textos, contacto, colores, horarios y políticas.",
+        "a: Revisar solicitudes"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/admin/cabanas",
+      "width": 1280,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro",
+        "a: ◇ Resumen",
+        "a: ◇ Cabañas",
+        "a: ◇ Solicitudes",
+        "a: ◇ Calendario",
+        "a: ◇ Configuración",
+        "a: ← Ver sitio público",
+        "button: Cerrar sesión",
+        "a: Crear cabaña",
+        "a: Editar cabaña y tarifas",
+        "a: Ver ficha pública ↗",
+        "button: Despublicar",
+        "input: yes",
+        "button: Eliminar cabaña"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/admin/cabanas/nueva",
+      "width": 1280,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro",
+        "a: ◇ Resumen",
+        "a: ◇ Cabañas",
+        "a: ◇ Solicitudes",
+        "a: ◇ Calendario",
+        "a: ◇ Configuración",
+        "a: ← Ver sitio público",
+        "button: Cerrar sesión",
+        "a: ← Cabañas",
+        "input: Nombre",
+        "input: Ruta (ejemplo: refugio-bosque)",
+        "select: Por noche Por hora",
+        "select: Borrador / despublicada Publicada Archivada",
+        "input: 2",
+        "input: 1",
+        "input: 0",
+        "textarea: Descripción",
+        "textarea: Servicios (uno por línea)",
+        "textarea: Imágenes (una por línea: URL | texto alternativo)",
+        "button: Guardar cabaña"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/admin/cabanas/22222222-2222-4222-8222-000000000001",
+      "width": 1280,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro",
+        "a: ◇ Resumen",
+        "a: ◇ Cabañas",
+        "a: ◇ Solicitudes",
+        "a: ◇ Calendario",
+        "a: ◇ Configuración",
+        "a: ← Ver sitio público",
+        "button: Cerrar sesión",
+        "a: ← Cabañas",
+        "input: Refugio Bosque",
+        "input: bosque",
+        "select: Por noche Por hora",
+        "select: Borrador / despublicada Publicada Archivada",
+        "input: 4",
+        "input: 2",
+        "input: 85000",
+        "textarea: Un espacio cálido con ventanales al bosque, cocina integrada y una terraza para disfrutar sin apuro.",
+        "textarea: Cocina equipada Estacionamiento Calefacción Terraza privada",
+        "textarea: /images/bosque.svg | Ilustración ficticia de Refugio Bosque",
+        "button: Guardar cabaña",
+        "input: Temporada ficticia E2E",
+        "input: 95000",
+        "input: 2030-01-01"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/admin/cabanas/22222222-2222-4222-8222-000000000002",
+      "width": 1280,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro",
+        "a: ◇ Resumen",
+        "a: ◇ Cabañas",
+        "a: ◇ Solicitudes",
+        "a: ◇ Calendario",
+        "a: ◇ Configuración",
+        "a: ← Ver sitio público",
+        "button: Cerrar sesión",
+        "a: ← Cabañas",
+        "input: Refugio Río",
+        "input: rio",
+        "select: Por noche Por hora",
+        "select: Borrador / despublicada Publicada Archivada",
+        "input: 2",
+        "input: 1",
+        "input: 18000",
+        "textarea: Una cabaña íntima pensada para desconectar durante unas horas. Luz suave, una pequeña terraza y todo",
+        "textarea: Terraza privada Estacionamiento Calefacción Zona de descanso",
+        "textarea: /images/rio.svg | Ilustración ficticia de Refugio Río",
+        "button: Guardar cabaña",
+        "input: Temporada ficticia E2E",
+        "input: 28000",
+        "input: 2030-01-01"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/admin/cabanas/22222222-2222-4222-8222-000000000003",
+      "width": 1280,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro",
+        "a: ◇ Resumen",
+        "a: ◇ Cabañas",
+        "a: ◇ Solicitudes",
+        "a: ◇ Calendario",
+        "a: ◇ Configuración",
+        "a: ← Ver sitio público",
+        "button: Cerrar sesión",
+        "a: ← Cabañas",
+        "input: Refugio Cerro",
+        "input: cerro",
+        "select: Por noche Por hora",
+        "select: Borrador / despublicada Publicada Archivada",
+        "input: 6",
+        "input: 3",
+        "input: 110000",
+        "textarea: Una cabaña amplia con espacios para reunirse, cocinar y disfrutar la vista. El punto de partida para",
+        "textarea: Cocina equipada Estacionamiento Terraza privada Comedor familiar",
+        "textarea: /images/cerro.svg | Ilustración ficticia de Refugio Cerro",
+        "button: Guardar cabaña",
+        "input: Temporada ficticia E2E",
+        "input: 120000",
+        "input: 2030-01-01"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/admin/solicitudes",
+      "width": 1280,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro",
+        "a: ◇ Resumen",
+        "a: ◇ Cabañas",
+        "a: ◇ Solicitudes",
+        "a: ◇ Calendario",
+        "a: ◇ Configuración",
+        "a: ← Ver sitio público",
+        "button: Cerrar sesión",
+        "select: Todos los estados Pendiente Confirmada Rechazada Cancelada",
+        "input: Desde (fecha local)"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/admin/solicitudes/5ccf69ff-5e0b-42e9-b072-e9091ad06464",
+      "width": 1280,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro",
+        "a: ◇ Resumen",
+        "a: ◇ Cabañas",
+        "a: ◇ Solicitudes",
+        "a: ◇ Calendario",
+        "a: ◇ Configuración",
+        "a: ← Ver sitio público",
+        "button: Cerrar sesión",
+        "a: ← Todas las solicitudes",
+        "button: Confirmar solicitud",
+        "button: Rechazar solicitud"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/admin/calendario?date=2030-02-10",
+      "width": 1280,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro",
+        "a: ◇ Resumen",
+        "a: ◇ Cabañas",
+        "a: ◇ Solicitudes",
+        "a: ◇ Calendario",
+        "a: ◇ Configuración",
+        "a: ← Ver sitio público",
+        "button: Cerrar sesión",
+        "select: Refugio Bosque · Por noche Refugio Cerro · Por noche Refugio Río · Por hora",
+        "input: 2030-02-10"
+      ],
+      "focusIssues": []
+    },
+    {
+      "route": "/admin/configuracion",
+      "width": 1280,
+      "order": [
+        "a: Saltar al contenido",
+        "a: Refugio Claro",
+        "a: ◇ Resumen",
+        "a: ◇ Cabañas",
+        "a: ◇ Solicitudes",
+        "a: ◇ Calendario",
+        "a: ◇ Configuración",
+        "a: ← Ver sitio público",
+        "button: Cerrar sesión",
+        "input: Refugio Claro",
+        "input: Un lugar para bajar el ritmo.",
+        "input: Valle del Claro · ubicación ficticia",
+        "input: /images/logo.svg",
+        "input: hola@refugioclaro.example",
+        "input: Teléfono de contacto",
+        "input: #244d40",
+        "input: #bb5c37",
+        "input: #faf8f2",
+        "textarea: Cabañas entre árboles, tardes largas y pequeños momentos que se quedan contigo.",
+        "textarea: MENOS PRISA, MÁS NATURALEZA",
+        "textarea: Encuentra tu propio refugio",
+        "textarea: Para una escapada de días o una pausa de unas horas. Tú eliges cómo descansar.",
+        "textarea: Lo simple también puede ser extraordinario.",
+        "textarea: Un café en la terraza, una conversación sin reloj y un espacio solo para ti. Imaginamos refugios peq",
+        "input: 15",
+        "input: 11",
+        "textarea: Las condiciones de cancelación se acuerdan directamente con el dueño. Este texto de ejemplo podrá ed",
+        "button: Guardar configuración"
+      ],
+      "focusIssues": []
+    }
+  ]
+}

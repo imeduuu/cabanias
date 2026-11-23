@@ -1,0 +1,7988 @@
+[
+  {
+    "width": 360,
+    "route": "/",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro\nCABAÑAS & NATURALEZA",
+        "width": 196,
+        "height": 44,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "Cabañas",
+        "width": 51,
+        "height": 21,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Contacto",
+        "width": 51,
+        "height": 21,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Administración ↗",
+        "width": 97,
+        "height": 34,
+        "className": "nav-admin"
+      },
+      {
+        "tag": "a",
+        "name": "Descubre las cabañas\n↗",
+        "width": 229,
+        "height": 52,
+        "className": "button "
+      },
+      {
+        "tag": "a",
+        "name": "Ver todas ↗",
+        "width": 123,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Por noche",
+        "width": 324,
+        "height": 600,
+        "className": "card-image"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Bosque",
+        "width": 182,
+        "height": 30,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Ver Refugio Bosque",
+        "width": 58,
+        "height": 26,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Por hora",
+        "width": 324,
+        "height": 600,
+        "className": "card-image"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Río",
+        "width": 137,
+        "height": 30,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Ver Refugio Río",
+        "width": 58,
+        "height": 26,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Por noche",
+        "width": 324,
+        "height": 600,
+        "className": "card-image"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Cerro",
+        "width": 162,
+        "height": 30,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Ver Refugio Cerro",
+        "width": 58,
+        "height": 26,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 324,
+        "height": 28,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "hola@refugioclaro.example",
+        "width": 195,
+        "height": 17,
+        "className": ""
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro CABAÑAS & NATURALEZA",
+      "a: Cabañas",
+      "a: Contacto",
+      "a: Administración ↗",
+      "a: Descubre las cabañas ↗",
+      "a: Ver todas ↗",
+      "a: Por noche",
+      "a: Refugio Bosque",
+      "a: Ver Refugio Bosque",
+      "a: Por hora",
+      "a: Refugio Río",
+      "a: Ver Refugio Río",
+      "a: Por noche",
+      "a: Refugio Cerro",
+      "a: Ver Refugio Cerro",
+      "a: Refugio Claro",
+      "a: hola@refugioclaro.example"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 360,
+    "route": "/login",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro\nCABAÑAS & NATURALEZA",
+        "width": 196,
+        "height": 44,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "Cabañas",
+        "width": 51,
+        "height": 21,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Contacto",
+        "width": 51,
+        "height": 21,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Administración ↗",
+        "width": 97,
+        "height": 34,
+        "className": "nav-admin"
+      },
+      {
+        "tag": "input",
+        "name": "Correo electrónico",
+        "width": 274,
+        "height": 52,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Contraseña",
+        "width": 274,
+        "height": 52,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Iniciar sesión",
+        "width": 274,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 324,
+        "height": 28,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "hola@refugioclaro.example",
+        "width": 195,
+        "height": 17,
+        "className": ""
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro CABAÑAS & NATURALEZA",
+      "a: Cabañas",
+      "a: Contacto",
+      "a: Administración ↗",
+      "input: Correo electrónico",
+      "input: Contraseña",
+      "button: Iniciar sesión",
+      "a: Refugio Claro",
+      "a: hola@refugioclaro.example"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 360,
+    "route": "/cabanas",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro\nCABAÑAS & NATURALEZA",
+        "width": 196,
+        "height": 44,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "Cabañas",
+        "width": 51,
+        "height": 21,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Contacto",
+        "width": 51,
+        "height": 21,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Administración ↗",
+        "width": 97,
+        "height": 34,
+        "className": "nav-admin"
+      },
+      {
+        "tag": "button",
+        "name": "Todas",
+        "width": 72,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Por noche",
+        "width": 98,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Por hora",
+        "width": 88,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Por noche",
+        "width": 324,
+        "height": 600,
+        "className": "card-image"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Bosque",
+        "width": 182,
+        "height": 30,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Ver Refugio Bosque",
+        "width": 58,
+        "height": 26,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Por hora",
+        "width": 324,
+        "height": 600,
+        "className": "card-image"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Río",
+        "width": 137,
+        "height": 30,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Ver Refugio Río",
+        "width": 58,
+        "height": 26,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Por noche",
+        "width": 324,
+        "height": 600,
+        "className": "card-image"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Cerro",
+        "width": 162,
+        "height": 30,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Ver Refugio Cerro",
+        "width": 58,
+        "height": 26,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 324,
+        "height": 28,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "hola@refugioclaro.example",
+        "width": 195,
+        "height": 17,
+        "className": ""
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro CABAÑAS & NATURALEZA",
+      "a: Cabañas",
+      "a: Contacto",
+      "a: Administración ↗",
+      "button: Todas",
+      "button: Por noche",
+      "button: Por hora",
+      "a: Por noche",
+      "a: Refugio Bosque",
+      "a: Ver Refugio Bosque",
+      "a: Por hora",
+      "a: Refugio Río",
+      "a: Ver Refugio Río",
+      "a: Por noche",
+      "a: Refugio Cerro",
+      "a: Ver Refugio Cerro",
+      "a: Refugio Claro",
+      "a: hola@refugioclaro.example"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 360,
+    "route": "/cabanas/bosque",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro\nCABAÑAS & NATURALEZA",
+        "width": 196,
+        "height": 44,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "Cabañas",
+        "width": 51,
+        "height": 21,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Contacto",
+        "width": 51,
+        "height": 21,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Administración ↗",
+        "width": 97,
+        "height": 34,
+        "className": "nav-admin"
+      },
+      {
+        "tag": "a",
+        "name": "← Todas las cabañas",
+        "width": 130,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "input",
+        "name": "Llegada",
+        "width": 274,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Salida",
+        "width": 274,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Huéspedes (máximo 4)",
+        "width": 274,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Consultar disponibilidad y precio",
+        "width": 274,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 324,
+        "height": 28,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "hola@refugioclaro.example",
+        "width": 195,
+        "height": 17,
+        "className": ""
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro CABAÑAS & NATURALEZA",
+      "a: Cabañas",
+      "a: Contacto",
+      "a: Administración ↗",
+      "a: ← Todas las cabañas",
+      "input: Llegada"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 360,
+    "route": "/cabanas/rio",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro\nCABAÑAS & NATURALEZA",
+        "width": 196,
+        "height": 44,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "Cabañas",
+        "width": 51,
+        "height": 21,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Contacto",
+        "width": 51,
+        "height": 21,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Administración ↗",
+        "width": 97,
+        "height": 34,
+        "className": "nav-admin"
+      },
+      {
+        "tag": "a",
+        "name": "← Todas las cabañas",
+        "width": 130,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "input",
+        "name": "Fecha",
+        "width": 274,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Hora de inicio (0–23, en punto)",
+        "width": 274,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Duración en horas completas",
+        "width": 274,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Huéspedes (máximo 2)",
+        "width": 274,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Consultar disponibilidad y precio",
+        "width": 274,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 324,
+        "height": 28,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "hola@refugioclaro.example",
+        "width": 195,
+        "height": 17,
+        "className": ""
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro CABAÑAS & NATURALEZA",
+      "a: Cabañas",
+      "a: Contacto",
+      "a: Administración ↗",
+      "a: ← Todas las cabañas",
+      "input: Fecha"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 360,
+    "route": "/cabanas/cerro",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro\nCABAÑAS & NATURALEZA",
+        "width": 196,
+        "height": 44,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "Cabañas",
+        "width": 51,
+        "height": 21,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Contacto",
+        "width": 51,
+        "height": 21,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Administración ↗",
+        "width": 97,
+        "height": 34,
+        "className": "nav-admin"
+      },
+      {
+        "tag": "a",
+        "name": "← Todas las cabañas",
+        "width": 130,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "input",
+        "name": "Llegada",
+        "width": 274,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Salida",
+        "width": 274,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Huéspedes (máximo 6)",
+        "width": 274,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Consultar disponibilidad y precio",
+        "width": 274,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 324,
+        "height": 28,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "hola@refugioclaro.example",
+        "width": 195,
+        "height": 17,
+        "className": ""
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro CABAÑAS & NATURALEZA",
+      "a: Cabañas",
+      "a: Contacto",
+      "a: Administración ↗",
+      "a: ← Todas las cabañas",
+      "input: Llegada"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 360,
+    "route": "/admin",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 324,
+        "height": 34,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "◇\nResumen",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCabañas",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nSolicitudes",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCalendario",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nConfiguración",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "← Ver sitio público",
+        "width": 113,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "button",
+        "name": "Cerrar sesión",
+        "width": 136,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Solicitudes pendientes\n1\nEsperan revisión",
+        "width": 136,
+        "height": 119,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Reservas confirmadas\n0\nOcupan su período",
+        "width": 136,
+        "height": 119,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Cabañas y tarifas ↗\n\nGestiona fichas, imágenes, servicios y temporadas.",
+        "width": 278,
+        "height": 119,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "La identidad de tu negocio ↗\n\nEdita textos, contacto, colores, horarios y políticas.",
+        "width": 278,
+        "height": 119,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Revisar solicitudes",
+        "width": 172,
+        "height": 52,
+        "className": "button"
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro",
+      "a: ◇ Resumen",
+      "a: ◇ Cabañas",
+      "a: ◇ Solicitudes",
+      "a: ◇ Calendario",
+      "a: ◇ Configuración",
+      "a: ← Ver sitio público",
+      "button: Cerrar sesión",
+      "a: Solicitudes pendientes 1 Esperan revisión",
+      "a: Reservas confirmadas 0 Ocupan su período",
+      "a: Cabañas y tarifas ↗ Gestiona fichas, imágenes, servicios y temporadas.",
+      "a: La identidad de tu negocio ↗ Edita textos, contacto, colores, horarios y políticas.",
+      "a: Revisar solicitudes"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 360,
+    "route": "/admin/cabanas",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 324,
+        "height": 34,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "◇\nResumen",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCabañas",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nSolicitudes",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCalendario",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nConfiguración",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "← Ver sitio público",
+        "width": 113,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "button",
+        "name": "Cerrar sesión",
+        "width": 136,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Crear cabaña",
+        "width": 134,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "a",
+        "name": "Editar cabaña y tarifas",
+        "width": 193,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Ver ficha pública ↗",
+        "width": 120,
+        "height": 16,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Despublicar",
+        "width": 126,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "input",
+        "name": "Confirmo eliminar esta cabaña",
+        "width": 20,
+        "height": 20,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Eliminar cabaña",
+        "width": 152,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "a",
+        "name": "Editar cabaña y tarifas",
+        "width": 193,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Ver ficha pública ↗",
+        "width": 120,
+        "height": 16,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Despublicar",
+        "width": 126,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "input",
+        "name": "Confirmo eliminar esta cabaña",
+        "width": 20,
+        "height": 20,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Eliminar cabaña",
+        "width": 152,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "a",
+        "name": "Editar cabaña y tarifas",
+        "width": 193,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Ver ficha pública ↗",
+        "width": 120,
+        "height": 16,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Despublicar",
+        "width": 126,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "input",
+        "name": "Confirmo eliminar esta cabaña",
+        "width": 20,
+        "height": 20,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Eliminar cabaña",
+        "width": 152,
+        "height": 52,
+        "className": "button"
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro",
+      "a: ◇ Resumen",
+      "a: ◇ Cabañas",
+      "a: ◇ Solicitudes",
+      "a: ◇ Calendario",
+      "a: ◇ Configuración",
+      "a: ← Ver sitio público",
+      "button: Cerrar sesión",
+      "a: Crear cabaña",
+      "a: Editar cabaña y tarifas",
+      "a: Ver ficha pública ↗",
+      "button: Despublicar",
+      "input: yes",
+      "button: Eliminar cabaña",
+      "a: Editar cabaña y tarifas",
+      "a: Ver ficha pública ↗",
+      "button: Despublicar",
+      "input: yes",
+      "button: Eliminar cabaña",
+      "a: Editar cabaña y tarifas",
+      "a: Ver ficha pública ↗",
+      "button: Despublicar",
+      "input: yes",
+      "button: Eliminar cabaña"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 360,
+    "route": "/admin/cabanas/nueva",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 324,
+        "height": 34,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "◇\nResumen",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCabañas",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nSolicitudes",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCalendario",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nConfiguración",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "← Ver sitio público",
+        "width": 113,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "button",
+        "name": "Cerrar sesión",
+        "width": 136,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "← Cabañas",
+        "width": 72,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "input",
+        "name": "Nombre",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Ruta (ejemplo: refugio-bosque)",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "select",
+        "name": "Modalidad\nPor noche\nPor hora",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "select",
+        "name": "Publicación\nBorrador / despublicada\nPublicada\nArchivada",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Capacidad de personas",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Dormitorios",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Tarifa base CLP por noche u hora",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Descripción",
+        "width": 278,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Servicios (uno por línea)",
+        "width": 278,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Imágenes (una por línea: URL | texto alternativo)",
+        "width": 278,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Guardar cabaña",
+        "width": 152,
+        "height": 52,
+        "className": "button"
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro",
+      "a: ◇ Resumen",
+      "a: ◇ Cabañas",
+      "a: ◇ Solicitudes",
+      "a: ◇ Calendario",
+      "a: ◇ Configuración",
+      "a: ← Ver sitio público",
+      "button: Cerrar sesión",
+      "a: ← Cabañas",
+      "input: Nombre",
+      "input: Ruta (ejemplo: refugio-bosque)",
+      "select: Por noche Por hora",
+      "select: Borrador / despublicada Publicada Archivada",
+      "input: 2",
+      "input: 1",
+      "input: 0",
+      "textarea: Descripción",
+      "textarea: Servicios (uno por línea)",
+      "textarea: Imágenes (una por línea: URL | texto alternativo)",
+      "button: Guardar cabaña"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 360,
+    "route": "/admin/cabanas/22222222-2222-4222-8222-000000000001",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 324,
+        "height": 34,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "◇\nResumen",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCabañas",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nSolicitudes",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCalendario",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nConfiguración",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "← Ver sitio público",
+        "width": 113,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "button",
+        "name": "Cerrar sesión",
+        "width": 136,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "← Cabañas",
+        "width": 72,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "input",
+        "name": "Nombre",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Ruta (ejemplo: refugio-bosque)",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "select",
+        "name": "Modalidad\nPor noche\nPor hora",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "select",
+        "name": "Publicación\nBorrador / despublicada\nPublicada\nArchivada",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Capacidad de personas",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Dormitorios",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Tarifa base CLP por noche u hora",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Descripción",
+        "width": 278,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Servicios (uno por línea)",
+        "width": 278,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Imágenes (una por línea: URL | texto alternativo)",
+        "width": 278,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Guardar cabaña",
+        "width": 152,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "input",
+        "name": "Nombre de temporada",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Tarifa CLP por unidad",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Inicio incluido",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Fin excluido",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Guardar temporada",
+        "width": 174,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "button",
+        "name": "Eliminar temporada",
+        "width": 175,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "input",
+        "name": "Nombre de temporada",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Tarifa CLP por unidad",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Inicio incluido",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Fin excluido",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Añadir temporada",
+        "width": 164,
+        "height": 52,
+        "className": "button"
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro",
+      "a: ◇ Resumen",
+      "a: ◇ Cabañas",
+      "a: ◇ Solicitudes",
+      "a: ◇ Calendario",
+      "a: ◇ Configuración",
+      "a: ← Ver sitio público",
+      "button: Cerrar sesión",
+      "a: ← Cabañas",
+      "input: Refugio Bosque",
+      "input: bosque",
+      "select: Por noche Por hora",
+      "select: Borrador / despublicada Publicada Archivada",
+      "input: 4",
+      "input: 2",
+      "input: 85000",
+      "textarea: Un espacio cálido con ventanales al bosque, cocina integrada y una terraza para disfrutar sin apuro.",
+      "textarea: Cocina equipada Estacionamiento Calefacción Terraza privada",
+      "textarea: /images/bosque.svg | Ilustración ficticia de Refugio Bosque",
+      "button: Guardar cabaña",
+      "input: Temporada ficticia E2E",
+      "input: 95000",
+      "input: 2030-01-01"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 360,
+    "route": "/admin/cabanas/22222222-2222-4222-8222-000000000002",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 324,
+        "height": 34,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "◇\nResumen",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCabañas",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nSolicitudes",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCalendario",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nConfiguración",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "← Ver sitio público",
+        "width": 113,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "button",
+        "name": "Cerrar sesión",
+        "width": 136,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "← Cabañas",
+        "width": 72,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "input",
+        "name": "Nombre",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Ruta (ejemplo: refugio-bosque)",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "select",
+        "name": "Modalidad\nPor noche\nPor hora",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "select",
+        "name": "Publicación\nBorrador / despublicada\nPublicada\nArchivada",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Capacidad de personas",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Dormitorios",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Tarifa base CLP por noche u hora",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Descripción",
+        "width": 278,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Servicios (uno por línea)",
+        "width": 278,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Imágenes (una por línea: URL | texto alternativo)",
+        "width": 278,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Guardar cabaña",
+        "width": 152,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "input",
+        "name": "Nombre de temporada",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Tarifa CLP por unidad",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Inicio incluido",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Fin excluido",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Guardar temporada",
+        "width": 174,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "button",
+        "name": "Eliminar temporada",
+        "width": 175,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "input",
+        "name": "Nombre de temporada",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Tarifa CLP por unidad",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Inicio incluido",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Fin excluido",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Añadir temporada",
+        "width": 164,
+        "height": 52,
+        "className": "button"
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro",
+      "a: ◇ Resumen",
+      "a: ◇ Cabañas",
+      "a: ◇ Solicitudes",
+      "a: ◇ Calendario",
+      "a: ◇ Configuración",
+      "a: ← Ver sitio público",
+      "button: Cerrar sesión",
+      "a: ← Cabañas",
+      "input: Refugio Río",
+      "input: rio",
+      "select: Por noche Por hora",
+      "select: Borrador / despublicada Publicada Archivada",
+      "input: 2",
+      "input: 1",
+      "input: 18000",
+      "textarea: Una cabaña íntima pensada para desconectar durante unas horas. Luz suave, una pequeña terraza y todo",
+      "textarea: Terraza privada Estacionamiento Calefacción Zona de descanso",
+      "textarea: /images/rio.svg | Ilustración ficticia de Refugio Río",
+      "button: Guardar cabaña",
+      "input: Temporada ficticia E2E",
+      "input: 28000",
+      "input: 2030-01-01"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 360,
+    "route": "/admin/cabanas/22222222-2222-4222-8222-000000000003",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 324,
+        "height": 34,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "◇\nResumen",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCabañas",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nSolicitudes",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCalendario",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nConfiguración",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "← Ver sitio público",
+        "width": 113,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "button",
+        "name": "Cerrar sesión",
+        "width": 136,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "← Cabañas",
+        "width": 72,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "input",
+        "name": "Nombre",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Ruta (ejemplo: refugio-bosque)",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "select",
+        "name": "Modalidad\nPor noche\nPor hora",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "select",
+        "name": "Publicación\nBorrador / despublicada\nPublicada\nArchivada",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Capacidad de personas",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Dormitorios",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Tarifa base CLP por noche u hora",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Descripción",
+        "width": 278,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Servicios (uno por línea)",
+        "width": 278,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Imágenes (una por línea: URL | texto alternativo)",
+        "width": 278,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Guardar cabaña",
+        "width": 152,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "input",
+        "name": "Nombre de temporada",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Tarifa CLP por unidad",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Inicio incluido",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Fin excluido",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Guardar temporada",
+        "width": 174,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "button",
+        "name": "Eliminar temporada",
+        "width": 175,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "input",
+        "name": "Nombre de temporada",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Tarifa CLP por unidad",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Inicio incluido",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Fin excluido",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Añadir temporada",
+        "width": 164,
+        "height": 52,
+        "className": "button"
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro",
+      "a: ◇ Resumen",
+      "a: ◇ Cabañas",
+      "a: ◇ Solicitudes",
+      "a: ◇ Calendario",
+      "a: ◇ Configuración",
+      "a: ← Ver sitio público",
+      "button: Cerrar sesión",
+      "a: ← Cabañas",
+      "input: Refugio Cerro",
+      "input: cerro",
+      "select: Por noche Por hora",
+      "select: Borrador / despublicada Publicada Archivada",
+      "input: 6",
+      "input: 3",
+      "input: 110000",
+      "textarea: Una cabaña amplia con espacios para reunirse, cocinar y disfrutar la vista. El punto de partida para",
+      "textarea: Cocina equipada Estacionamiento Terraza privada Comedor familiar",
+      "textarea: /images/cerro.svg | Ilustración ficticia de Refugio Cerro",
+      "button: Guardar cabaña",
+      "input: Temporada ficticia E2E",
+      "input: 120000",
+      "input: 2030-01-01"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 360,
+    "route": "/admin/solicitudes",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 324,
+        "height": 34,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "◇\nResumen",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCabañas",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nSolicitudes",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCalendario",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nConfiguración",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "← Ver sitio público",
+        "width": 113,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "button",
+        "name": "Cerrar sesión",
+        "width": 136,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "select",
+        "name": "Estado\nTodos los estados\nPendiente\nConfirmada\nRechazada\nCancelada",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Desde (fecha local)",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Hasta (fecha local, incluida)",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Filtrar",
+        "width": 278,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "a",
+        "name": "Limpiar",
+        "width": 278,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Bosque",
+        "width": 161,
+        "height": 29,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Abrir detalle",
+        "width": 278,
+        "height": 52,
+        "className": "button secondary"
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro",
+      "a: ◇ Resumen",
+      "a: ◇ Cabañas",
+      "a: ◇ Solicitudes",
+      "a: ◇ Calendario",
+      "a: ◇ Configuración",
+      "a: ← Ver sitio público",
+      "button: Cerrar sesión",
+      "select: Todos los estados Pendiente Confirmada Rechazada Cancelada",
+      "input: Desde (fecha local)"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 360,
+    "route": "/admin/solicitudes/5ccf69ff-5e0b-42e9-b072-e9091ad06464",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 324,
+        "height": 34,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "◇\nResumen",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCabañas",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nSolicitudes",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCalendario",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nConfiguración",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "← Ver sitio público",
+        "width": 113,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "button",
+        "name": "Cerrar sesión",
+        "width": 136,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "← Todas las solicitudes",
+        "width": 142,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "button",
+        "name": "Confirmar solicitud",
+        "width": 278,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "button",
+        "name": "Rechazar solicitud",
+        "width": 278,
+        "height": 52,
+        "className": "button"
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro",
+      "a: ◇ Resumen",
+      "a: ◇ Cabañas",
+      "a: ◇ Solicitudes",
+      "a: ◇ Calendario",
+      "a: ◇ Configuración",
+      "a: ← Ver sitio público",
+      "button: Cerrar sesión",
+      "a: ← Todas las solicitudes",
+      "button: Confirmar solicitud",
+      "button: Rechazar solicitud"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 360,
+    "route": "/admin/calendario?date=2030-02-10",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 324,
+        "height": 34,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "◇\nResumen",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCabañas",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nSolicitudes",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCalendario",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nConfiguración",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "← Ver sitio público",
+        "width": 113,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "button",
+        "name": "Cerrar sesión",
+        "width": 136,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "select",
+        "name": "Cabaña\nRefugio Bosque · Por noche\nRefugio Cerro · Por noche\nRefugio Río · Por hora",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Fecha de referencia (Santiago)",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Ver calendario",
+        "width": 278,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "a",
+        "name": "← Mes anterior",
+        "width": 146,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Hoy",
+        "width": 74,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Mes siguiente →",
+        "width": 155,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Abrir solicitud ↗",
+        "width": 88,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Abrir solicitud ↗",
+        "width": 88,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Abrir solicitud ↗",
+        "width": 88,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Inicio incluido",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Salida excluida",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Motivo",
+        "width": 278,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Crear bloqueo",
+        "width": 140,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "input",
+        "name": "Confirmo eliminar este bloqueo y liberar su intervalo",
+        "width": 17,
+        "height": 20,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Eliminar bloqueo",
+        "width": 278,
+        "height": 52,
+        "className": "button"
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro",
+      "a: ◇ Resumen",
+      "a: ◇ Cabañas",
+      "a: ◇ Solicitudes",
+      "a: ◇ Calendario",
+      "a: ◇ Configuración",
+      "a: ← Ver sitio público",
+      "button: Cerrar sesión",
+      "select: Refugio Bosque · Por noche Refugio Cerro · Por noche Refugio Río · Por hora",
+      "input: 2030-02-10"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 360,
+    "route": "/admin/configuracion",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 324,
+        "height": 34,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "◇\nResumen",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCabañas",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nSolicitudes",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCalendario",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nConfiguración",
+        "width": 159,
+        "height": 40,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "← Ver sitio público",
+        "width": 113,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "button",
+        "name": "Cerrar sesión",
+        "width": 136,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "input",
+        "name": "Nombre del negocio",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Frase principal",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Ubicación",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Logo (ruta o URL)",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Correo de contacto público",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Teléfono de contacto",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Color principal",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Color de acento",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Color de fondo",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Descripción del negocio",
+        "width": 278,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Antetítulo",
+        "width": 278,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Título del catálogo",
+        "width": 278,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Introducción al catálogo",
+        "width": 278,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Título de presentación",
+        "width": 278,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Texto de presentación",
+        "width": 278,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Hora de entrada por noche (0–23)",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Hora de salida por noche (0–23)",
+        "width": 278,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Política de cancelación",
+        "width": 278,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Guardar configuración",
+        "width": 195,
+        "height": 52,
+        "className": "button"
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro",
+      "a: ◇ Resumen",
+      "a: ◇ Cabañas",
+      "a: ◇ Solicitudes",
+      "a: ◇ Calendario",
+      "a: ◇ Configuración",
+      "a: ← Ver sitio público",
+      "button: Cerrar sesión",
+      "input: Refugio Claro",
+      "input: Un lugar para bajar el ritmo.",
+      "input: Valle del Claro · ubicación ficticia",
+      "input: /images/logo.svg",
+      "input: hola@refugioclaro.example",
+      "input: Teléfono de contacto",
+      "input: #244d40",
+      "input: #bb5c37",
+      "input: #faf8f2",
+      "textarea: Cabañas entre árboles, tardes largas y pequeños momentos que se quedan contigo.",
+      "textarea: MENOS PRISA, MÁS NATURALEZA",
+      "textarea: Encuentra tu propio refugio",
+      "textarea: Para una escapada de días o una pausa de unas horas. Tú eliges cómo descansar.",
+      "textarea: Lo simple también puede ser extraordinario.",
+      "textarea: Un café en la terraza, una conversación sin reloj y un espacio solo para ti. Imaginamos refugios peq",
+      "input: 15",
+      "input: 11",
+      "textarea: Las condiciones de cancelación se acuerdan directamente con el dueño. Este texto de ejemplo podrá ed",
+      "button: Guardar configuración"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 768,
+    "route": "/",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro\nCABAÑAS & NATURALEZA",
+        "width": 196,
+        "height": 44,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "Cabañas",
+        "width": 56,
+        "height": 23,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Contacto",
+        "width": 56,
+        "height": 23,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Administración ↗",
+        "width": 107,
+        "height": 36,
+        "className": "nav-admin"
+      },
+      {
+        "tag": "a",
+        "name": "Descubre las cabañas\n↗",
+        "width": 229,
+        "height": 52,
+        "className": "button "
+      },
+      {
+        "tag": "a",
+        "name": "Ver todas ↗",
+        "width": 119,
+        "height": 75,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Por noche",
+        "width": 223,
+        "height": 600,
+        "className": "card-image"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Bosque",
+        "width": 182,
+        "height": 30,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Ver Refugio Bosque",
+        "width": 223,
+        "height": 19,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Por hora",
+        "width": 223,
+        "height": 600,
+        "className": "card-image"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Río",
+        "width": 137,
+        "height": 30,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Ver Refugio Río",
+        "width": 223,
+        "height": 19,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Por noche",
+        "width": 223,
+        "height": 600,
+        "className": "card-image"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Cerro",
+        "width": 162,
+        "height": 30,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Ver Refugio Cerro",
+        "width": 223,
+        "height": 19,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 446,
+        "height": 28,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "hola@refugioclaro.example",
+        "width": 195,
+        "height": 17,
+        "className": ""
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro CABAÑAS & NATURALEZA",
+      "a: Cabañas",
+      "a: Contacto",
+      "a: Administración ↗",
+      "a: Descubre las cabañas ↗",
+      "a: Ver todas ↗",
+      "a: Por noche",
+      "a: Refugio Bosque",
+      "a: Ver Refugio Bosque",
+      "a: Por hora",
+      "a: Refugio Río",
+      "a: Ver Refugio Río",
+      "a: Por noche",
+      "a: Refugio Cerro",
+      "a: Ver Refugio Cerro",
+      "a: Refugio Claro",
+      "a: hola@refugioclaro.example"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 768,
+    "route": "/login",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro\nCABAÑAS & NATURALEZA",
+        "width": 196,
+        "height": 44,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "Cabañas",
+        "width": 56,
+        "height": 23,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Contacto",
+        "width": 56,
+        "height": 23,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Administración ↗",
+        "width": 107,
+        "height": 36,
+        "className": "nav-admin"
+      },
+      {
+        "tag": "input",
+        "name": "Correo electrónico",
+        "width": 438,
+        "height": 52,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Contraseña",
+        "width": 438,
+        "height": 52,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Iniciar sesión",
+        "width": 438,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 446,
+        "height": 28,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "hola@refugioclaro.example",
+        "width": 195,
+        "height": 17,
+        "className": ""
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro CABAÑAS & NATURALEZA",
+      "a: Cabañas",
+      "a: Contacto",
+      "a: Administración ↗",
+      "input: Correo electrónico",
+      "input: Contraseña",
+      "button: Iniciar sesión",
+      "a: Refugio Claro",
+      "a: hola@refugioclaro.example"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 768,
+    "route": "/cabanas",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro\nCABAÑAS & NATURALEZA",
+        "width": 196,
+        "height": 44,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "Cabañas",
+        "width": 56,
+        "height": 23,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Contacto",
+        "width": 56,
+        "height": 23,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Administración ↗",
+        "width": 107,
+        "height": 36,
+        "className": "nav-admin"
+      },
+      {
+        "tag": "button",
+        "name": "Todas",
+        "width": 78,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Por noche",
+        "width": 104,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Por hora",
+        "width": 94,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Por noche",
+        "width": 223,
+        "height": 600,
+        "className": "card-image"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Bosque",
+        "width": 182,
+        "height": 30,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Ver Refugio Bosque",
+        "width": 223,
+        "height": 19,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Por hora",
+        "width": 223,
+        "height": 600,
+        "className": "card-image"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Río",
+        "width": 137,
+        "height": 30,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Ver Refugio Río",
+        "width": 223,
+        "height": 19,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Por noche",
+        "width": 223,
+        "height": 600,
+        "className": "card-image"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Cerro",
+        "width": 162,
+        "height": 30,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Ver Refugio Cerro",
+        "width": 223,
+        "height": 19,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 446,
+        "height": 28,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "hola@refugioclaro.example",
+        "width": 195,
+        "height": 17,
+        "className": ""
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro CABAÑAS & NATURALEZA",
+      "a: Cabañas",
+      "a: Contacto",
+      "a: Administración ↗",
+      "button: Todas",
+      "button: Por noche",
+      "button: Por hora",
+      "a: Por noche",
+      "a: Refugio Bosque",
+      "a: Ver Refugio Bosque",
+      "a: Por hora",
+      "a: Refugio Río",
+      "a: Ver Refugio Río",
+      "a: Por noche",
+      "a: Refugio Cerro",
+      "a: Ver Refugio Cerro",
+      "a: Refugio Claro",
+      "a: hola@refugioclaro.example"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 768,
+    "route": "/cabanas/bosque",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro\nCABAÑAS & NATURALEZA",
+        "width": 196,
+        "height": 44,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "Cabañas",
+        "width": 56,
+        "height": 23,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Contacto",
+        "width": 56,
+        "height": 23,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Administración ↗",
+        "width": 107,
+        "height": 36,
+        "className": "nav-admin"
+      },
+      {
+        "tag": "a",
+        "name": "← Todas las cabañas",
+        "width": 130,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "input",
+        "name": "Llegada",
+        "width": 197,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Salida",
+        "width": 197,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Huéspedes (máximo 4)",
+        "width": 197,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Consultar disponibilidad y precio",
+        "width": 197,
+        "height": 75,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 446,
+        "height": 28,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "hola@refugioclaro.example",
+        "width": 195,
+        "height": 17,
+        "className": ""
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro CABAÑAS & NATURALEZA",
+      "a: Cabañas",
+      "a: Contacto",
+      "a: Administración ↗",
+      "a: ← Todas las cabañas",
+      "input: Llegada"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 768,
+    "route": "/cabanas/rio",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro\nCABAÑAS & NATURALEZA",
+        "width": 196,
+        "height": 44,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "Cabañas",
+        "width": 56,
+        "height": 23,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Contacto",
+        "width": 56,
+        "height": 23,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Administración ↗",
+        "width": 107,
+        "height": 36,
+        "className": "nav-admin"
+      },
+      {
+        "tag": "a",
+        "name": "← Todas las cabañas",
+        "width": 130,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "input",
+        "name": "Fecha",
+        "width": 197,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Hora de inicio (0–23, en punto)",
+        "width": 197,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Duración en horas completas",
+        "width": 197,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Huéspedes (máximo 2)",
+        "width": 197,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Consultar disponibilidad y precio",
+        "width": 197,
+        "height": 75,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 446,
+        "height": 28,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "hola@refugioclaro.example",
+        "width": 195,
+        "height": 17,
+        "className": ""
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro CABAÑAS & NATURALEZA",
+      "a: Cabañas",
+      "a: Contacto",
+      "a: Administración ↗",
+      "a: ← Todas las cabañas",
+      "input: Fecha"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 768,
+    "route": "/cabanas/cerro",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro\nCABAÑAS & NATURALEZA",
+        "width": 196,
+        "height": 44,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "Cabañas",
+        "width": 56,
+        "height": 23,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Contacto",
+        "width": 56,
+        "height": 23,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Administración ↗",
+        "width": 107,
+        "height": 36,
+        "className": "nav-admin"
+      },
+      {
+        "tag": "a",
+        "name": "← Todas las cabañas",
+        "width": 130,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "input",
+        "name": "Llegada",
+        "width": 197,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Salida",
+        "width": 197,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Huéspedes (máximo 6)",
+        "width": 197,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Consultar disponibilidad y precio",
+        "width": 197,
+        "height": 75,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 446,
+        "height": 28,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "hola@refugioclaro.example",
+        "width": 195,
+        "height": 17,
+        "className": ""
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro CABAÑAS & NATURALEZA",
+      "a: Cabañas",
+      "a: Contacto",
+      "a: Administración ↗",
+      "a: ← Todas las cabañas",
+      "input: Llegada"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 768,
+    "route": "/admin",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 165,
+        "height": 34,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "◇\nResumen",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCabañas",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nSolicitudes",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCalendario",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nConfiguración",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "← Ver sitio público",
+        "width": 113,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "button",
+        "name": "Cerrar sesión",
+        "width": 136,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Solicitudes pendientes\n1\nEsperan revisión",
+        "width": 228,
+        "height": 119,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Reservas confirmadas\n0\nOcupan su período",
+        "width": 228,
+        "height": 119,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Cabañas y tarifas ↗\n\nGestiona fichas, imágenes, servicios y temporadas.",
+        "width": 216,
+        "height": 119,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "La identidad de tu negocio ↗\n\nEdita textos, contacto, colores, horarios y políticas.",
+        "width": 216,
+        "height": 119,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Revisar solicitudes",
+        "width": 172,
+        "height": 52,
+        "className": "button"
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro",
+      "a: ◇ Resumen",
+      "a: ◇ Cabañas",
+      "a: ◇ Solicitudes",
+      "a: ◇ Calendario",
+      "a: ◇ Configuración",
+      "a: ← Ver sitio público",
+      "button: Cerrar sesión",
+      "a: Solicitudes pendientes 1 Esperan revisión",
+      "a: Reservas confirmadas 0 Ocupan su período",
+      "a: Cabañas y tarifas ↗ Gestiona fichas, imágenes, servicios y temporadas.",
+      "a: La identidad de tu negocio ↗ Edita textos, contacto, colores, horarios y políticas.",
+      "a: Revisar solicitudes"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 768,
+    "route": "/admin/cabanas",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 165,
+        "height": 34,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "◇\nResumen",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCabañas",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nSolicitudes",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCalendario",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nConfiguración",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "← Ver sitio público",
+        "width": 113,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "button",
+        "name": "Cerrar sesión",
+        "width": 136,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Crear cabaña",
+        "width": 134,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "a",
+        "name": "Editar cabaña y tarifas",
+        "width": 193,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Ver ficha pública ↗",
+        "width": 120,
+        "height": 16,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Despublicar",
+        "width": 126,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "input",
+        "name": "Confirmo eliminar esta cabaña",
+        "width": 20,
+        "height": 20,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Eliminar cabaña",
+        "width": 152,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "a",
+        "name": "Editar cabaña y tarifas",
+        "width": 193,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Ver ficha pública ↗",
+        "width": 120,
+        "height": 16,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Despublicar",
+        "width": 126,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "input",
+        "name": "Confirmo eliminar esta cabaña",
+        "width": 20,
+        "height": 20,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Eliminar cabaña",
+        "width": 152,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "a",
+        "name": "Editar cabaña y tarifas",
+        "width": 193,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Ver ficha pública ↗",
+        "width": 120,
+        "height": 16,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Despublicar",
+        "width": 126,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "input",
+        "name": "Confirmo eliminar esta cabaña",
+        "width": 20,
+        "height": 20,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Eliminar cabaña",
+        "width": 152,
+        "height": 52,
+        "className": "button"
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro",
+      "a: ◇ Resumen",
+      "a: ◇ Cabañas",
+      "a: ◇ Solicitudes",
+      "a: ◇ Calendario",
+      "a: ◇ Configuración",
+      "a: ← Ver sitio público",
+      "button: Cerrar sesión",
+      "a: Crear cabaña",
+      "a: Editar cabaña y tarifas",
+      "a: Ver ficha pública ↗",
+      "button: Despublicar",
+      "input: yes",
+      "button: Eliminar cabaña",
+      "a: Editar cabaña y tarifas",
+      "a: Ver ficha pública ↗",
+      "button: Despublicar",
+      "input: yes",
+      "button: Eliminar cabaña",
+      "a: Editar cabaña y tarifas",
+      "a: Ver ficha pública ↗",
+      "button: Despublicar",
+      "input: yes",
+      "button: Eliminar cabaña"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 768,
+    "route": "/admin/cabanas/nueva",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 165,
+        "height": 34,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "◇\nResumen",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCabañas",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nSolicitudes",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCalendario",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nConfiguración",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "← Ver sitio público",
+        "width": 113,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "button",
+        "name": "Cerrar sesión",
+        "width": 136,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "← Cabañas",
+        "width": 72,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "input",
+        "name": "Nombre",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Ruta (ejemplo: refugio-bosque)",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "select",
+        "name": "Modalidad\nPor noche\nPor hora",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "select",
+        "name": "Publicación\nBorrador / despublicada\nPublicada\nArchivada",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Capacidad de personas",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Dormitorios",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Tarifa base CLP por noche u hora",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Descripción",
+        "width": 456,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Servicios (uno por línea)",
+        "width": 456,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Imágenes (una por línea: URL | texto alternativo)",
+        "width": 456,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Guardar cabaña",
+        "width": 152,
+        "height": 52,
+        "className": "button"
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro",
+      "a: ◇ Resumen",
+      "a: ◇ Cabañas",
+      "a: ◇ Solicitudes",
+      "a: ◇ Calendario",
+      "a: ◇ Configuración",
+      "a: ← Ver sitio público",
+      "button: Cerrar sesión",
+      "a: ← Cabañas",
+      "input: Nombre",
+      "input: Ruta (ejemplo: refugio-bosque)",
+      "select: Por noche Por hora",
+      "select: Borrador / despublicada Publicada Archivada",
+      "input: 2",
+      "input: 1",
+      "input: 0",
+      "textarea: Descripción",
+      "textarea: Servicios (uno por línea)",
+      "textarea: Imágenes (una por línea: URL | texto alternativo)",
+      "button: Guardar cabaña"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 768,
+    "route": "/admin/cabanas/22222222-2222-4222-8222-000000000001",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 165,
+        "height": 34,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "◇\nResumen",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCabañas",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nSolicitudes",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCalendario",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nConfiguración",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "← Ver sitio público",
+        "width": 113,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "button",
+        "name": "Cerrar sesión",
+        "width": 136,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "← Cabañas",
+        "width": 72,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "input",
+        "name": "Nombre",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Ruta (ejemplo: refugio-bosque)",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "select",
+        "name": "Modalidad\nPor noche\nPor hora",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "select",
+        "name": "Publicación\nBorrador / despublicada\nPublicada\nArchivada",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Capacidad de personas",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Dormitorios",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Tarifa base CLP por noche u hora",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Descripción",
+        "width": 456,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Servicios (uno por línea)",
+        "width": 456,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Imágenes (una por línea: URL | texto alternativo)",
+        "width": 456,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Guardar cabaña",
+        "width": 152,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "input",
+        "name": "Nombre de temporada",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Tarifa CLP por unidad",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Inicio incluido",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Fin excluido",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Guardar temporada",
+        "width": 174,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "button",
+        "name": "Eliminar temporada",
+        "width": 175,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "input",
+        "name": "Nombre de temporada",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Tarifa CLP por unidad",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Inicio incluido",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Fin excluido",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Añadir temporada",
+        "width": 164,
+        "height": 52,
+        "className": "button"
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro",
+      "a: ◇ Resumen",
+      "a: ◇ Cabañas",
+      "a: ◇ Solicitudes",
+      "a: ◇ Calendario",
+      "a: ◇ Configuración",
+      "a: ← Ver sitio público",
+      "button: Cerrar sesión",
+      "a: ← Cabañas",
+      "input: Refugio Bosque",
+      "input: bosque",
+      "select: Por noche Por hora",
+      "select: Borrador / despublicada Publicada Archivada",
+      "input: 4",
+      "input: 2",
+      "input: 85000",
+      "textarea: Un espacio cálido con ventanales al bosque, cocina integrada y una terraza para disfrutar sin apuro.",
+      "textarea: Cocina equipada Estacionamiento Calefacción Terraza privada",
+      "textarea: /images/bosque.svg | Ilustración ficticia de Refugio Bosque",
+      "button: Guardar cabaña",
+      "input: Temporada ficticia E2E",
+      "input: 95000",
+      "input: 2030-01-01"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 768,
+    "route": "/admin/cabanas/22222222-2222-4222-8222-000000000002",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 165,
+        "height": 34,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "◇\nResumen",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCabañas",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nSolicitudes",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCalendario",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nConfiguración",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "← Ver sitio público",
+        "width": 113,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "button",
+        "name": "Cerrar sesión",
+        "width": 136,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "← Cabañas",
+        "width": 72,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "input",
+        "name": "Nombre",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Ruta (ejemplo: refugio-bosque)",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "select",
+        "name": "Modalidad\nPor noche\nPor hora",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "select",
+        "name": "Publicación\nBorrador / despublicada\nPublicada\nArchivada",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Capacidad de personas",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Dormitorios",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Tarifa base CLP por noche u hora",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Descripción",
+        "width": 456,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Servicios (uno por línea)",
+        "width": 456,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Imágenes (una por línea: URL | texto alternativo)",
+        "width": 456,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Guardar cabaña",
+        "width": 152,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "input",
+        "name": "Nombre de temporada",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Tarifa CLP por unidad",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Inicio incluido",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Fin excluido",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Guardar temporada",
+        "width": 174,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "button",
+        "name": "Eliminar temporada",
+        "width": 175,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "input",
+        "name": "Nombre de temporada",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Tarifa CLP por unidad",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Inicio incluido",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Fin excluido",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Añadir temporada",
+        "width": 164,
+        "height": 52,
+        "className": "button"
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro",
+      "a: ◇ Resumen",
+      "a: ◇ Cabañas",
+      "a: ◇ Solicitudes",
+      "a: ◇ Calendario",
+      "a: ◇ Configuración",
+      "a: ← Ver sitio público",
+      "button: Cerrar sesión",
+      "a: ← Cabañas",
+      "input: Refugio Río",
+      "input: rio",
+      "select: Por noche Por hora",
+      "select: Borrador / despublicada Publicada Archivada",
+      "input: 2",
+      "input: 1",
+      "input: 18000",
+      "textarea: Una cabaña íntima pensada para desconectar durante unas horas. Luz suave, una pequeña terraza y todo",
+      "textarea: Terraza privada Estacionamiento Calefacción Zona de descanso",
+      "textarea: /images/rio.svg | Ilustración ficticia de Refugio Río",
+      "button: Guardar cabaña",
+      "input: Temporada ficticia E2E",
+      "input: 28000",
+      "input: 2030-01-01"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 768,
+    "route": "/admin/cabanas/22222222-2222-4222-8222-000000000003",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 165,
+        "height": 34,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "◇\nResumen",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCabañas",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nSolicitudes",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCalendario",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nConfiguración",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "← Ver sitio público",
+        "width": 113,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "button",
+        "name": "Cerrar sesión",
+        "width": 136,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "← Cabañas",
+        "width": 72,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "input",
+        "name": "Nombre",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Ruta (ejemplo: refugio-bosque)",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "select",
+        "name": "Modalidad\nPor noche\nPor hora",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "select",
+        "name": "Publicación\nBorrador / despublicada\nPublicada\nArchivada",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Capacidad de personas",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Dormitorios",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Tarifa base CLP por noche u hora",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Descripción",
+        "width": 456,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Servicios (uno por línea)",
+        "width": 456,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Imágenes (una por línea: URL | texto alternativo)",
+        "width": 456,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Guardar cabaña",
+        "width": 152,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "input",
+        "name": "Nombre de temporada",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Tarifa CLP por unidad",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Inicio incluido",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Fin excluido",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Guardar temporada",
+        "width": 174,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "button",
+        "name": "Eliminar temporada",
+        "width": 175,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "input",
+        "name": "Nombre de temporada",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Tarifa CLP por unidad",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Inicio incluido",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Fin excluido",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Añadir temporada",
+        "width": 164,
+        "height": 52,
+        "className": "button"
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro",
+      "a: ◇ Resumen",
+      "a: ◇ Cabañas",
+      "a: ◇ Solicitudes",
+      "a: ◇ Calendario",
+      "a: ◇ Configuración",
+      "a: ← Ver sitio público",
+      "button: Cerrar sesión",
+      "a: ← Cabañas",
+      "input: Refugio Cerro",
+      "input: cerro",
+      "select: Por noche Por hora",
+      "select: Borrador / despublicada Publicada Archivada",
+      "input: 6",
+      "input: 3",
+      "input: 110000",
+      "textarea: Una cabaña amplia con espacios para reunirse, cocinar y disfrutar la vista. El punto de partida para",
+      "textarea: Cocina equipada Estacionamiento Terraza privada Comedor familiar",
+      "textarea: /images/cerro.svg | Ilustración ficticia de Refugio Cerro",
+      "button: Guardar cabaña",
+      "input: Temporada ficticia E2E",
+      "input: 120000",
+      "input: 2030-01-01"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 768,
+    "route": "/admin/solicitudes",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 165,
+        "height": 34,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "◇\nResumen",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCabañas",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nSolicitudes",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCalendario",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nConfiguración",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "← Ver sitio público",
+        "width": 113,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "button",
+        "name": "Cerrar sesión",
+        "width": 136,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "select",
+        "name": "Estado\nTodos los estados\nPendiente\nConfirmada\nRechazada\nCancelada",
+        "width": 220,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Desde (fecha local)",
+        "width": 220,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Hasta (fecha local, incluida)",
+        "width": 220,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Filtrar",
+        "width": 220,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "a",
+        "name": "Limpiar",
+        "width": 220,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Bosque",
+        "width": 161,
+        "height": 29,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Abrir detalle",
+        "width": 127,
+        "height": 52,
+        "className": "button secondary"
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro",
+      "a: ◇ Resumen",
+      "a: ◇ Cabañas",
+      "a: ◇ Solicitudes",
+      "a: ◇ Calendario",
+      "a: ◇ Configuración",
+      "a: ← Ver sitio público",
+      "button: Cerrar sesión",
+      "select: Todos los estados Pendiente Confirmada Rechazada Cancelada",
+      "input: Desde (fecha local)"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 768,
+    "route": "/admin/solicitudes/5ccf69ff-5e0b-42e9-b072-e9091ad06464",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 165,
+        "height": 34,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "◇\nResumen",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCabañas",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nSolicitudes",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCalendario",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nConfiguración",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "← Ver sitio público",
+        "width": 113,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "button",
+        "name": "Cerrar sesión",
+        "width": 136,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "← Todas las solicitudes",
+        "width": 142,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "button",
+        "name": "Confirmar solicitud",
+        "width": 173,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "button",
+        "name": "Rechazar solicitud",
+        "width": 168,
+        "height": 52,
+        "className": "button"
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro",
+      "a: ◇ Resumen",
+      "a: ◇ Cabañas",
+      "a: ◇ Solicitudes",
+      "a: ◇ Calendario",
+      "a: ◇ Configuración",
+      "a: ← Ver sitio público",
+      "button: Cerrar sesión",
+      "a: ← Todas las solicitudes",
+      "button: Confirmar solicitud",
+      "button: Rechazar solicitud"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 768,
+    "route": "/admin/calendario?date=2030-02-10",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 165,
+        "height": 34,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "◇\nResumen",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCabañas",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nSolicitudes",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCalendario",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nConfiguración",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "← Ver sitio público",
+        "width": 113,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "button",
+        "name": "Cerrar sesión",
+        "width": 136,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "select",
+        "name": "Cabaña\nRefugio Bosque · Por noche\nRefugio Cerro · Por noche\nRefugio Río · Por hora",
+        "width": 220,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Fecha de referencia (Santiago)",
+        "width": 220,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Ver calendario",
+        "width": 220,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "a",
+        "name": "← Mes anterior",
+        "width": 146,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Hoy",
+        "width": 74,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Mes siguiente →",
+        "width": 155,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Abrir solicitud ↗",
+        "width": 88,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Abrir solicitud ↗",
+        "width": 88,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Abrir solicitud ↗",
+        "width": 88,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Inicio incluido",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Salida excluida",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Motivo",
+        "width": 456,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Crear bloqueo",
+        "width": 140,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "input",
+        "name": "Confirmo eliminar este bloqueo y liberar su intervalo",
+        "width": 20,
+        "height": 20,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Eliminar bloqueo",
+        "width": 158,
+        "height": 52,
+        "className": "button"
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro",
+      "a: ◇ Resumen",
+      "a: ◇ Cabañas",
+      "a: ◇ Solicitudes",
+      "a: ◇ Calendario",
+      "a: ◇ Configuración",
+      "a: ← Ver sitio público",
+      "button: Cerrar sesión",
+      "select: Refugio Bosque · Por noche Refugio Cerro · Por noche Refugio Río · Por hora",
+      "input: 2030-02-10"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 768,
+    "route": "/admin/configuracion",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 165,
+        "height": 34,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "◇\nResumen",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCabañas",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nSolicitudes",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCalendario",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nConfiguración",
+        "width": 165,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "← Ver sitio público",
+        "width": 113,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "button",
+        "name": "Cerrar sesión",
+        "width": 136,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "input",
+        "name": "Nombre del negocio",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Frase principal",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Ubicación",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Logo (ruta o URL)",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Correo de contacto público",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Teléfono de contacto",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Color principal",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Color de acento",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Color de fondo",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Descripción del negocio",
+        "width": 456,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Antetítulo",
+        "width": 456,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Título del catálogo",
+        "width": 456,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Introducción al catálogo",
+        "width": 456,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Título de presentación",
+        "width": 456,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Texto de presentación",
+        "width": 456,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Hora de entrada por noche (0–23)",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Hora de salida por noche (0–23)",
+        "width": 219,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Política de cancelación",
+        "width": 456,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Guardar configuración",
+        "width": 195,
+        "height": 52,
+        "className": "button"
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro",
+      "a: ◇ Resumen",
+      "a: ◇ Cabañas",
+      "a: ◇ Solicitudes",
+      "a: ◇ Calendario",
+      "a: ◇ Configuración",
+      "a: ← Ver sitio público",
+      "button: Cerrar sesión",
+      "input: Refugio Claro",
+      "input: Un lugar para bajar el ritmo.",
+      "input: Valle del Claro · ubicación ficticia",
+      "input: /images/logo.svg",
+      "input: hola@refugioclaro.example",
+      "input: Teléfono de contacto",
+      "input: #244d40",
+      "input: #bb5c37",
+      "input: #faf8f2",
+      "textarea: Cabañas entre árboles, tardes largas y pequeños momentos que se quedan contigo.",
+      "textarea: MENOS PRISA, MÁS NATURALEZA",
+      "textarea: Encuentra tu propio refugio",
+      "textarea: Para una escapada de días o una pausa de unas horas. Tú eliges cómo descansar.",
+      "textarea: Lo simple también puede ser extraordinario.",
+      "textarea: Un café en la terraza, una conversación sin reloj y un espacio solo para ti. Imaginamos refugios peq",
+      "input: 15",
+      "input: 11",
+      "textarea: Las condiciones de cancelación se acuerdan directamente con el dueño. Este texto de ejemplo podrá ed",
+      "button: Guardar configuración"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 1280,
+    "route": "/",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro\nCABAÑAS & NATURALEZA",
+        "width": 196,
+        "height": 44,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "Cabañas",
+        "width": 56,
+        "height": 23,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Contacto",
+        "width": 56,
+        "height": 23,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Administración ↗",
+        "width": 107,
+        "height": 36,
+        "className": "nav-admin"
+      },
+      {
+        "tag": "a",
+        "name": "Descubre las cabañas\n↗",
+        "width": 229,
+        "height": 52,
+        "className": "button "
+      },
+      {
+        "tag": "a",
+        "name": "Ver todas ↗",
+        "width": 123,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Por noche",
+        "width": 383,
+        "height": 600,
+        "className": "card-image"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Bosque",
+        "width": 182,
+        "height": 30,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Ver Refugio Bosque",
+        "width": 58,
+        "height": 26,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Por hora",
+        "width": 383,
+        "height": 600,
+        "className": "card-image"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Río",
+        "width": 137,
+        "height": 30,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Ver Refugio Río",
+        "width": 58,
+        "height": 26,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Por noche",
+        "width": 383,
+        "height": 600,
+        "className": "card-image"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Cerro",
+        "width": 162,
+        "height": 30,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Ver Refugio Cerro",
+        "width": 58,
+        "height": 26,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 777,
+        "height": 28,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "hola@refugioclaro.example",
+        "width": 195,
+        "height": 17,
+        "className": ""
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro CABAÑAS & NATURALEZA",
+      "a: Cabañas",
+      "a: Contacto",
+      "a: Administración ↗",
+      "a: Descubre las cabañas ↗",
+      "a: Ver todas ↗",
+      "a: Por noche",
+      "a: Refugio Bosque",
+      "a: Ver Refugio Bosque",
+      "a: Por hora",
+      "a: Refugio Río",
+      "a: Ver Refugio Río",
+      "a: Por noche",
+      "a: Refugio Cerro",
+      "a: Ver Refugio Cerro",
+      "a: Refugio Claro",
+      "a: hola@refugioclaro.example"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 1280,
+    "route": "/login",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro\nCABAÑAS & NATURALEZA",
+        "width": 196,
+        "height": 44,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "Cabañas",
+        "width": 56,
+        "height": 23,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Contacto",
+        "width": 56,
+        "height": 23,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Administración ↗",
+        "width": 107,
+        "height": 36,
+        "className": "nav-admin"
+      },
+      {
+        "tag": "input",
+        "name": "Correo electrónico",
+        "width": 438,
+        "height": 52,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Contraseña",
+        "width": 438,
+        "height": 52,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Iniciar sesión",
+        "width": 438,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 777,
+        "height": 28,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "hola@refugioclaro.example",
+        "width": 195,
+        "height": 17,
+        "className": ""
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro CABAÑAS & NATURALEZA",
+      "a: Cabañas",
+      "a: Contacto",
+      "a: Administración ↗",
+      "input: Correo electrónico",
+      "input: Contraseña",
+      "button: Iniciar sesión",
+      "a: Refugio Claro",
+      "a: hola@refugioclaro.example"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 1280,
+    "route": "/cabanas",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro\nCABAÑAS & NATURALEZA",
+        "width": 196,
+        "height": 44,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "Cabañas",
+        "width": 56,
+        "height": 23,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Contacto",
+        "width": 56,
+        "height": 23,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Administración ↗",
+        "width": 107,
+        "height": 36,
+        "className": "nav-admin"
+      },
+      {
+        "tag": "button",
+        "name": "Todas",
+        "width": 78,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Por noche",
+        "width": 104,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Por hora",
+        "width": 94,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Por noche",
+        "width": 383,
+        "height": 600,
+        "className": "card-image"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Bosque",
+        "width": 182,
+        "height": 30,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Ver Refugio Bosque",
+        "width": 58,
+        "height": 26,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Por hora",
+        "width": 383,
+        "height": 600,
+        "className": "card-image"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Río",
+        "width": 137,
+        "height": 30,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Ver Refugio Río",
+        "width": 58,
+        "height": 26,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Por noche",
+        "width": 383,
+        "height": 600,
+        "className": "card-image"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Cerro",
+        "width": 162,
+        "height": 30,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Ver Refugio Cerro",
+        "width": 58,
+        "height": 26,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 777,
+        "height": 28,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "hola@refugioclaro.example",
+        "width": 195,
+        "height": 17,
+        "className": ""
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro CABAÑAS & NATURALEZA",
+      "a: Cabañas",
+      "a: Contacto",
+      "a: Administración ↗",
+      "button: Todas",
+      "button: Por noche",
+      "button: Por hora",
+      "a: Por noche",
+      "a: Refugio Bosque",
+      "a: Ver Refugio Bosque",
+      "a: Por hora",
+      "a: Refugio Río",
+      "a: Ver Refugio Río",
+      "a: Por noche",
+      "a: Refugio Cerro",
+      "a: Ver Refugio Cerro",
+      "a: Refugio Claro",
+      "a: hola@refugioclaro.example"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 1280,
+    "route": "/cabanas/bosque",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro\nCABAÑAS & NATURALEZA",
+        "width": 196,
+        "height": 44,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "Cabañas",
+        "width": 56,
+        "height": 23,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Contacto",
+        "width": 56,
+        "height": 23,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Administración ↗",
+        "width": 107,
+        "height": 36,
+        "className": "nav-admin"
+      },
+      {
+        "tag": "a",
+        "name": "← Todas las cabañas",
+        "width": 130,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "input",
+        "name": "Llegada",
+        "width": 375,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Salida",
+        "width": 375,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Huéspedes (máximo 4)",
+        "width": 375,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Consultar disponibilidad y precio",
+        "width": 375,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 777,
+        "height": 28,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "hola@refugioclaro.example",
+        "width": 195,
+        "height": 17,
+        "className": ""
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro CABAÑAS & NATURALEZA",
+      "a: Cabañas",
+      "a: Contacto",
+      "a: Administración ↗",
+      "a: ← Todas las cabañas",
+      "input: Llegada"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 1280,
+    "route": "/cabanas/rio",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro\nCABAÑAS & NATURALEZA",
+        "width": 196,
+        "height": 44,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "Cabañas",
+        "width": 56,
+        "height": 23,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Contacto",
+        "width": 56,
+        "height": 23,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Administración ↗",
+        "width": 107,
+        "height": 36,
+        "className": "nav-admin"
+      },
+      {
+        "tag": "a",
+        "name": "← Todas las cabañas",
+        "width": 130,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "input",
+        "name": "Fecha",
+        "width": 375,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Hora de inicio (0–23, en punto)",
+        "width": 375,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Duración en horas completas",
+        "width": 375,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Huéspedes (máximo 2)",
+        "width": 375,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Consultar disponibilidad y precio",
+        "width": 375,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 777,
+        "height": 28,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "hola@refugioclaro.example",
+        "width": 195,
+        "height": 17,
+        "className": ""
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro CABAÑAS & NATURALEZA",
+      "a: Cabañas",
+      "a: Contacto",
+      "a: Administración ↗",
+      "a: ← Todas las cabañas",
+      "input: Fecha"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 1280,
+    "route": "/cabanas/cerro",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro\nCABAÑAS & NATURALEZA",
+        "width": 196,
+        "height": 44,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "Cabañas",
+        "width": 56,
+        "height": 23,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Contacto",
+        "width": 56,
+        "height": 23,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Administración ↗",
+        "width": 107,
+        "height": 36,
+        "className": "nav-admin"
+      },
+      {
+        "tag": "a",
+        "name": "← Todas las cabañas",
+        "width": 130,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "input",
+        "name": "Llegada",
+        "width": 375,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Salida",
+        "width": 375,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Huéspedes (máximo 6)",
+        "width": 375,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Consultar disponibilidad y precio",
+        "width": 375,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 777,
+        "height": 28,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "hola@refugioclaro.example",
+        "width": 195,
+        "height": 17,
+        "className": ""
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro CABAÑAS & NATURALEZA",
+      "a: Cabañas",
+      "a: Contacto",
+      "a: Administración ↗",
+      "a: ← Todas las cabañas",
+      "input: Llegada"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 1280,
+    "route": "/admin",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 205,
+        "height": 34,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "◇\nResumen",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCabañas",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nSolicitudes",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCalendario",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nConfiguración",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "← Ver sitio público",
+        "width": 113,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "button",
+        "name": "Cerrar sesión",
+        "width": 136,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Solicitudes pendientes\n1\nEsperan revisión",
+        "width": 253,
+        "height": 139,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Reservas confirmadas\n0\nOcupan su período",
+        "width": 253,
+        "height": 139,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Cabañas y tarifas ↗\n\nGestiona fichas, imágenes, servicios y temporadas.",
+        "width": 437,
+        "height": 96,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "La identidad de tu negocio ↗\n\nEdita textos, contacto, colores, horarios y políticas.",
+        "width": 437,
+        "height": 96,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Revisar solicitudes",
+        "width": 172,
+        "height": 52,
+        "className": "button"
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro",
+      "a: ◇ Resumen",
+      "a: ◇ Cabañas",
+      "a: ◇ Solicitudes",
+      "a: ◇ Calendario",
+      "a: ◇ Configuración",
+      "a: ← Ver sitio público",
+      "button: Cerrar sesión",
+      "a: Solicitudes pendientes 1 Esperan revisión",
+      "a: Reservas confirmadas 0 Ocupan su período",
+      "a: Cabañas y tarifas ↗ Gestiona fichas, imágenes, servicios y temporadas.",
+      "a: La identidad de tu negocio ↗ Edita textos, contacto, colores, horarios y políticas.",
+      "a: Revisar solicitudes"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 1280,
+    "route": "/admin/cabanas",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 205,
+        "height": 34,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "◇\nResumen",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCabañas",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nSolicitudes",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCalendario",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nConfiguración",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "← Ver sitio público",
+        "width": 113,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "button",
+        "name": "Cerrar sesión",
+        "width": 136,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Crear cabaña",
+        "width": 134,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "a",
+        "name": "Editar cabaña y tarifas",
+        "width": 193,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Ver ficha pública ↗",
+        "width": 120,
+        "height": 16,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Despublicar",
+        "width": 126,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "input",
+        "name": "Confirmo eliminar esta cabaña",
+        "width": 20,
+        "height": 20,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Eliminar cabaña",
+        "width": 152,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "a",
+        "name": "Editar cabaña y tarifas",
+        "width": 193,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Ver ficha pública ↗",
+        "width": 120,
+        "height": 16,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Despublicar",
+        "width": 126,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "input",
+        "name": "Confirmo eliminar esta cabaña",
+        "width": 20,
+        "height": 20,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Eliminar cabaña",
+        "width": 152,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "a",
+        "name": "Editar cabaña y tarifas",
+        "width": 193,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Ver ficha pública ↗",
+        "width": 120,
+        "height": 16,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Despublicar",
+        "width": 126,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "input",
+        "name": "Confirmo eliminar esta cabaña",
+        "width": 20,
+        "height": 20,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Eliminar cabaña",
+        "width": 152,
+        "height": 52,
+        "className": "button"
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro",
+      "a: ◇ Resumen",
+      "a: ◇ Cabañas",
+      "a: ◇ Solicitudes",
+      "a: ◇ Calendario",
+      "a: ◇ Configuración",
+      "a: ← Ver sitio público",
+      "button: Cerrar sesión",
+      "a: Crear cabaña",
+      "a: Editar cabaña y tarifas",
+      "a: Ver ficha pública ↗",
+      "button: Despublicar",
+      "input: yes",
+      "button: Eliminar cabaña",
+      "a: Editar cabaña y tarifas",
+      "a: Ver ficha pública ↗",
+      "button: Despublicar",
+      "input: yes",
+      "button: Eliminar cabaña",
+      "a: Editar cabaña y tarifas",
+      "a: Ver ficha pública ↗",
+      "button: Despublicar",
+      "input: yes",
+      "button: Eliminar cabaña"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 1280,
+    "route": "/admin/cabanas/nueva",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 205,
+        "height": 34,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "◇\nResumen",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCabañas",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nSolicitudes",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCalendario",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nConfiguración",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "← Ver sitio público",
+        "width": 113,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "button",
+        "name": "Cerrar sesión",
+        "width": 136,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "← Cabañas",
+        "width": 72,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "input",
+        "name": "Nombre",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Ruta (ejemplo: refugio-bosque)",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "select",
+        "name": "Modalidad\nPor noche\nPor hora",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "select",
+        "name": "Publicación\nBorrador / despublicada\nPublicada\nArchivada",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Capacidad de personas",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Dormitorios",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Tarifa base CLP por noche u hora",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Descripción",
+        "width": 898,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Servicios (uno por línea)",
+        "width": 898,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Imágenes (una por línea: URL | texto alternativo)",
+        "width": 898,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Guardar cabaña",
+        "width": 152,
+        "height": 52,
+        "className": "button"
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro",
+      "a: ◇ Resumen",
+      "a: ◇ Cabañas",
+      "a: ◇ Solicitudes",
+      "a: ◇ Calendario",
+      "a: ◇ Configuración",
+      "a: ← Ver sitio público",
+      "button: Cerrar sesión",
+      "a: ← Cabañas",
+      "input: Nombre",
+      "input: Ruta (ejemplo: refugio-bosque)",
+      "select: Por noche Por hora",
+      "select: Borrador / despublicada Publicada Archivada",
+      "input: 2",
+      "input: 1",
+      "input: 0",
+      "textarea: Descripción",
+      "textarea: Servicios (uno por línea)",
+      "textarea: Imágenes (una por línea: URL | texto alternativo)",
+      "button: Guardar cabaña"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 1280,
+    "route": "/admin/cabanas/22222222-2222-4222-8222-000000000001",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 205,
+        "height": 34,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "◇\nResumen",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCabañas",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nSolicitudes",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCalendario",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nConfiguración",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "← Ver sitio público",
+        "width": 113,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "button",
+        "name": "Cerrar sesión",
+        "width": 136,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "← Cabañas",
+        "width": 72,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "input",
+        "name": "Nombre",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Ruta (ejemplo: refugio-bosque)",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "select",
+        "name": "Modalidad\nPor noche\nPor hora",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "select",
+        "name": "Publicación\nBorrador / despublicada\nPublicada\nArchivada",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Capacidad de personas",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Dormitorios",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Tarifa base CLP por noche u hora",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Descripción",
+        "width": 898,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Servicios (uno por línea)",
+        "width": 898,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Imágenes (una por línea: URL | texto alternativo)",
+        "width": 898,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Guardar cabaña",
+        "width": 152,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "input",
+        "name": "Nombre de temporada",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Tarifa CLP por unidad",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Inicio incluido",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Fin excluido",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Guardar temporada",
+        "width": 174,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "button",
+        "name": "Eliminar temporada",
+        "width": 175,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "input",
+        "name": "Nombre de temporada",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Tarifa CLP por unidad",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Inicio incluido",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Fin excluido",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Añadir temporada",
+        "width": 164,
+        "height": 52,
+        "className": "button"
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro",
+      "a: ◇ Resumen",
+      "a: ◇ Cabañas",
+      "a: ◇ Solicitudes",
+      "a: ◇ Calendario",
+      "a: ◇ Configuración",
+      "a: ← Ver sitio público",
+      "button: Cerrar sesión",
+      "a: ← Cabañas",
+      "input: Refugio Bosque",
+      "input: bosque",
+      "select: Por noche Por hora",
+      "select: Borrador / despublicada Publicada Archivada",
+      "input: 4",
+      "input: 2",
+      "input: 85000",
+      "textarea: Un espacio cálido con ventanales al bosque, cocina integrada y una terraza para disfrutar sin apuro.",
+      "textarea: Cocina equipada Estacionamiento Calefacción Terraza privada",
+      "textarea: /images/bosque.svg | Ilustración ficticia de Refugio Bosque",
+      "button: Guardar cabaña",
+      "input: Temporada ficticia E2E",
+      "input: 95000",
+      "input: 2030-01-01"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 1280,
+    "route": "/admin/cabanas/22222222-2222-4222-8222-000000000002",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 205,
+        "height": 34,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "◇\nResumen",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCabañas",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nSolicitudes",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCalendario",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nConfiguración",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "← Ver sitio público",
+        "width": 113,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "button",
+        "name": "Cerrar sesión",
+        "width": 136,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "← Cabañas",
+        "width": 72,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "input",
+        "name": "Nombre",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Ruta (ejemplo: refugio-bosque)",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "select",
+        "name": "Modalidad\nPor noche\nPor hora",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "select",
+        "name": "Publicación\nBorrador / despublicada\nPublicada\nArchivada",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Capacidad de personas",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Dormitorios",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Tarifa base CLP por noche u hora",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Descripción",
+        "width": 898,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Servicios (uno por línea)",
+        "width": 898,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Imágenes (una por línea: URL | texto alternativo)",
+        "width": 898,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Guardar cabaña",
+        "width": 152,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "input",
+        "name": "Nombre de temporada",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Tarifa CLP por unidad",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Inicio incluido",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Fin excluido",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Guardar temporada",
+        "width": 174,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "button",
+        "name": "Eliminar temporada",
+        "width": 175,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "input",
+        "name": "Nombre de temporada",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Tarifa CLP por unidad",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Inicio incluido",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Fin excluido",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Añadir temporada",
+        "width": 164,
+        "height": 52,
+        "className": "button"
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro",
+      "a: ◇ Resumen",
+      "a: ◇ Cabañas",
+      "a: ◇ Solicitudes",
+      "a: ◇ Calendario",
+      "a: ◇ Configuración",
+      "a: ← Ver sitio público",
+      "button: Cerrar sesión",
+      "a: ← Cabañas",
+      "input: Refugio Río",
+      "input: rio",
+      "select: Por noche Por hora",
+      "select: Borrador / despublicada Publicada Archivada",
+      "input: 2",
+      "input: 1",
+      "input: 18000",
+      "textarea: Una cabaña íntima pensada para desconectar durante unas horas. Luz suave, una pequeña terraza y todo",
+      "textarea: Terraza privada Estacionamiento Calefacción Zona de descanso",
+      "textarea: /images/rio.svg | Ilustración ficticia de Refugio Río",
+      "button: Guardar cabaña",
+      "input: Temporada ficticia E2E",
+      "input: 28000",
+      "input: 2030-01-01"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 1280,
+    "route": "/admin/cabanas/22222222-2222-4222-8222-000000000003",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 205,
+        "height": 34,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "◇\nResumen",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCabañas",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nSolicitudes",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCalendario",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nConfiguración",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "← Ver sitio público",
+        "width": 113,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "button",
+        "name": "Cerrar sesión",
+        "width": 136,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "← Cabañas",
+        "width": 72,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "input",
+        "name": "Nombre",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Ruta (ejemplo: refugio-bosque)",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "select",
+        "name": "Modalidad\nPor noche\nPor hora",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "select",
+        "name": "Publicación\nBorrador / despublicada\nPublicada\nArchivada",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Capacidad de personas",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Dormitorios",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Tarifa base CLP por noche u hora",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Descripción",
+        "width": 898,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Servicios (uno por línea)",
+        "width": 898,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Imágenes (una por línea: URL | texto alternativo)",
+        "width": 898,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Guardar cabaña",
+        "width": 152,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "input",
+        "name": "Nombre de temporada",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Tarifa CLP por unidad",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Inicio incluido",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Fin excluido",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Guardar temporada",
+        "width": 174,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "button",
+        "name": "Eliminar temporada",
+        "width": 175,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "input",
+        "name": "Nombre de temporada",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Tarifa CLP por unidad",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Inicio incluido",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Fin excluido",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Añadir temporada",
+        "width": 164,
+        "height": 52,
+        "className": "button"
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro",
+      "a: ◇ Resumen",
+      "a: ◇ Cabañas",
+      "a: ◇ Solicitudes",
+      "a: ◇ Calendario",
+      "a: ◇ Configuración",
+      "a: ← Ver sitio público",
+      "button: Cerrar sesión",
+      "a: ← Cabañas",
+      "input: Refugio Cerro",
+      "input: cerro",
+      "select: Por noche Por hora",
+      "select: Borrador / despublicada Publicada Archivada",
+      "input: 6",
+      "input: 3",
+      "input: 110000",
+      "textarea: Una cabaña amplia con espacios para reunirse, cocinar y disfrutar la vista. El punto de partida para",
+      "textarea: Cocina equipada Estacionamiento Terraza privada Comedor familiar",
+      "textarea: /images/cerro.svg | Ilustración ficticia de Refugio Cerro",
+      "button: Guardar cabaña",
+      "input: Temporada ficticia E2E",
+      "input: 120000",
+      "input: 2030-01-01"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 1280,
+    "route": "/admin/solicitudes",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 205,
+        "height": 34,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "◇\nResumen",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCabañas",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nSolicitudes",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCalendario",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nConfiguración",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "← Ver sitio público",
+        "width": 113,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "button",
+        "name": "Cerrar sesión",
+        "width": 136,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "select",
+        "name": "Estado\nTodos los estados\nPendiente\nConfirmada\nRechazada\nCancelada",
+        "width": 289,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Desde (fecha local)",
+        "width": 289,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Hasta (fecha local, incluida)",
+        "width": 289,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Filtrar",
+        "width": 289,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "a",
+        "name": "Limpiar",
+        "width": 289,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Bosque",
+        "width": 161,
+        "height": 29,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Abrir detalle",
+        "width": 127,
+        "height": 52,
+        "className": "button secondary"
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro",
+      "a: ◇ Resumen",
+      "a: ◇ Cabañas",
+      "a: ◇ Solicitudes",
+      "a: ◇ Calendario",
+      "a: ◇ Configuración",
+      "a: ← Ver sitio público",
+      "button: Cerrar sesión",
+      "select: Todos los estados Pendiente Confirmada Rechazada Cancelada",
+      "input: Desde (fecha local)"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 1280,
+    "route": "/admin/solicitudes/5ccf69ff-5e0b-42e9-b072-e9091ad06464",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 205,
+        "height": 34,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "◇\nResumen",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCabañas",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nSolicitudes",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCalendario",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nConfiguración",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "← Ver sitio público",
+        "width": 113,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "button",
+        "name": "Cerrar sesión",
+        "width": 136,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "← Todas las solicitudes",
+        "width": 142,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "button",
+        "name": "Confirmar solicitud",
+        "width": 173,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "button",
+        "name": "Rechazar solicitud",
+        "width": 168,
+        "height": 52,
+        "className": "button"
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro",
+      "a: ◇ Resumen",
+      "a: ◇ Cabañas",
+      "a: ◇ Solicitudes",
+      "a: ◇ Calendario",
+      "a: ◇ Configuración",
+      "a: ← Ver sitio público",
+      "button: Cerrar sesión",
+      "a: ← Todas las solicitudes",
+      "button: Confirmar solicitud",
+      "button: Rechazar solicitud"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 1280,
+    "route": "/admin/calendario?date=2030-02-10",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 205,
+        "height": 34,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "◇\nResumen",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCabañas",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nSolicitudes",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCalendario",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nConfiguración",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "← Ver sitio público",
+        "width": 113,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "button",
+        "name": "Cerrar sesión",
+        "width": 136,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "select",
+        "name": "Cabaña\nRefugio Bosque · Por noche\nRefugio Cerro · Por noche\nRefugio Río · Por hora",
+        "width": 483,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Fecha de referencia (Santiago)",
+        "width": 242,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Ver calendario",
+        "width": 141,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "a",
+        "name": "← Mes anterior",
+        "width": 146,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Hoy",
+        "width": 74,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Mes siguiente →",
+        "width": 155,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "a",
+        "name": "Abrir solicitud ↗",
+        "width": 73,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Abrir solicitud ↗",
+        "width": 73,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "Abrir solicitud ↗",
+        "width": 73,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Inicio incluido",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Salida excluida",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Motivo",
+        "width": 898,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Crear bloqueo",
+        "width": 140,
+        "height": 52,
+        "className": "button"
+      },
+      {
+        "tag": "input",
+        "name": "Confirmo eliminar este bloqueo y liberar su intervalo",
+        "width": 20,
+        "height": 20,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Eliminar bloqueo",
+        "width": 158,
+        "height": 52,
+        "className": "button"
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro",
+      "a: ◇ Resumen",
+      "a: ◇ Cabañas",
+      "a: ◇ Solicitudes",
+      "a: ◇ Calendario",
+      "a: ◇ Configuración",
+      "a: ← Ver sitio público",
+      "button: Cerrar sesión",
+      "select: Refugio Bosque · Por noche Refugio Cerro · Por noche Refugio Río · Por hora",
+      "input: 2030-02-10"
+    ],
+    "focusIssues": []
+  },
+  {
+    "width": 1280,
+    "route": "/admin/configuracion",
+    "controls": [
+      {
+        "tag": "a",
+        "name": "Saltar al contenido",
+        "width": 157,
+        "height": 50,
+        "className": "skip-link"
+      },
+      {
+        "tag": "a",
+        "name": "Refugio Claro",
+        "width": 205,
+        "height": 34,
+        "className": "brand"
+      },
+      {
+        "tag": "a",
+        "name": "◇\nResumen",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCabañas",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nSolicitudes",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nCalendario",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "◇\nConfiguración",
+        "width": 205,
+        "height": 44,
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "name": "← Ver sitio público",
+        "width": 113,
+        "height": 22,
+        "className": "back-link"
+      },
+      {
+        "tag": "button",
+        "name": "Cerrar sesión",
+        "width": 136,
+        "height": 52,
+        "className": "button secondary"
+      },
+      {
+        "tag": "input",
+        "name": "Nombre del negocio",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Frase principal",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Ubicación",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Logo (ruta o URL)",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Correo de contacto público",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Teléfono de contacto",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Color principal",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Color de acento",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Color de fondo",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Descripción del negocio",
+        "width": 898,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Antetítulo",
+        "width": 898,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Título del catálogo",
+        "width": 898,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Introducción al catálogo",
+        "width": 898,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Título de presentación",
+        "width": 898,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Texto de presentación",
+        "width": 898,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Hora de entrada por noche (0–23)",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "name": "Hora de salida por noche (0–23)",
+        "width": 440,
+        "height": 46,
+        "className": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "Política de cancelación",
+        "width": 898,
+        "height": 112,
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "name": "Guardar configuración",
+        "width": 195,
+        "height": 52,
+        "className": "button"
+      }
+    ],
+    "unnamed": [],
+    "order": [
+      "a: Saltar al contenido",
+      "a: Refugio Claro",
+      "a: ◇ Resumen",
+      "a: ◇ Cabañas",
+      "a: ◇ Solicitudes",
+      "a: ◇ Calendario",
+      "a: ◇ Configuración",
+      "a: ← Ver sitio público",
+      "button: Cerrar sesión",
+      "input: Refugio Claro",
+      "input: Un lugar para bajar el ritmo.",
+      "input: Valle del Claro · ubicación ficticia",
+      "input: /images/logo.svg",
+      "input: hola@refugioclaro.example",
+      "input: Teléfono de contacto",
+      "input: #244d40",
+      "input: #bb5c37",
+      "input: #faf8f2",
+      "textarea: Cabañas entre árboles, tardes largas y pequeños momentos que se quedan contigo.",
+      "textarea: MENOS PRISA, MÁS NATURALEZA",
+      "textarea: Encuentra tu propio refugio",
+      "textarea: Para una escapada de días o una pausa de unas horas. Tú eliges cómo descansar.",
+      "textarea: Lo simple también puede ser extraordinario.",
+      "textarea: Un café en la terraza, una conversación sin reloj y un espacio solo para ti. Imaginamos refugios peq",
+      "input: 15",
+      "input: 11",
+      "textarea: Las condiciones de cancelación se acuerdan directamente con el dueño. Este texto de ejemplo podrá ed",
+      "button: Guardar configuración"
+    ],
+    "focusIssues": []
+  }
+]

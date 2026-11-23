@@ -1,3 +1,12 @@
+## Etapa 16: correcciones responsive y accesibilidad (23 de noviembre de 2026)
+
+Se corrigen los contrastes detectados con los colores de `BusinessSettings`, los nombres visibles de los enlaces a cabañas, la jerarquía de encabezados y el landmark inferior del panel. Los enlaces y controles dedicados reciben áreas táctiles de al menos 44 px; los campos de texto con valores largos muestran una fila adicional en móvil. Se agrega una prueba Playwright con axe para las 16 rutas públicas y administrativas a 360, 768 y 1280 px, que falla ante violaciones serias o críticas. El informe conserva la medición inicial y agrega el resultado posterior.
+
+Archivos: `src/app/globals.css`, `src/app/admin/layout.tsx`, `src/components/admin-fields.tsx`, `src/components/cabin-card.tsx`, `src/components/catalog.tsx`, `tests/e2e/accessibility.spec.ts`, ajuste de tipado en `tests/e2e/admin-panel.spec.ts`, `package.json`, `package-lock.json`, `artifacts/a11y-audit/report.md` y capturas del informe.
+
+Verificaciones: `npm test` aprobó 11 pruebas; `npm run typecheck` correcto; `next build` correcto en copia temporal sin `.env` ni `.local/`; la prueba E2E axe aprobó las 48 combinaciones de ruta y viewport. El análisis completo posterior reportó cero violaciones axe de cualquier nivel, cero desbordes horizontales, cero textos recortados, cero controles sin nombre y cero áreas de texto que requieran desplazamiento. `npm run lint` terminó sin errores y conserva ocho advertencias de imágenes y navegación.
+
+Límites: se usó el fixture E2E con los colores predeterminados de `BusinessSettings`. No se modificaron acciones, autenticación, persistencia ni reglas de dominio. La solicitud de prueba y el administrador vivieron solo en el contenedor temporal `cabanias_test`, eliminado al terminar.
 # Archivos y verificaciones
 
 ## Etapa 15: flujos E2E del panel administrativo (23 de noviembre de 2026)

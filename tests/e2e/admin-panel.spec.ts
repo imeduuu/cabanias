@@ -8,8 +8,8 @@ if (!adminEmail || !adminPassword) throw new Error("Faltan las credenciales efí
 
 type AdminStorageState = Awaited<ReturnType<BrowserContext["storageState"]>>;
 
-const test = base.extend<{}, { adminStorageState: AdminStorageState }>({
-  adminStorageState: [async ({ browser }, use) => {
+const test = base.extend<Record<never, never>, { adminStorageState: AdminStorageState }>({
+  adminStorageState: [async ({ browser }, completeFixture) => {
     const context = await browser.newContext();
     const page = await context.newPage();
     await page.goto("/login");
@@ -17,12 +17,12 @@ const test = base.extend<{}, { adminStorageState: AdminStorageState }>({
     await page.getByLabel("Contraseña").fill(adminPassword!);
     await page.getByRole("button", { name: "Iniciar sesión" }).click();
     await expect(page).toHaveURL(/\/admin$/);
-    await use(await context.storageState());
+    await completeFixture(await context.storageState());
     await context.close();
   }, { scope: "worker" }],
-  context: async ({ browser, adminStorageState }, use) => {
+  context: async ({ browser, adminStorageState }, completeFixture) => {
     const context = await browser.newContext({ storageState: adminStorageState });
-    await use(context);
+    await completeFixture(context);
     await context.close();
   },
 });
