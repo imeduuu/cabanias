@@ -31,6 +31,8 @@ Abre http://localhost:3000. Para cargar el catálogo ficticio de desarrollo, eje
 - `npm run check`: ejecutar lint, tipos, pruebas, validación de Prisma y compilación.
 - `npm test`: pruebas puras y protecciones de destino.
 - `npm run test:postgres`: suite de integración en la base desechable `cabanias_test`.
+- `docker compose up -d mailpit`: iniciar el SMTP local de desarrollo en `127.0.0.1:1025` y su interfaz en `127.0.0.1:8025`. Configura `SMTP_*` según `.env.example`.
+- `npm run notifications:send`: enviar notificaciones pendientes mediante SMTP. Ejecútalo periódicamente fuera del proceso web; requiere `SMTP_*` y `DATABASE_URL`.
 - `npm run test:e2e`: recrear `cabanias_test`, compilar en `.local/next-e2e` y ejecutar Playwright en Chromium de escritorio y móvil. Requiere las variables locales de base de datos configuradas y Chromium instalado (`npx playwright install chromium`).
 - `npm run db:seed:demo`: cargar datos ficticios de desarrollo de forma explícita.
 

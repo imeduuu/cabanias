@@ -39,6 +39,13 @@ test("admin authentication over HTTP and direct server access", { skip: !process
   process.env.BETTER_AUTH_SECRET = randomBytes(48).toString("hex");
   const db = new PrismaClient({ adapter: new PrismaPg({ connectionString: process.env.TEST_DATABASE_URL! }) });
   const email = "synthetic-auth@example.test", password = randomBytes(32).toString("base64url");
+  const clearCabinRequests = async (cabinId: string) => {
+    const requests = await db.bookingRequest.findMany({ where: { cabinId }, select: { id: true } });
+    const requestIds = requests.map(row => row.id);
+    await db.notificationOutbox.deleteMany({ where: { requestId: { in: requestIds } } });
+    await db.bookingSubmission.deleteMany({ where: { requestId: { in: requestIds } } });
+    await db.bookingRequest.deleteMany({ where: { cabinId } });
+  };
   let child: ReturnType<typeof spawn> | undefined;
   let startupLog = "";
   const request = (path: string, init: RequestInit = {}) => fetch(base + path, { redirect: "manual", signal: AbortSignal.timeout(30000), ...init });
@@ -261,9 +268,9 @@ test("admin authentication over HTTP and direct server access", { skip: !process
     assert.ok(monthHtml.includes("month-desktop") && monthHtml.includes("month-mobile") && monthHtml.includes("Solicitud pendiente · no ocupa"));
     const mobileCalendar = await request(monthPath, { headers: { cookie, "user-agent": "Mozilla/5.0 (Linux; Android 14) Mobile" } });
     assert.equal(mobileCalendar.status, 200);
-    await db.bookingRequest.deleteMany({ where: { cabinId: monthlyCabin.id } });
+    await clearCabinRequests(monthlyCabin.id);
     await db.cabin.delete({ where: { id: monthlyCabin.id } });
-    await db.bookingRequest.deleteMany({ where: { cabinId: managedCabin.id } });
+    await clearCabinRequests(managedCabin.id);
     await db.cabin.delete({ where: { id: managedCabin.id } });
     const form = new FormData(); form.set(`$ACTION_ID_${action}`, "");
     const directAction = await request("/admin", { method: "POST", headers: { origin: base }, body: form });

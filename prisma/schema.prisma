@@ -31,6 +31,20 @@ enum BookingStatus {
   CANCELLED
 }
 
+enum NotificationEvent {
+  REQUEST_CREATED
+  REQUEST_CONFIRMED
+  REQUEST_REJECTED
+  REQUEST_CANCELLED
+}
+
+enum NotificationStatus {
+  PENDING
+  PROCESSING
+  SENT
+  ERROR
+}
+
 model BusinessSettings {
   id                 Int      @id @default(1)
   name               String
@@ -193,6 +207,7 @@ model BookingRequest {
   currency          String             @default("CLP")
   status            BookingStatus      @default(PENDING)
   occupancy         Occupancy?
+  notifications     NotificationOutbox[]
   createdAt         DateTime           @default(now()) @db.Timestamptz(3)
   updatedAt         DateTime           @updatedAt @db.Timestamptz(3)
 
@@ -205,6 +220,26 @@ model BookingSubmission {
   requestId   String         @unique @db.Uuid
   request     BookingRequest @relation(fields: [requestId], references: [id], onDelete: Restrict)
   createdAt   DateTime       @default(now()) @db.Timestamptz(3)
+}
+
+model NotificationOutbox {
+  id            String             @id @default(uuid()) @db.Uuid
+  requestId     String             @db.Uuid
+  request       BookingRequest     @relation(fields: [requestId], references: [id], onDelete: Restrict)
+  event         NotificationEvent
+  status        NotificationStatus @default(PENDING)
+  recipient     String
+  payload       Json               @db.JsonB
+  attempts      Int                @default(0)
+  nextAttemptAt DateTime           @default(now()) @db.Timestamptz(3)
+  lockedAt      DateTime?          @db.Timestamptz(3)
+  lastError     String?            @db.VarChar(500)
+  createdAt     DateTime           @default(now()) @db.Timestamptz(3)
+  sentAt        DateTime?          @db.Timestamptz(3)
+
+  @@unique([requestId, event])
+  @@index([status, nextAttemptAt, createdAt])
+  @@index([status, lockedAt])
 }
 
 model ManualBlock {

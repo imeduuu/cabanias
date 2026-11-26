@@ -3,6 +3,7 @@ import type { Prisma, PrismaClient } from "../../generated/prisma/client";
 import { assertTransition, DomainError, estimateStay, interval, invariant, validateGuest, type StayInput, type Status } from "./domain";
 import { quoteFingerprint } from "./quote-security";
 import { limitPublicBooking } from "./public-limit";
+import { enqueueRequestCreated, enqueueRequestStatus } from "../notifications/service";
 
 // Server-side services; callers must validate their own public/admin boundary.
 type Tx = Prisma.TransactionClient;
@@ -42,9 +43,11 @@ async function persistRequest(tx: Tx, input: RequestInput) {
     await assertFree(tx, cabin.id, quote.startsAt, quote.endsAt);
     invariant(!input.expectedFingerprint || input.expectedFingerprint === quoteFingerprint(cabin.id, input.guests, quote),
       "QUOTE_CHANGED", "El precio o los datos cambiaron. Consulta nuevamente antes de enviar.");
-    return tx.bookingRequest.create({ data: { cabinId: cabin.id, mode: cabin.mode, ...guest,
+    const request = await tx.bookingRequest.create({ data: { cabinId: cabin.id, mode: cabin.mode, ...guest,
       startsAt: quote.startsAt, endsAt: quote.endsAt, estimatedTotalClp: quote.totalClp,
       pricingSnapshot: quote.snapshot, status: "PENDING" } });
+    await enqueueRequestCreated(tx, request, cabin.name, settings);
+    return request;
 }
 export function createRequest(db: PrismaClient, input: RequestInput) {
   return transaction(db, tx => persistRequest(tx, input));
@@ -102,7 +105,10 @@ export function changeRequestStatus(db: PrismaClient, requestId: string, status:
       await assertFree(tx, cabin.id, request.startsAt, request.endsAt);
     }
     // Trigger inserts occupation atomically. Failure rolls back status and occupation.
-    return tx.bookingRequest.update({ where: { id: requestId }, data: { status } });
+    const updated = await tx.bookingRequest.update({ where: { id: requestId }, data: { status } });
+    const settings = await tx.businessSettings.findUnique({ where: { id: 1 } });
+    await enqueueRequestStatus(tx, updated, cabin.name, settings);
+    return updated;
   });
 }
 export function createManualBlock(db: PrismaClient, input: { cabinId: string; startsAt: Date; endsAt: Date; reason: string }) {

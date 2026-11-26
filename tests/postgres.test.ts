@@ -4,7 +4,8 @@ import assert from "node:assert/strict";
 import { randomUUID } from "node:crypto";
 import { PrismaPg } from "@prisma/adapter-pg";
 import { PrismaClient } from "../src/generated/prisma/client";
-import { changeRequestStatus, createManualBlock, removeManualBlock } from "../src/modules/bookings/service";
+import { changeRequestStatus, createIdempotentRequest, createManualBlock, removeManualBlock } from "../src/modules/bookings/service";
+import { sendPendingNotifications } from "../src/modules/notifications/service";
 import { assertLocalUrl } from "../scripts/local-db-safety.mjs";
 import { limitPublicBooking } from "../src/modules/bookings/public-limit";
 import { createHash } from "node:crypto";
@@ -22,8 +23,24 @@ test("PostgreSQL invariants and concurrent writers", { skip: !process.env.TEST_D
     estimatedTotalClp: 2000, pricingSnapshot: { test: true },
   } });
   const clear = async () => {
+    const requests = await db.bookingRequest.findMany({ where: { cabinId }, select: { id: true } });
+    const requestIds = requests.map(row => row.id);
+    await db.notificationOutbox.deleteMany({ where: { requestId: { in: requestIds } } });
+    await db.bookingSubmission.deleteMany({ where: { requestId: { in: requestIds } } });
     await db.bookingRequest.deleteMany({ where: { cabinId } });
     await db.manualBlock.deleteMany({ where: { cabinId } });
+  };
+  const idempotentInput = (guestName: string, guestEmail: string, day: string) => ({
+    cabinId,
+    stay: { mode: "HOURLY" as const, startsAt: `${day}T15:00:00-03:00`, endsAt: `${day}T17:00:00-03:00` },
+    guestName,
+    guestEmail,
+    guests: 1,
+  });
+  const submitIdempotently = (guestName: string, guestEmail: string, day: string, key: string, visitor: string) => {
+    const keyHash = createHash("sha256").update(key).digest("hex");
+    const payloadHash = createHash("sha256").update(`${key}:payload`).digest("hex");
+    return createIdempotentRequest(db, keyHash, payloadHash, visitor, async () => idempotentInput(guestName, guestEmail, day));
   };
   try {
     await t.test("visitor quotas are atomic, isolated and separate for quotes and sends", async () => {
@@ -55,6 +72,118 @@ test("PostgreSQL invariants and concurrent writers", { skip: !process.env.TEST_D
     await db.cabin.create({ data: { id: cabinId, slug: `test-${cabinId}`, name: "Synthetic test cabin",
       description: "Disposable fixture", mode: "HOURLY", capacity: 2, bedrooms: 1,
       publicationStatus: "PUBLISHED", baseRateClp: 1000 } });
+    await db.businessSettings.upsert({ where: { id: 1 }, update: {}, create: {
+      id: 1, name: "Synthetic test business", tagline: "Test", description: "Test business",
+      location: "Test", contactEmail: "owner@example.test", primaryColor: "#123456",
+      accentColor: "#234567", backgroundColor: "#345678", homeTexts: {},
+      cancellationPolicy: "Test policy",
+    } });
+    await t.test("a transaction rollback leaves no queued notification", async () => {
+      await db.$executeRaw`
+        CREATE OR REPLACE FUNCTION test_fail_booking_submission() RETURNS trigger AS $$
+        BEGIN
+          RAISE EXCEPTION 'synthetic transaction rollback';
+        END;
+        $$ LANGUAGE plpgsql
+      `;
+      await db.$executeRaw`
+        CREATE TRIGGER test_fail_booking_submission
+        BEFORE INSERT ON "BookingSubmission"
+        FOR EACH ROW EXECUTE FUNCTION test_fail_booking_submission()
+      `;
+      const email = `rollback-${randomUUID()}@example.test`;
+      const ownerNotificationsBefore = await db.notificationOutbox.count({ where: { recipient: "owner@example.test" } });
+      try {
+        const visitor = createHash("sha256").update(randomUUID()).digest("hex");
+        await assert.rejects(submitIdempotently("Rollback Test", email, "2035-02-01", randomUUID(), visitor),
+          /synthetic transaction rollback/);
+        assert.equal(await db.bookingRequest.count({ where: { cabinId, guestEmail: email } }), 0);
+        assert.equal(await db.notificationOutbox.count({ where: { recipient: "owner@example.test" } }), ownerNotificationsBefore);
+      } finally {
+        await db.$executeRaw`DROP TRIGGER IF EXISTS test_fail_booking_submission ON "BookingSubmission"`;
+        await db.$executeRaw`DROP FUNCTION IF EXISTS test_fail_booking_submission()`;
+      }
+    });
+    await t.test("idempotent retry does not duplicate its notification and confirmation queues exactly one", async () => {
+      const email = `idempotent-${randomUUID()}@example.test`;
+      const key = randomUUID(), visitor = createHash("sha256").update(randomUUID()).digest("hex");
+      await submitIdempotently("Idempotent Test", email, "2035-03-01", key, visitor);
+      const created = await db.bookingRequest.findFirstOrThrow({ where: { cabinId, guestEmail: email } });
+      assert.equal(await db.notificationOutbox.count({ where: { requestId: created.id, event: "REQUEST_CREATED" } }), 1);
+      await submitIdempotently("Idempotent Test", email, "2035-03-01", key, visitor);
+      assert.equal(await db.notificationOutbox.count({ where: { requestId: created.id, event: "REQUEST_CREATED" } }), 1);
+      await changeRequestStatus(db, created.id, "CONFIRMED");
+      assert.equal(await db.notificationOutbox.count({ where: { requestId: created.id, event: "REQUEST_CONFIRMED" } }), 1);
+      await clear();
+    });
+    await t.test("SMTP connection failure retries twice and then records a terminal error", async () => {
+      await clear();
+      const failedRequest = await request();
+      const notification = await db.notificationOutbox.create({ data: {
+        requestId: failedRequest.id,
+        event: "REQUEST_CREATED",
+        recipient: "guest@example.test",
+        nextAttemptAt: new Date(0),
+        payload: {
+          businessName: "Synthetic test business",
+          cabinName: "Synthetic test cabin",
+          guestName: "SMTP Test",
+          guestEmail: "guest@example.test",
+          guestPhone: null,
+          startsAt: startsAt.toISOString(),
+          endsAt: endsAt.toISOString(),
+          guests: 1,
+          estimatedTotalClp: 2000,
+          currency: "CLP",
+          contactEmail: "owner@example.test",
+          contactPhone: null,
+          timezone: "America/Santiago",
+        },
+      } });
+      const envNames = ["SMTP_HOST", "SMTP_PORT", "SMTP_USER", "SMTP_PASSWORD", "SMTP_FROM", "SMTP_SECURE"] as const;
+      const previous = Object.fromEntries(envNames.map(name => [name, process.env[name]]));
+      Object.assign(process.env, {
+        SMTP_HOST: "127.0.0.1",
+        SMTP_PORT: "1",
+        SMTP_USER: "",
+        SMTP_PASSWORD: "",
+        SMTP_FROM: "Cabañas <sender@example.test>",
+        SMTP_SECURE: "false",
+      });
+      try {
+        const dueCheck = await db.$queryRaw<{ due: boolean; status: string }[]>`
+          SELECT "nextAttemptAt" <= NOW() AS due, "status"::text AS status
+          FROM "NotificationOutbox" WHERE "id" = ${notification.id}::uuid
+        `;
+        assert.deepEqual(dueCheck, [{ due: true, status: "PENDING" }]);
+        const first = await sendPendingNotifications(db);
+        assert.ok(first.failed >= 1, JSON.stringify({ first, notification: await db.notificationOutbox.findUnique({ where: { id: notification.id } }) }));
+        const afterFirst = await db.notificationOutbox.findUniqueOrThrow({ where: { id: notification.id } });
+        assert.equal(afterFirst.status, "PENDING");
+        assert.equal(afterFirst.attempts, 1);
+        assert.ok(afterFirst.lastError);
+        await db.notificationOutbox.update({ where: { id: notification.id }, data: { nextAttemptAt: new Date(0) } });
+        const second = await sendPendingNotifications(db);
+        assert.equal(second.failed, 1);
+        const afterSecond = await db.notificationOutbox.findUniqueOrThrow({ where: { id: notification.id } });
+        assert.equal(afterSecond.status, "PENDING");
+        assert.equal(afterSecond.attempts, 2);
+        await db.notificationOutbox.update({ where: { id: notification.id }, data: { nextAttemptAt: new Date(0) } });
+        const third = await sendPendingNotifications(db);
+        assert.equal(third.failed, 1);
+        const afterThird = await db.notificationOutbox.findUniqueOrThrow({ where: { id: notification.id } });
+        assert.equal(afterThird.status, "ERROR");
+        assert.equal(afterThird.attempts, 3);
+        assert.ok(afterThird.lastError);
+      } finally {
+        for (const name of envNames) {
+          const value = previous[name];
+          if (value === undefined) delete process.env[name];
+          else process.env[name] = value;
+        }
+        await clear();
+      }
+    });
     await t.test("pending requests do not occupy; two concurrent confirmations yield one winner", async () => {
       const a = await request(), b = await request();
       assert.equal(await db.occupancy.count({ where: { cabinId } }), 0);

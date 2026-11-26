@@ -1,3 +1,13 @@
+## Etapa 19: notificaciones transaccionales por correo (26 de noviembre de 2026)
+
+Se implementa una outbox PostgreSQL con estados, intentos, reintentos y retención; la creación de solicitudes y los cambios de estado encolan dentro de sus transacciones actuales. `npm run notifications:send` envía por SMTP con Nodemailer; se agregan Mailpit enlazado solo a loopback, variables SMTP de ejemplo y pruebas de integración para rollback, idempotencia, confirmación y fallo/reintentos. La migración es aditiva y conserva intactas las invariantes SQL de `Occupancy`.
+
+Archivos: `docs/decisiones/notificaciones.md`, `prisma/schema.prisma`, `prisma/migrations/202611260001_notifications_outbox/migration.sql`, `src/modules/bookings/service.ts`, `src/modules/notifications/service.ts`, `scripts/send-notifications.ts`, `tests/postgres.test.ts`, `tests/auth.test.ts`, `compose.yaml`, `.env.example`, `package.json`, `package-lock.json`, `README.md` e `IMPLEMENTACION.md`.
+
+Verificaciones: `npm run db:generate`, `npm run db:validate`, `docker compose config --quiet`, `npm run lint` (sin errores; ocho avisos preexistentes), `npm test` (11 aprobadas), `npm run typecheck`, `npm run build` y `npm run test:postgres` (24 aprobadas, incluida la migración aplicada en `cabanias_test`). `git diff --check` final.
+
+Límites: no se configuró ni probó un proveedor SMTP real; la prueba de fallo usa exclusivamente `127.0.0.1:1`. Mailpit no se inicia automáticamente y el comando requiere un planificador externo para el envío periódico. No se conectó ni modificó `cabanias_dev`.
+
 ## Etapa 18: propuesta de notificaciones por correo (26 de noviembre de 2026)
 
 Se documenta una propuesta para notificar al dueño cuando se crea una solicitud y al huésped cuando se confirma, rechaza o cancela. Describe outbox PostgreSQL transaccional, reintentos SMTP genérico, Mailpit para desarrollo, datos personales y retención, alternativas, riesgos y puntos de integración existentes en `service.ts`.
