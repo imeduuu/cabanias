@@ -55,6 +55,7 @@ model BusinessSettings {
   contactEmail       String
   notificationEmail  String
   contactPhone       String?
+  whatsappNumber     String?
   primaryColor       String
   accentColor        String
   backgroundColor    String

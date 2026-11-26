@@ -20,6 +20,8 @@ npm run db:deploy
 
 Los servicios internos de configuración y precios se usan desde acciones autenticadas y validan los cambios antes de guardarlos. Las temporadas usan fechas locales `[inicio, fin)`, sin superposición por cabaña; reemplazan la tarifa base, no se acumulan.
 
+La columna opcional `BusinessSettings.whatsappNumber` guarda el número público en formato E.164 y la restricción `business_whatsapp_e164` rechaza otros formatos; las filas existentes quedan en `NULL`.
+
 ### Reglas de intervalos y precios
 
 Las solicitudes nocturnas reciben fechas `YYYY-MM-DD`; se convierten a instantes en `America/Santiago` con entrada a las 15 y salida a las 11 por defecto, configurables en `BusinessSettings`. Se cobra cada noche por su fecha local de llegada, excluyendo el día de salida. Los cambios de horario no alteran el número de noches.

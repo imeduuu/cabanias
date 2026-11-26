@@ -1,4 +1,5 @@
 import { clp, DomainError, invariant } from "../bookings/domain";
+import { normalizeWhatsappNumber } from "../contact/whatsapp";
 export function text(form: FormData, key: string, max = 200, required = true) {
   const value = form.get(key);
   invariant(typeof value === "string", "INVALID_INPUT", `Falta el campo ${key}.`);
@@ -57,9 +58,12 @@ export function settingsInput(form: FormData) {
   const colors = { primaryColor: text(form, "primaryColor"), accentColor: text(form, "accentColor"), backgroundColor: text(form, "backgroundColor") };
   invariant(Object.values(colors).every(v => /^#[0-9a-f]{6}$/i.test(v)), "INVALID_INPUT", "Los colores deben usar formato #123456.");
   const logo = text(form, "logoUrl", 2000, false);
+  const whatsappRaw = text(form, "whatsappNumber", 30, false);
+  const whatsappNumber = whatsappRaw ? normalizeWhatsappNumber(whatsappRaw) : null;
+  invariant(!whatsappRaw || whatsappNumber, "INVALID_INPUT", "Revisa el número de WhatsApp: usa formato internacional con código de país, por ejemplo +56 9 1234 5678.");
   return { name: text(form, "name", 120), tagline: text(form, "tagline", 200), description: text(form, "description", 5000),
     location: text(form, "location", 200), logoUrl: logo ? imageUrl(logo) : null,
-    contactEmail: email, notificationEmail, contactPhone: text(form, "contactPhone", 40, false) || null, ...colors,
+    contactEmail: email, notificationEmail, contactPhone: text(form, "contactPhone", 40, false) || null, whatsappNumber, ...colors,
     cancellationPolicy: text(form, "cancellationPolicy", 10000), checkInHour: number(form, "checkInHour", 0, 23),
     checkOutHour: number(form, "checkOutHour", 0, 23), homeTexts: Object.fromEntries(homeKeys.map(key => [key, text(form, key, 3000)])) };
 }

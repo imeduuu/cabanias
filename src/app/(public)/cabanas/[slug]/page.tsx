@@ -16,5 +16,5 @@ export default async function CabinPage({params}: {params: Promise<{slug: string
  <h3>Política de cancelación</h3><p className="preserve-lines">{business.cancellationPolicy}</p></div>
  <aside className="price-panel"><span className="eyebrow">TARIFA BASE</span><p className="price">{money(cabin.price)} <small>/ {modeLabel(cabin.mode)}</small></p>
  {cabin.seasons.length > 0 && <><h3>Temporadas</h3><ul className="season-prices">{cabin.seasons.map((season, i) => <li key={i}><strong>{season.name}</strong><span>{season.startDate} al {season.endDate} (fin excluido)</span><span>{money(season.rateClp)} / {modeLabel(cabin.mode)}</span></li>)}</ul><p className="muted">Las tarifas de temporada sustituyen la tarifa base. Fechas locales de Santiago.</p></>}
- <BookingForm slug={cabin.slug} mode={cabin.mode} capacity={cabin.guests} submissionKey={randomUUID()}/><small>Moneda {business.currency} · {business.timezone}</small></aside></div></main>;
+ <BookingForm slug={cabin.slug} mode={cabin.mode} capacity={cabin.guests} submissionKey={randomUUID()} cabinName={cabin.name} whatsappNumber={business.whatsappNumber}/><small>Moneda {business.currency} · {business.timezone}</small></aside></div></main>;
 }

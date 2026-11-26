@@ -3,18 +3,23 @@ import { useActionState, useState } from "react";
 import { publicBookingAction } from "@/app/(public)/cabanas/booking-actions";
 import { money } from "@/lib/format";
 import type { PublicBookingState } from "@/modules/bookings/public-types";
+import { stayFromSelection, whatsappLink } from "@/modules/contact/whatsapp";
+import { WhatsappLink } from "./whatsapp-link";
 
-type Props = { slug: string; mode: "night" | "hour"; capacity: number; submissionKey: string };
+type Props = { slug: string; mode: "night" | "hour"; capacity: number; submissionKey: string; cabinName: string; whatsappNumber: string | null };
 export function BookingForm(props: Props) {
   const [intent,setIntent] = useState({key:props.submissionKey,generation:0});
   return <BookingFormContent key={intent.generation} {...props} submissionKey={intent.key}
     onNew={key=>setIntent(previous=>({key,generation:previous.generation+1}))}/>;
 }
-function BookingFormContent({ slug, mode, capacity, submissionKey, onNew }: Props & {onNew: (key: string)=>void}) {
+function BookingFormContent({ slug, mode, capacity, submissionKey, cabinName, whatsappNumber, onNew }: Props & {onNew: (key: string)=>void}) {
   const [state, action, pending] = useActionState<PublicBookingState, FormData>(publicBookingAction, {});
   const [values, setValues] = useState<Record<string, string>>({ guests: "1", hour: "15", duration: "1", ...state.selection });
   const [dirty, setDirty] = useState(false);
   const quote = dirty ? undefined : state.quote;
+  const stay = quote ? stayFromSelection(mode, state.selection) : undefined;
+  const href = whatsappLink(whatsappNumber, cabinName, stay);
+  const genericHref = whatsappLink(whatsappNumber, cabinName);
   function field(name: string, label: string, type: string, extra: React.InputHTMLAttributes<HTMLInputElement> = {}) {
     return <label className="form-field" htmlFor={`booking-${slug}-${name}`}>{label}<input id={`booking-${slug}-${name}`} name={name} type={type}
       value={values[name] ?? ""} onChange={event => { setValues(previous => ({ ...previous, [name]: event.target.value })); if (!["guestName", "guestEmail", "guestPhone"].includes(name)) setDirty(true); }} {...extra}/></label>;
@@ -22,6 +27,7 @@ function BookingFormContent({ slug, mode, capacity, submissionKey, onNew }: Prop
   if (state.success) return <section className="booking-success" role="status" tabIndex={-1}>
     <h3>Solicitud recibida</h3><p>El envío se registró para revisión. Los reintentos del mismo envío no crean otra solicitud. <strong>Esta recepción no confirma ni garantiza una reserva.</strong> Se requiere aceptación del dueño.</p>
     <p>No se realizó ningún cobro.</p><button className="button secondary" type="button" onClick={()=>onNew(state.nextSubmissionKey!)}>Iniciar otra solicitud intencional</button>
+    {genericHref && <WhatsappLink href={genericHref} cabinName={cabinName}/>}
   </section>;
   const local = (value: string) => new Intl.DateTimeFormat("es-CL", { timeZone: "America/Santiago", dateStyle: "medium", timeStyle: "short" }).format(new Date(value));
   return <form action={action} className="management-form booking-form" data-management="public-booking"
@@ -54,5 +60,6 @@ function BookingFormContent({ slug, mode, capacity, submissionKey, onNew }: Prop
     {state.error && <p className="form-error" role="alert">{state.error}</p>}
     {pending && <p role="status">Procesando…</p>}
     <p className="muted">Consultar no bloquea el período. Las solicitudes pendientes tampoco lo bloquean; la disponibilidad puede cambiar. No se realizan pagos ni se envían mensajes automáticos.</p>
+    {href && <WhatsappLink href={href} cabinName={cabinName}/>}
   </form>;
 }

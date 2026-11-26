@@ -75,6 +75,27 @@ test("rechaza la consulta cuando el período tiene un bloqueo manual", async ({ 
   await expect(page.locator(".quote-result")).toHaveCount(0);
 });
 
+test("el detalle ofrece WhatsApp con la cabaña y la consulta, sin datos del huésped", async ({ page }) => {
+  await page.goto("/cabanas/bosque");
+  const link = page.getByRole("link", { name: /^Consultar por WhatsApp sobre Refugio Bosque/ });
+  await expect(link).toHaveAttribute("target", "_blank");
+  await expect(link).toHaveAttribute("rel", /noopener/);
+  const textOf = async () => {
+    const url = new URL((await link.getAttribute("href"))!);
+    expect(url.origin + url.pathname).toBe("https://wa.me/56912345678");
+    return url.searchParams.get("text") ?? "";
+  };
+  expect(await textOf()).toContain("«Refugio Bosque»");
+  await quoteNight(page);
+  await expect(page.locator(".quote-result")).toBeVisible();
+  await page.locator(".quote-result").getByLabel("Nombre de contacto").fill(guest.name);
+  await page.locator(".quote-result").getByLabel("Correo electrónico").fill(guest.email);
+  const text = await textOf();
+  for (const value of ["14/02/2030", "16/02/2030", "1 huésped"]) expect(text).toContain(value);
+  expect(text).not.toContain(guest.name);
+  expect(text).not.toContain(guest.email);
+});
+
 test("cambiar la selección invalida el estimado visible", async ({ page }) => {
   await page.goto("/cabanas/bosque");
   await quoteNight(page);

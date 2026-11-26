@@ -17,7 +17,7 @@ async function main() {
     await db.businessSettings.create({ data: {
       id: 1, name: business.name, tagline: business.tagline, description: business.description,
       location: business.location, logoUrl: business.logo, contactEmail: business.contact.email,
-      notificationEmail: "avisos@refugioclaro.example",
+      notificationEmail: "avisos@refugioclaro.example", whatsappNumber: "+56912345678",
       primaryColor: business.colors.primary, accentColor: business.colors.accent,
       backgroundColor: business.colors.background, homeTexts: business.home,
       cancellationPolicy: business.cancellationPolicy,

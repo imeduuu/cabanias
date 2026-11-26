@@ -8,7 +8,7 @@ export const getBusiness = cache(async () => {
   const texts = (row?.homeTexts ?? {}) as Record<string, string>;
   return { configured: !!row, name: row?.name ?? "Cabañas", tagline: row?.tagline ?? "Sitio en preparación",
     description: row?.description ?? "Pronto encontrarás aquí nuestros alojamientos.", location: row?.location ?? "",
-    logo: row?.logoUrl ?? "", contact: { email: row?.contactEmail ?? "", phoneLabel: row?.contactPhone ?? "" },
+    logo: row?.logoUrl ?? "", contact: { email: row?.contactEmail ?? "", phoneLabel: row?.contactPhone ?? "" }, whatsappNumber: row?.whatsappNumber ?? null,
     colors: { primary: row?.primaryColor ?? "#244d40", accent: row?.accentColor ?? "#bb5c37", background: row?.backgroundColor ?? "#faf8f2" },
     timezone: "America/Santiago", currency: "CLP", locale: "es-CL", cancellationPolicy: row?.cancellationPolicy ?? "",
     checkInHour: row?.checkInHour ?? 15, checkOutHour: row?.checkOutHour ?? 11,

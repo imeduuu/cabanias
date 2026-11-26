@@ -1,7 +1,7 @@
 ## Personalización
 
 - `src/config/business.ts` y `src/modules/cabins/data.ts`: fixtures ficticios para la carga inicial, no fuente de datos de las páginas.
-- Panel `/admin/configuracion`: identidad, logo, colores, contacto público, correo para avisos, textos, horarios y políticas persistidos. El correo para avisos es distinto e independiente del contacto público y de la cuenta de acceso.
+- Panel `/admin/configuracion`: identidad, logo, colores, contacto público, WhatsApp opcional en formato internacional E.164 (por ejemplo `+56912345678`; si queda vacío, el enlace no aparece en las cabañas), correo para avisos, textos, horarios y políticas persistidos. El correo para avisos es distinto e independiente del contacto público y de la cuenta de acceso.
 - Panel `/admin/cabanas`: fichas, modalidad NIGHTLY o HOURLY, capacidad, servicios, imágenes, publicación y tarifas.
 - `public/images/`: logo e ilustraciones SVG locales. También se pueden referenciar imágenes por URL HTTPS, sin proveedor de almacenamiento ni subida de archivos.
 - `src/components/`: componentes compartidos y filtros del catálogo.

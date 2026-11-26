@@ -13,3 +13,5 @@
 .card-body h2 a,.card-body h3 a,.card-bottom a,.request-card-heading h2 a,.admin-cabin p a{display:inline-flex;min-height:44px;align-items:center}
 .delete-check,.booking-ack{min-height:44px}
 footer.admin-disclaimer{background:transparent}
+
+.whatsapp-contact{margin-top:16px}.whatsapp-contact small{display:block;margin-top:6px}

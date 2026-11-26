@@ -40,13 +40,13 @@ Abre http://localhost:3000. Para cargar el catálogo ficticio de desarrollo, eje
 
 - `/`: portada pública.
 - `/cabanas`: catálogo público.
-- `/cabanas/[slug]`: detalle de una cabaña publicada y consulta/envío de solicitud.
+- `/cabanas/[slug]`: detalle de una cabaña publicada, consulta/envío de solicitud y enlace opcional a WhatsApp con mensaje prellenado (cabaña y, tras consultar, fechas y huéspedes; sin datos personales).
 - `/login`: acceso de la cuenta administradora.
 - `/admin`: resumen de solicitudes pendientes y confirmadas, con accesos de gestión.
 - `/admin/cabanas`: listado y gestión de cabañas.
 - `/admin/cabanas/nueva` y `/admin/cabanas/[id]`: creación y edición de cabañas.
 - `/admin/solicitudes`: listado filtrable de solicitudes; `/admin/solicitudes/[id]`: detalle y gestión de estado.
-- `/admin/configuracion`: edición de identidad, contacto público, correo para avisos, textos, horarios y políticas del negocio. El correo para avisos es independiente del contacto público y del acceso administrativo.
+- `/admin/configuracion`: edición de identidad, contacto público, número de WhatsApp opcional en formato internacional, correo para avisos, textos, horarios y políticas del negocio. El correo para avisos es independiente del contacto público y del acceso administrativo.
 - `/admin/calendario`: calendario de reservas, solicitudes y bloqueos manuales.
 
 El panel y sus acciones requieren autenticación en el servidor. Las solicitudes públicas quedan pendientes hasta que el administrador las gestiona; los detalles de operación están en [Reservas](docs/reservas.md) y [Panel](docs/panel.md).

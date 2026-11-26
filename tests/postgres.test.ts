@@ -237,6 +237,12 @@ test("PostgreSQL invariants and concurrent writers", { skip: !process.env.TEST_D
       await assert.rejects(db.seasonalRate.create({ data: { cabinId, name: "Overlap", startDate: new Date("2035-01-05Z"), endDate: new Date("2035-01-11Z"), rateClp: 100 } }));
       await clear();
     });
+    await t.test("database enforces the E.164 WhatsApp number format", async () => {
+      await assert.rejects(db.$executeRaw`UPDATE "BusinessSettings" SET "whatsappNumber" = '56912' WHERE id = 1`, /business_whatsapp_e164/);
+      assert.equal(await db.$executeRaw`UPDATE "BusinessSettings" SET "whatsappNumber" = NULL WHERE id = 1`, 1);
+      assert.equal(await db.$executeRaw`UPDATE "BusinessSettings" SET "whatsappNumber" = '+56912345678' WHERE id = 1`, 1);
+      await db.$executeRaw`UPDATE "BusinessSettings" SET "whatsappNumber" = NULL WHERE id = 1`;
+    });
     await t.test("block update collision rolls back interval and occupation together", async () => {
       const a = await createManualBlock(db, { cabinId, startsAt, endsAt, reason: "Test A" });
       const b = await createManualBlock(db, { cabinId, startsAt: endsAt, endsAt: new Date("2035-01-01T18:00Z"), reason: "Test B" });

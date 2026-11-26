@@ -13,10 +13,11 @@ export function SettingsEditor({ settings: s }: { settings: Awaited<ReturnType<t
       <Field label="Correo de contacto público" name="contactEmail" type="email" defaultValue={s?.contactEmail} maxLength={254} required/>
       <Field label="Correo para avisos" name="notificationEmail" type="email" defaultValue={s?.notificationEmail} maxLength={254} required/>
       <Field label="Teléfono de contacto" name="contactPhone" defaultValue={s?.contactPhone ?? ""} maxLength={40}/>
+      <Field label="WhatsApp (opcional, formato internacional)" name="whatsappNumber" type="tel" inputMode="tel" autoComplete="off" placeholder="+56 9 1234 5678" maxLength={30} defaultValue={s?.whatsappNumber ?? ""} aria-describedby="whatsapp-help"/>
       <Field label="Color principal" name="primaryColor" type="color" defaultValue={s?.primaryColor ?? "#244d40"} required/>
       <Field label="Color de acento" name="accentColor" type="color" defaultValue={s?.accentColor ?? "#bb5c37"} required/>
       <Field label="Color de fondo" name="backgroundColor" type="color" defaultValue={s?.backgroundColor ?? "#faf8f2"} required/>
-    </div><p className="muted">Recibe avisos de nuevas solicitudes; no cambia el correo público ni el correo de acceso.</p><TextArea label="Descripción del negocio" name="description" defaultValue={s?.description} required/></section>
+    </div><p id="whatsapp-help" className="muted">Incluye el código de país (por ejemplo +56). Si lo dejas vacío, no se muestra el enlace de WhatsApp en las cabañas. No se envían mensajes automáticos.</p><p className="muted">Recibe avisos de nuevas solicitudes; no cambia el correo público ni el correo de acceso.</p><TextArea label="Descripción del negocio" name="description" defaultValue={s?.description} required/></section>
     <section className="admin-panel"><h2>Textos de inicio</h2>
       {[["eyebrow", "Antetítulo"], ["catalogTitle", "Título del catálogo"], ["catalogDescription", "Introducción al catálogo"], ["storyTitle", "Título de presentación"], ["storyBody", "Texto de presentación"]].map(([key, label]) => <TextArea key={key} label={label} name={key} defaultValue={home[key]} required maxLength={3000}/>)}</section>
     <section className="admin-panel"><h2>Horarios y políticas</h2><p>Moneda CLP · Zona horaria America/Santiago</p><div className="form-grid">
