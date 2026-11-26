@@ -1,3 +1,13 @@
+## Etapa 18: propuesta de notificaciones por correo (26 de noviembre de 2026)
+
+Se documenta una propuesta para notificar al dueño cuando se crea una solicitud y al huésped cuando se confirma, rechaza o cancela. Describe outbox PostgreSQL transaccional, reintentos SMTP genérico, Mailpit para desarrollo, datos personales y retención, alternativas, riesgos y puntos de integración existentes en `service.ts`.
+
+Archivos: `docs/decisiones/notificaciones.md`, `IMPLEMENTACION.md`.
+
+Verificaciones: revisión documental de `CLAUDE.md`, `src/modules/bookings/service.ts`, `prisma/schema.prisma`, `compose.yaml` y la documentación actual de reservas y base de datos. `npm test`, `npm run typecheck` y `npm run build`.
+
+Límites: propuesta solamente; no se modificaron código, esquema, migraciones, Compose ni reglas de dominio. No se probó envío SMTP ni Mailpit. No se tocó ninguna base de datos.
+
 ## Etapa 17: E2E mult navegador en CI (26 de noviembre de 2026)
 
 Playwright ejecuta Chromium, Firefox y WebKit en escritorio y viewport de 360 px. El job `e2e` depende de `check`, prepara credenciales y PostgreSQL efímeros, instala los tres navegadores con caché y ejecuta `npm run test:e2e`. Si el job falla conserva y publica el reporte HTML; en ejecuciones locales y exitosas se mantiene la limpieza de resultados. Los flujos administrativos usan meses distintos por proyecto para no colisionar en la base compartida.
