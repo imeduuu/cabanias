@@ -74,7 +74,7 @@ test("PostgreSQL invariants and concurrent writers", { skip: !process.env.TEST_D
       publicationStatus: "PUBLISHED", baseRateClp: 1000 } });
     await db.businessSettings.upsert({ where: { id: 1 }, update: {}, create: {
       id: 1, name: "Synthetic test business", tagline: "Test", description: "Test business",
-      location: "Test", contactEmail: "owner@example.test", primaryColor: "#123456",
+      location: "Test", contactEmail: "owner@example.test", notificationEmail: "avisos@example.test", primaryColor: "#123456",
       accentColor: "#234567", backgroundColor: "#345678", homeTexts: {},
       cancellationPolicy: "Test policy",
     } });
@@ -92,13 +92,13 @@ test("PostgreSQL invariants and concurrent writers", { skip: !process.env.TEST_D
         FOR EACH ROW EXECUTE FUNCTION test_fail_booking_submission()
       `;
       const email = `rollback-${randomUUID()}@example.test`;
-      const ownerNotificationsBefore = await db.notificationOutbox.count({ where: { recipient: "owner@example.test" } });
+      const ownerNotificationsBefore = await db.notificationOutbox.count({ where: { recipient: "avisos@example.test" } });
       try {
         const visitor = createHash("sha256").update(randomUUID()).digest("hex");
         await assert.rejects(submitIdempotently("Rollback Test", email, "2035-02-01", randomUUID(), visitor),
           /synthetic transaction rollback/);
         assert.equal(await db.bookingRequest.count({ where: { cabinId, guestEmail: email } }), 0);
-        assert.equal(await db.notificationOutbox.count({ where: { recipient: "owner@example.test" } }), ownerNotificationsBefore);
+        assert.equal(await db.notificationOutbox.count({ where: { recipient: "avisos@example.test" } }), ownerNotificationsBefore);
       } finally {
         await db.$executeRaw`DROP TRIGGER IF EXISTS test_fail_booking_submission ON "BookingSubmission"`;
         await db.$executeRaw`DROP FUNCTION IF EXISTS test_fail_booking_submission()`;
@@ -109,7 +109,10 @@ test("PostgreSQL invariants and concurrent writers", { skip: !process.env.TEST_D
       const key = randomUUID(), visitor = createHash("sha256").update(randomUUID()).digest("hex");
       await submitIdempotently("Idempotent Test", email, "2035-03-01", key, visitor);
       const created = await db.bookingRequest.findFirstOrThrow({ where: { cabinId, guestEmail: email } });
-      assert.equal(await db.notificationOutbox.count({ where: { requestId: created.id, event: "REQUEST_CREATED" } }), 1);
+      const creationNotice = await db.notificationOutbox.findUniqueOrThrow({
+        where: { requestId_event: { requestId: created.id, event: "REQUEST_CREATED" } },
+      });
+      assert.equal(creationNotice.recipient, "avisos@example.test");
       await submitIdempotently("Idempotent Test", email, "2035-03-01", key, visitor);
       assert.equal(await db.notificationOutbox.count({ where: { requestId: created.id, event: "REQUEST_CREATED" } }), 1);
       await changeRequestStatus(db, created.id, "CONFIRMED");

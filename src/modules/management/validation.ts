@@ -52,12 +52,14 @@ export const homeKeys = ["eyebrow", "catalogTitle", "catalogDescription", "story
 export function settingsInput(form: FormData) {
   const email = text(form, "contactEmail", 254).toLowerCase();
   invariant(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email), "INVALID_INPUT", "Revisa el correo de contacto.");
+  const notificationEmail = text(form, "notificationEmail", 254).toLowerCase();
+  invariant(/^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/.test(notificationEmail), "INVALID_INPUT", "Revisa el correo para avisos.");
   const colors = { primaryColor: text(form, "primaryColor"), accentColor: text(form, "accentColor"), backgroundColor: text(form, "backgroundColor") };
   invariant(Object.values(colors).every(v => /^#[0-9a-f]{6}$/i.test(v)), "INVALID_INPUT", "Los colores deben usar formato #123456.");
   const logo = text(form, "logoUrl", 2000, false);
   return { name: text(form, "name", 120), tagline: text(form, "tagline", 200), description: text(form, "description", 5000),
     location: text(form, "location", 200), logoUrl: logo ? imageUrl(logo) : null,
-    contactEmail: email, contactPhone: text(form, "contactPhone", 40, false) || null, ...colors,
+    contactEmail: email, notificationEmail, contactPhone: text(form, "contactPhone", 40, false) || null, ...colors,
     cancellationPolicy: text(form, "cancellationPolicy", 10000), checkInHour: number(form, "checkInHour", 0, 23),
     checkOutHour: number(form, "checkOutHour", 0, 23), homeTexts: Object.fromEntries(homeKeys.map(key => [key, text(form, key, 3000)])) };
 }

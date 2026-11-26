@@ -142,11 +142,14 @@ test("admin authentication over HTTP and direct server access", { skip: !process
     let detailHtml = (await detail.text()).replace(/<!--[\s\S]*?-->/g, "");
     for (const value of ["Cabaña HTTP editada", "42.000", "Galería HTTP", "Terraza HTTP", "Arriendo por hora"]) assert.ok(detailHtml.includes(value), `Public detail missing ${value}`);
     const settingValues = { name: "Negocio HTTP ficticio", tagline: "Una identidad editable", description: "Descripción de negocio de pruebas", location: "Ubicación ficticia",
-      contactEmail: "contacto@example.test", contactPhone: "+56 000 000 000", logoUrl: "/images/logo.svg", primaryColor: "#123456", accentColor: "#654321", backgroundColor: "#fafafa",
+      contactEmail: "contacto@example.test", notificationEmail: "avisos@example.test", contactPhone: "+56 000 000 000", logoUrl: "/images/logo.svg", primaryColor: "#123456", accentColor: "#654321", backgroundColor: "#fafafa",
       eyebrow: "ANTETÍTULO HTTP", catalogTitle: "Catálogo HTTP", catalogDescription: "Texto de catálogo HTTP", storyTitle: "Historia HTTP", storyBody: "Texto de historia HTTP",
       cancellationPolicy: "Política HTTP editable sin reembolsos automáticos.", checkInHour: "16", checkOutHour: "10" };
     const settings = await submit("/admin/configuracion", fill(nativeForm(await pageHtml("/admin/configuracion"), "settings"), settingValues));
     assert.equal(settings.status, 303);
+    const savedSettings = await db.businessSettings.findUniqueOrThrow({ where: { id: 1 } });
+    assert.equal(savedSettings.notificationEmail, settingValues.notificationEmail);
+    assert.equal(savedSettings.contactEmail, settingValues.contactEmail);
     const home = await (await request("/")).text();
     for (const value of [settingValues.name, settingValues.tagline, settingValues.contactEmail, settingValues.primaryColor, settingValues.catalogTitle]) assert.ok(home.includes(value));
     detailHtml = await (await request(`/cabanas/${fields.slug}`)).text();

@@ -7,10 +7,12 @@
 
 | Evento persistido | Destinatario | Contenido funcional |
 | --- | --- | --- |
-| Se crea una solicitud `PENDING` | Correo del dueño configurado en `BusinessSettings.contactEmail` | Aviso de nueva solicitud pendiente y acceso al panel para revisarla. |
+| Se crea una solicitud `PENDING` | Correo para avisos configurado en `BusinessSettings.notificationEmail` | Aviso de nueva solicitud pendiente y acceso al panel para revisarla. |
 | La solicitud pasa a `CONFIRMED` | `BookingRequest.guestEmail` | Confirmación y resumen de la estadía. |
 | La solicitud pasa a `REJECTED` | `BookingRequest.guestEmail` | Aviso de rechazo, sin presentarlo como reserva. |
 | La solicitud pasa a `CANCELLED` | `BookingRequest.guestEmail` | Aviso de cancelación y resumen de la estadía. |
+
+El correo para avisos se configura por separado del correo público `contactEmail` y de la cuenta administradora. La migración `202611260002_notification_email` agrega `notificationEmail`, copia el contacto público actual para conservar el destinatario previo y después lo hace obligatorio. La edición posterior de cualquiera de esos correos no cambia los otros.
 
 No se envían correos por cotizar, crear un bloqueo, consultar disponibilidad ni repetir una solicitud idempotente ya reconocida. No se envían notificaciones por transiciones que el dominio rechace.
 
@@ -18,7 +20,7 @@ No se envían correos por cotizar, crear un bloqueo, consultar disponibilidad ni
 
 La migración `202611260001_notifications_outbox` agrega `NotificationOutbox`, `NotificationEvent` y `NotificationStatus`. Cada fila identifica la solicitud y el evento, guarda destinatario y payload mínimo congelado, estado (`PENDING`, `PROCESSING`, `SENT` o `ERROR`), intentos (máximo 3), próximo intento, marca de reclamo, error técnico acotado y fechas de creación/envío. Una clave única por solicitud y tipo de evento evita duplicados; la FK restringe borrar solicitudes con notificaciones aún conservadas.
 
-La inserción en la outbox se hace en la **misma transacción PostgreSQL** que la operación de negocio:
+La inserción en la outbox se hace en la **misma transacción PostgreSQL** que la operación de negocio. El payload congela identidad (nombre, logo, ubicación, colores, contactos y política), datos guardados de solicitud, total original y snapshot de precio:
 
 - Si una solicitud se revierte, también se revierte su correo pendiente.
 - Si cambia el estado de una solicitud, el cambio y su notificación se confirman juntos o ninguno se confirma.
@@ -44,12 +46,12 @@ Minimizar los datos y no incluir información innecesaria en asuntos, logs o enl
 
 | Correo | Datos personales incluidos |
 | --- | --- |
-| Nueva solicitud al dueño | Nombre del huésped, correo y teléfono solo si se proporcionó; nombre de la cabaña, fechas/horas, cantidad de huéspedes y estado pendiente. El correo y teléfono permiten al dueño responder directamente. El total estimado puede mostrarse como dato de la solicitud, no es un dato personal; no incluir desglose sensible que el mensaje no necesite. |
-| Confirmación al huésped | Nombre del huésped, nombre de la cabaña, fechas/horas, cantidad de huéspedes y total estimado/moneda guardados en la solicitud. Incluir el contacto público del negocio para consultas. No repetir teléfono del huésped. |
-| Rechazo al huésped | Nombre del huésped, nombre de la cabaña y fechas/horas para identificar qué solicitud se rechazó; estado y contacto público del negocio. Omitir teléfono y, por defecto, omitir el total. |
-| Cancelación al huésped | Nombre del huésped, nombre de la cabaña y fechas/horas para identificar la solicitud; estado y contacto público del negocio. Omitir teléfono y datos de pago (no se procesan pagos). |
+| Nueva solicitud al dueño | Datos de contacto guardados del huésped, cabaña, fechas/horas, cantidad, precio total guardado y líneas del snapshot. |
+| Confirmación al huésped | Datos de la solicitud, total guardado y desglose original; contacto público del negocio. |
+| Rechazo al huésped | Datos de la solicitud, total guardado y desglose original; contacto público del negocio. |
+| Cancelación al huésped | Datos de la solicitud, total guardado y desglose original; contacto público del negocio. |
 
-No usar CC/BCC a terceros. Escapar y codificar correctamente los valores al generar HTML y texto plano; evitar datos personales en URLs, `Message-ID`, logs, métricas o mensajes de error.
+Las cuatro plantillas incluyen la política de cancelación y los datos de marca guardados al encolarse. Las fechas se muestran en `America/Santiago`; el mensaje explica que el intervalo es `[inicio, salida)`, incluye el inicio y excluye la salida. El total procede de `BookingRequest.estimatedTotalClp` y las líneas de `pricingSnapshot`; no se vuelven a consultar ni recalcular tarifas. Si un registro antiguo no tiene líneas reconocibles, se conserva su total y se indica que el desglose no está disponible. No usar CC/BCC a terceros. Escapar todo dato del huésped y demás contenido dinámico en HTML; evitar datos personales en URLs, `Message-ID`, logs, métricas o mensajes de error.
 
 Política aplicada para **la copia adicional de la outbox**:
 

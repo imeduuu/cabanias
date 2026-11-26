@@ -31,6 +31,6 @@ export default async function RequestDetail({ params, searchParams }: { params: 
     <section className="admin-panel"><h2>Gestionar estado</h2>
       {request.status === "PENDING" ? <><p>Confirmar vuelve a comprobar disponibilidad. Rechazar no ocupa el período.</p><div className="request-transitions">{transition("CONFIRMED", "Confirmar solicitud")}{transition("REJECTED", "Rechazar solicitud")}</div></> :
         request.status === "CONFIRMED" ? <><p>Cancelar libera el período. No realiza reembolsos ni envía mensajes.</p>{transition("CANCELLED", "Cancelar reserva confirmada")}</> : <p>Esta solicitud está {request.status === "REJECTED" ? "rechazada" : "cancelada"} y no permite nuevas transiciones.</p>}
-      <p className="muted">No se envían correos ni WhatsApp. No se realizan pagos ni reembolsos automáticos.</p>
+      <p className="muted">Los cambios de estado encolan un correo al huésped. No se envían WhatsApp ni se realizan pagos o reembolsos automáticos.</p>
     </section></>;
 }

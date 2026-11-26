@@ -53,6 +53,7 @@ model BusinessSettings {
   location           String
   logoUrl            String?
   contactEmail       String
+  notificationEmail  String
   contactPhone       String?
   primaryColor       String
   accentColor        String

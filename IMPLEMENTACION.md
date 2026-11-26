@@ -1,3 +1,13 @@
+## Etapa 20: plantillas de correo y correo para avisos (26 de noviembre de 2026)
+
+Se agregan las cuatro plantillas HTML/texto con identidad y política congeladas en cada aviso; se muestran el total guardado y las líneas de `pricingSnapshot`, sin consultar ni recalcular precios. Las fechas se presentan en `America/Santiago` y se explica el intervalo `[inicio, salida)`. El correo para avisos de nuevas solicitudes queda separado del contacto público y del acceso. La migración aditiva copia el correo público actual como destinatario inicial y luego exige `notificationEmail`, conservando los avisos ya configurados. No modifica triggers ni restricciones de `Occupancy`.
+
+Archivos: `prisma/schema.prisma`, `prisma/migrations/202611260002_notification_email/migration.sql`, `src/modules/notifications/service.ts`, `src/modules/notifications/templates.ts`, `src/modules/settings/service.ts`, `src/modules/management/validation.ts`, `src/modules/management/demo.ts`, `src/components/settings-editor.tsx`, `src/app/admin/configuracion/page.tsx`, `src/app/admin/solicitudes/[id]/page.tsx`, `scripts/seed-e2e.ts`, `tests/notifications.test.ts`, `tests/auth.test.ts`, `tests/postgres.test.ts`, `package.json`, README, `docs/panel.md`, `docs/reservas.md`, `docs/decisiones/notificaciones.md` e `IMPLEMENTACION.md`.
+
+Verificaciones: `npm run db:generate` y `npm run db:validate` correctos; `npm test` (17 aprobadas), `npm run typecheck`, `npm run lint` (sin errores; ocho advertencias preexistentes) y `npm run build` correctos. La compilación se ejecutó en una copia temporal que excluyó `.env` y `.local`. `npm run test:postgres` aplicó las siete migraciones en la base desechable `cabanias_test` y aprobó 24 pruebas, incluida la migración nueva; `git diff --check` sin errores.
+
+Límites: la entrega SMTP sigue dependiendo de `npm run notifications:send` y del planificador configurado; no se envió correo a destinatarios reales. La migración se verificó solo en `cabanias_test`, nunca en `cabanias_dev`.
+
 ## Etapa 19: notificaciones transaccionales por correo (26 de noviembre de 2026)
 
 Se implementa una outbox PostgreSQL con estados, intentos, reintentos y retención; la creación de solicitudes y los cambios de estado encolan dentro de sus transacciones actuales. `npm run notifications:send` envía por SMTP con Nodemailer; se agregan Mailpit enlazado solo a loopback, variables SMTP de ejemplo y pruebas de integración para rollback, idempotencia, confirmación y fallo/reintentos. La migración es aditiva y conserva intactas las invariantes SQL de `Occupancy`.

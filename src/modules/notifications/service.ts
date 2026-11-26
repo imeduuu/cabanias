@@ -1,28 +1,23 @@
 import "server-only";
 import { createTransport } from "nodemailer";
 import type { BookingRequest, NotificationEvent, Prisma, PrismaClient } from "../../generated/prisma/client";
+import {
+  renderNotificationTemplate,
+  type NotificationPricingSnapshot,
+  type NotificationTemplatePayload,
+} from "./templates";
 
 type SettingsForEmail = {
   name: string;
+  logoUrl: string | null;
+  location: string;
+  primaryColor: string;
+  accentColor: string;
+  backgroundColor: string;
   contactEmail: string;
+  notificationEmail: string;
   contactPhone: string | null;
-  timezone: string;
-};
-
-type NotificationPayload = {
-  businessName: string;
-  cabinName: string;
-  guestName: string;
-  guestEmail: string;
-  guestPhone: string | null;
-  startsAt: string;
-  endsAt: string;
-  guests: number;
-  estimatedTotalClp: number;
-  currency: string;
-  contactEmail: string;
-  contactPhone: string | null;
-  timezone: string;
+  cancellationPolicy: string;
 };
 
 type SmtpConfig = {
@@ -48,7 +43,7 @@ export async function enqueueRequestCreated(
   cabinName: string,
   settings: SettingsForEmail,
 ) {
-  await enqueue(tx, request, "REQUEST_CREATED", settings.contactEmail, cabinName, settings);
+  await enqueue(tx, request, "REQUEST_CREATED", settings.notificationEmail, cabinName, settings);
 }
 
 export async function enqueueRequestStatus(
@@ -82,20 +77,28 @@ async function enqueue(
   cabinName: string,
   settings: SettingsForEmail | null,
 ) {
+  if (!settings) throw new Error("No se puede encolar el correo: falta BusinessSettings.");
   const payload: Prisma.InputJsonObject = {
-    businessName: settings?.name ?? "",
+    businessName: settings.name,
+    logoUrl: settings.logoUrl,
+    location: settings.location,
+    primaryColor: settings.primaryColor,
+    accentColor: settings.accentColor,
+    backgroundColor: settings.backgroundColor,
     cabinName,
     guestName: request.guestName,
-    guestEmail: event === "REQUEST_CREATED" ? request.guestEmail : "",
-    guestPhone: event === "REQUEST_CREATED" ? request.guestPhone : null,
+    guestEmail: request.guestEmail,
+    guestPhone: request.guestPhone,
     startsAt: request.startsAt.toISOString(),
     endsAt: request.endsAt.toISOString(),
+    mode: request.mode,
     guests: request.guests,
-    estimatedTotalClp: event === "REQUEST_CREATED" || event === "REQUEST_CONFIRMED" ? request.estimatedTotalClp : 0,
+    estimatedTotalClp: request.estimatedTotalClp,
     currency: request.currency,
-    contactEmail: settings?.contactEmail ?? "",
-    contactPhone: settings?.contactPhone ?? null,
-    timezone: settings?.timezone ?? "America/Santiago",
+    pricingSnapshot: request.pricingSnapshot as Prisma.InputJsonValue,
+    contactEmail: settings.contactEmail,
+    contactPhone: settings.contactPhone,
+    cancellationPolicy: settings.cancellationPolicy,
   };
   await tx.notificationOutbox.create({ data: { requestId: request.id, event, recipient, payload } });
 }
@@ -137,7 +140,7 @@ function isJsonObject(value: Prisma.JsonValue): value is Prisma.JsonObject {
   return typeof value === "object" && value !== null && !Array.isArray(value);
 }
 
-function payloadFromJson(value: Prisma.JsonValue): NotificationPayload {
+function payloadFromJson(value: Prisma.JsonValue): NotificationTemplatePayload {
   if (!isJsonObject(value)) throw new Error("El contenido de la notificación no es válido.");
   const requiredString = (key: string) => {
     const item = value[key];
@@ -146,93 +149,69 @@ function payloadFromJson(value: Prisma.JsonValue): NotificationPayload {
   };
   const optionalString = (key: string) => {
     const item = value[key];
-    if (item !== null && typeof item !== "string") throw new Error("El contenido de la notificación no es válido.");
+    if (item === undefined || item === null) return null;
+    if (typeof item !== "string") throw new Error("El contenido de la notificación no es válido.");
     return item;
   };
+  const optionalText = (key: string, fallback = "") => optionalString(key) ?? fallback;
   const guests = value.guests;
   const estimatedTotalClp = value.estimatedTotalClp;
   if (typeof guests !== "number" || !Number.isInteger(guests) ||
-      typeof estimatedTotalClp !== "number" || !Number.isInteger(estimatedTotalClp)) {
+      guests < 1 || typeof estimatedTotalClp !== "number" || !Number.isInteger(estimatedTotalClp) ||
+      estimatedTotalClp < 0) {
     throw new Error("El contenido de la notificación no es válido.");
+  }
+  const mode = value.mode;
+  if (mode !== undefined && mode !== "NIGHTLY" && mode !== "HOURLY") {
+    throw new Error("El contenido de la notificación no es válido.");
+  }
+  const pricingValue = value.pricingSnapshot;
+  let pricingSnapshot: NotificationPricingSnapshot | null = null;
+  if (pricingValue !== undefined && pricingValue !== null) {
+    if (!isJsonObject(pricingValue)) throw new Error("El contenido de la notificación no es válido.");
+    if (Array.isArray(pricingValue.lines)) {
+      pricingSnapshot = {
+        lines: pricingValue.lines.map(line => {
+          if (!isJsonObject(line) || typeof line.date !== "string" ||
+              !/^\d{4}-\d{2}-\d{2}$/.test(line.date) ||
+              typeof line.rateClp !== "number" || !Number.isInteger(line.rateClp) || line.rateClp < 0 ||
+              typeof line.units !== "number" || !Number.isInteger(line.units) || line.units < 1 ||
+              (line.seasonId !== null && line.seasonId !== undefined && typeof line.seasonId !== "string")) {
+            throw new Error("El contenido de la notificación no es válido.");
+          }
+          return { date: line.date, rateClp: line.rateClp, units: line.units, seasonal: typeof line.seasonId === "string" };
+        }),
+      };
+    } else if ("lines" in pricingValue) {
+      throw new Error("El contenido de la notificación no es válido.");
+    }
   }
   return {
     businessName: requiredString("businessName"),
+    logoUrl: optionalString("logoUrl"),
+    location: optionalText("location"),
+    primaryColor: optionalText("primaryColor", "#244d40"),
+    accentColor: optionalText("accentColor", "#bb5c37"),
+    backgroundColor: optionalText("backgroundColor", "#faf8f2"),
     cabinName: requiredString("cabinName"),
     guestName: requiredString("guestName"),
     guestEmail: requiredString("guestEmail"),
     guestPhone: optionalString("guestPhone"),
     startsAt: requiredString("startsAt"),
     endsAt: requiredString("endsAt"),
+    mode: mode === "NIGHTLY" || mode === "HOURLY" ? mode : null,
     guests,
     estimatedTotalClp,
     currency: requiredString("currency"),
     contactEmail: requiredString("contactEmail"),
     contactPhone: optionalString("contactPhone"),
-    timezone: requiredString("timezone"),
+    cancellationPolicy: optionalText("cancellationPolicy", "No disponible."),
+    pricingSnapshot,
   };
 }
 
 function validateRecipient(value: string) {
   if (!isEmail(value)) throw new Error("El destinatario de una notificación pendiente no es válido.");
-}
-
-function escapeHtml(value: string) {
-  return value.replace(/[&<>"']/g, character => ({
-    "&": "&amp;",
-    "<": "&lt;",
-    ">": "&gt;",
-    "\"": "&quot;",
-    "'": "&#39;",
-  })[character]!);
-}
-
-function formatDate(value: string, timezone: string) {
-  return new Intl.DateTimeFormat("es-CL", {
-    dateStyle: "medium",
-    timeStyle: "short",
-    timeZone: timezone,
-  }).format(new Date(value));
-}
-
-function renderMessage(event: NotificationEvent, payload: NotificationPayload) {
-  const subjectByEvent: Record<NotificationEvent, string> = {
-    REQUEST_CREATED: "Nueva solicitud de reserva",
-    REQUEST_CONFIRMED: "Tu solicitud fue confirmada",
-    REQUEST_REJECTED: "Actualización de tu solicitud",
-    REQUEST_CANCELLED: "Tu solicitud fue cancelada",
-  };
-  const titleByEvent: Record<NotificationEvent, string> = {
-    REQUEST_CREATED: "Nueva solicitud pendiente",
-    REQUEST_CONFIRMED: "Solicitud confirmada",
-    REQUEST_REJECTED: "Solicitud rechazada",
-    REQUEST_CANCELLED: "Solicitud cancelada",
-  };
-  const start = formatDate(payload.startsAt, payload.timezone);
-  const end = formatDate(payload.endsAt, payload.timezone);
-  const total = `${payload.estimatedTotalClp.toLocaleString("es-CL")} ${payload.currency}`;
-  const details = [
-    `Cabaña: ${payload.cabinName}`,
-    `Huésped: ${payload.guestName}`,
-    `Fechas: ${start} - ${end}`,
-    `Personas: ${payload.guests}`,
-  ];
-  if (event === "REQUEST_CREATED") {
-    details.splice(2, 0, `Correo: ${payload.guestEmail}`);
-    if (payload.guestPhone) details.splice(3, 0, `Teléfono: ${payload.guestPhone}`);
-    details.push("Ingresa al panel de administración para revisar la solicitud.");
-  }
-  if (event === "REQUEST_CREATED" || event === "REQUEST_CONFIRMED") details.push(`Total estimado: ${total}`);
-  const signature = [payload.businessName, payload.contactEmail, payload.contactPhone].filter(Boolean).join(" · ");
-  const text = [
-    titleByEvent[event],
-    "",
-    ...details,
-    ...(signature ? ["", signature] : []),
-  ].join("\n");
-  const htmlDetails = details.map(line => `<li>${escapeHtml(line)}</li>`).join("");
-  const htmlSignature = signature ? `<p>${escapeHtml(signature)}</p>` : "";
-  const html = `<main><h1>${escapeHtml(titleByEvent[event])}</h1><ul>${htmlDetails}</ul>${htmlSignature}</main>`;
-  return { subject: subjectByEvent[event], text, html };
 }
 
 function safeError(error: unknown) {
@@ -304,7 +283,7 @@ export async function sendPendingNotifications(db: PrismaClient) {
       let sendFailed = false;
       try {
         const payload = payloadFromJson(notification.payload);
-        const message = renderMessage(notification.event, payload);
+        const message = renderNotificationTemplate(notification.event, payload);
         await transporter.sendMail({
           from: config.from,
           to: notification.recipient,

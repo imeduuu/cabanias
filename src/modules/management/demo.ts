@@ -10,6 +10,7 @@ export async function seedDemo(db: PrismaClient) {
     await tx.businessSettings.upsert({ where: { id: 1 }, update: {}, create: {
       id: 1, name: business.name, tagline: business.tagline, description: business.description,
       location: business.location, logoUrl: business.logo, contactEmail: business.contact.email,
+      notificationEmail: "avisos@refugioclaro.example",
       primaryColor: business.colors.primary, accentColor: business.colors.accent, backgroundColor: business.colors.background,
       homeTexts: business.home, cancellationPolicy: "Las cancelaciones se acuerdan directamente con el dueño. No hay reembolsos automáticos. Política ficticia de demostración.",
     } });

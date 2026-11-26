@@ -1,7 +1,7 @@
 ## Personalización
 
 - `src/config/business.ts` y `src/modules/cabins/data.ts`: fixtures ficticios para la carga inicial, no fuente de datos de las páginas.
-- Panel `/admin/configuracion`: identidad, logo, colores, contacto, textos, horarios y políticas persistidos.
+- Panel `/admin/configuracion`: identidad, logo, colores, contacto público, correo para avisos, textos, horarios y políticas persistidos. El correo para avisos es distinto e independiente del contacto público y de la cuenta de acceso.
 - Panel `/admin/cabanas`: fichas, modalidad NIGHTLY o HOURLY, capacidad, servicios, imágenes, publicación y tarifas.
 - `public/images/`: logo e ilustraciones SVG locales. También se pueden referenciar imágenes por URL HTTPS, sin proveedor de almacenamiento ni subida de archivos.
 - `src/components/`: componentes compartidos y filtros del catálogo.
@@ -32,7 +32,7 @@ Para probar con datos ficticios, sin tocar una instalación productiva:
 4. Confirmar C y luego cancelarla. Dejar D pendiente. Probar los cuatro filtros de estado y el rango de fechas; el resumen debe reflejar A confirmada y D pendiente. Consultar el período de C públicamente vuelve a estar permitido si no hay otra ocupación.
 5. Modificar una tarifa actual y volver al detalle de A: el total y desglose guardados deben permanecer iguales. Sin sesión, la lista y los detalles deben redirigir a `/login`; publicar una cabaña no publica los contactos de sus solicitudes.
 
-`npm run test:postgres` verifica estas operaciones por HTTP con una cuenta y datos efímeros en `cabanias_test`; conserva las pruebas anteriores de concurrencia y consulta pública. No se agregaron modelos, migraciones, dependencias ni datos de desarrollo. No se envían correos, WhatsApp, pagos ni reembolsos automáticos.
+`npm run test:postgres` verifica estas operaciones por HTTP con una cuenta y datos efímeros en `cabanias_test`; conserva las pruebas anteriores de concurrencia y consulta pública. No se envían WhatsApp ni se procesan pagos o reembolsos automáticos.
 
 Móvil: tarjetas en una columna, filtros apilados, contacto con corte de líneas y controles de al menos 48 px; no hay tabla ancha que obligue a desplazamiento horizontal. Se revisó CSS/estructura y respuesta HTTP con agente móvil. La revisión visual y de interacción en navegadores/dispositivos queda para la etapa final.
 
