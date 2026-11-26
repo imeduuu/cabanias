@@ -24,6 +24,57 @@ jobs:
       - run: npm ci
       - run: npm run check
 
+  e2e:
+    runs-on: ubuntu-latest
+    needs: check
+    env:
+      CI: "true"
+      BETTER_AUTH_URL: http://localhost:3000
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('package-lock.json') }}
+      - run: npx playwright install --with-deps chromium firefox webkit
+      - name: Create ephemeral CI credentials
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE'
+          import { randomBytes, randomUUID } from 'node:crypto';
+          import { appendFileSync, mkdirSync, writeFileSync } from 'node:fs';
+          import { join } from 'node:path';
+
+          const dir = join(process.env.RUNNER_TEMP, `cabanias-e2e-${randomUUID()}`);
+          mkdirSync(dir, { mode: 0o700 });
+          const devPassword = randomBytes(32).toString('hex');
+          const testPassword = randomBytes(32).toString('hex');
+          writeFileSync(join(dir, 'dev-password'), devPassword, { mode: 0o600 });
+          writeFileSync(join(dir, 'test-password'), testPassword, { mode: 0o600 });
+          const override = join(dir, 'compose.override.yaml');
+          writeFileSync(override, `secrets:\n  dev_password:\n    file: ${join(dir, 'dev-password')}\n  test_password:\n    file: ${join(dir, 'test-password')}\n`, { mode: 0o600 });
+          const env = [
+            `CI_COMPOSE_OVERRIDE=${override}`,
+            `DATABASE_URL=postgresql://cabanias_local:${devPassword}@127.0.0.1:54329/cabanias_dev?schema=public`,
+            `TEST_DATABASE_URL=postgresql://cabanias_local:${testPassword}@127.0.0.1:54330/cabanias_test?schema=public`,
+          ];
+          appendFileSync(process.env.GITHUB_ENV, `${env.join('\n')}\n`);
+          NODE
+      - run: npm run test:e2e
+      - name: Upload Playwright report on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: .local/playwright-report/
+          if-no-files-found: warn
+          retention-days: 7
+
   postgres:
     runs-on: ubuntu-latest
     env:

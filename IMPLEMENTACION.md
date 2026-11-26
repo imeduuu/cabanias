@@ -1,3 +1,13 @@
+## Etapa 17: E2E mult navegador en CI (26 de noviembre de 2026)
+
+Playwright ejecuta Chromium, Firefox y WebKit en escritorio y viewport de 360 px. El job `e2e` depende de `check`, prepara credenciales y PostgreSQL efímeros, instala los tres navegadores con caché y ejecuta `npm run test:e2e`. Si el job falla conserva y publica el reporte HTML; en ejecuciones locales y exitosas se mantiene la limpieza de resultados. Los flujos administrativos usan meses distintos por proyecto para no colisionar en la base compartida.
+
+Archivos: `playwright.config.ts`, `.github/workflows/ci.yml`, `scripts/local-db.mjs`, `tests/e2e/admin-panel.spec.ts` e `IMPLEMENTACION.md`.
+
+Verificaciones: `npm test` (11 aprobadas), `npm run typecheck`, `npm run lint` (sin errores; ocho avisos existentes), `npm run build` en copia temporal sin `.env` ni `.local/`, `node --check scripts/local-db.mjs`, `npx playwright test --list` (90 pruebas descubiertas en seis proyectos) y `git diff --check`.
+
+Límites: no se ejecutó `npm run test:e2e` ni se lanzaron navegadores; el runner crea y modifica `.local/` y requiere el PostgreSQL efímero, acciones que no se realizaron en este entorno. Por ello no se validó aún el comportamiento visual o funcional específico de cada navegador.
+
 ## Etapa 16: correcciones responsive y accesibilidad (23 de noviembre de 2026)
 
 Se corrigen los contrastes detectados con los colores de `BusinessSettings`, los nombres visibles de los enlaces a cabañas, la jerarquía de encabezados y el landmark inferior del panel. Los enlaces y controles dedicados reciben áreas táctiles de al menos 44 px; los campos de texto con valores largos muestran una fila adicional en móvil. Se agrega una prueba Playwright con axe para las 16 rutas públicas y administrativas a 360, 768 y 1280 px, que falla ante violaciones serias o críticas. El informe conserva la medición inicial y agrega el resultado posterior.

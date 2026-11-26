@@ -63,11 +63,13 @@ function migrate(value) {
 function runE2e(value) {
   const buildDir = resolve(".local/next-e2e");
   const artifactsDir = resolve(".local/playwright-e2e");
+  const reportDir = resolve(".local/playwright-report");
   const localDir = resolve(".local");
-  for (const target of [buildDir, artifactsDir]) {
+  for (const target of [buildDir, artifactsDir, reportDir]) {
     if (!target.startsWith(`${localDir}/`) && !target.startsWith(`${localDir}\\`)) throw new Error("Una carpeta temporal E2E salió de .local.");
   }
   let server;
+  let preserveArtifacts = false;
   const rootConfigSnapshot = readFileSync("tsconfig.json");
   const nextEnvSnapshot = readFileSync("next-env.d.ts");
   const secret = randomBytes(48).toString("hex");
@@ -88,6 +90,7 @@ function runE2e(value) {
     try {
       rmSync(buildDir, { recursive: true, force: true });
       rmSync(artifactsDir, { recursive: true, force: true });
+      rmSync(reportDir, { recursive: true, force: true });
       mkdirSync(localDir, { recursive: true });
       compose("--profile", "test", "up", "-d", "--wait", "--force-recreate", "postgres-test");
       await verify(value, "test");
@@ -110,6 +113,9 @@ function runE2e(value) {
       }
       if (!ready) throw new Error("Next no respondió en 127.0.0.1:3102 dentro del plazo.");
       run(process.execPath, [resolve("node_modules/@playwright/test/cli.js"), "test", "--config", "playwright.config.ts"], env);
+    } catch (error) {
+      preserveArtifacts = true;
+      throw error;
     } finally {
       if (server && server.exitCode === null) {
         const exited = new Promise(resolveExit => server.once("exit", resolveExit));
@@ -120,7 +126,10 @@ function runE2e(value) {
         try { compose("--profile", "test", "rm", "-f", "postgres-test"); } finally {
           try {
             rmSync(buildDir, { recursive: true, force: true });
-            rmSync(artifactsDir, { recursive: true, force: true });
+            if (process.env.CI !== "true" || !preserveArtifacts) {
+              rmSync(artifactsDir, { recursive: true, force: true });
+              rmSync(reportDir, { recursive: true, force: true });
+            }
           } finally {
             writeFileSync("tsconfig.json", rootConfigSnapshot);
             writeFileSync("next-env.d.ts", nextEnvSnapshot);

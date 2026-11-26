@@ -28,7 +28,17 @@ const test = base.extend<Record<never, never>, { adminStorageState: AdminStorage
 });
 
 function monthFor(testInfo: TestInfo) {
-  return testInfo.project.name.includes("mobile") ? "05" : "04";
+  const months: Record<string, string> = {
+    "chromium-desktop": "04",
+    "chromium-mobile": "05",
+    "firefox-desktop": "06",
+    "firefox-mobile": "07",
+    "webkit-desktop": "08",
+    "webkit-mobile": "09",
+  };
+  const month = months[testInfo.project.name];
+  if (!month) throw new Error(`No hay un mes de prueba definido para ${testInfo.project.name}.`);
+  return month;
 }
 
 async function login(page: Page) {
