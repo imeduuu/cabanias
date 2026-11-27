@@ -1,3 +1,13 @@
+## Etapa 31: alta aislada de negocios y chequeo de instalacion (27 de noviembre de 2026)
+
+Se documenta el alta por cliente con aplicacion, secretos, PostgreSQL, almacenamiento, cuenta del dueno, configuracion, cabanas, SMTP, dominio, tareas y respaldos independientes. `npm run setup:check` valida variables y formato, origen Better Auth, longitud del secreto, conexion, `btree_gist` y migraciones aplicadas sin cambiar la base ni imprimir secretos. La validacion de entorno es pura y tiene pruebas unitarias; el CLI solo lee la base.
+
+Archivos: `docs/nuevo-negocio.md`, `scripts/setup-check.ts`, `scripts/setup-check-validation.ts`, `tests/setup-check-validation.test.ts`, `package.json`, `README.md` e `IMPLEMENTACION.md`.
+
+Verificaciones: `npm test` (51 aprobadas), `npm run typecheck` y `npm run build` correctos. `npm run test:postgres` aplico las 10 migraciones y valido la restauracion en `cabanias_test`; luego se detuvo al rechazar el `DATABASE_URL` local configurado, que no corresponde al destino de desarrollo permitido. No se conecto a `cabanias_dev`.
+
+Limites: SMTP es opcional si no se configura ninguna variable; las bases nuevas requieren aplicar migraciones antes de que el chequeo quede completamente correcto. El comando informa pendientes, pero no aplica migraciones.
+
 ## Etapa 30: respaldos y restauración de PostgreSQL (27 de noviembre de 2026)
 
 Se agregan comandos de respaldo `pg_dump` custom con fecha UTC y de restauración `pg_restore` que exige URL destino explícita y confirmación escrita exacta. `docs/respaldos.md` explica operación, retención sugerida y recuperación. `npm run test:postgres` respalda `cabanias_test`, restaura en PostgreSQL desechable y verifica triggers y restricciones EXCLUDE, incluido el rechazo de un solapamiento.
