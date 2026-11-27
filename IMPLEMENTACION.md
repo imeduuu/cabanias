@@ -1,3 +1,13 @@
+## Etapa 30: respaldos y restauración de PostgreSQL (27 de noviembre de 2026)
+
+Se agregan comandos de respaldo `pg_dump` custom con fecha UTC y de restauración `pg_restore` que exige URL destino explícita y confirmación escrita exacta. `docs/respaldos.md` explica operación, retención sugerida y recuperación. `npm run test:postgres` respalda `cabanias_test`, restaura en PostgreSQL desechable y verifica triggers y restricciones EXCLUDE, incluido el rechazo de un solapamiento.
+
+Archivos: `scripts/backup.mjs`, `scripts/restore.mjs`, `scripts/backup-restore-test.mjs`, `scripts/local-db.mjs`, `docs/respaldos.md`, `package.json` e `IMPLEMENTACION.md`.
+
+Verificaciones: `npm test` (47 aprobadas), `npm run typecheck` y `npm run build` correctos. La comprobación backup/restauración de `npm run test:postgres` pasó: se restauraron 6 triggers y 2 restricciones EXCLUDE, y el solapamiento fue rechazado. Después, el comando completo se detuvo al validar `DATABASE_URL` para la suite, que no corresponde al destino local permitido; no se conectó a ese destino.
+
+Límites: los comandos requieren `pg_dump`/`pg_restore` instalados en PATH; la copia fuera del servidor y la retención son responsabilidad del operador.
+
 ## Etapa 29: carga de imágenes de cabañas (27 de noviembre de 2026)
 
 Se añade carga autenticada de imágenes JPEG, PNG y WebP con comprobación de contenido, tamaño de 5 MiB y dimensiones de 320 a 6000 px por lado. Se eliminan metadatos EXIF/XMP y texto PNG antes del almacenamiento. El puerto usa filesystem configurable: `.local/uploads` en desarrollo y `/data/images` en OCI con volumen persistente. La URL sigue incorporándose a la galería con alt obligatorio; se mantienen las URLs existentes.
