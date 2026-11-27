@@ -36,6 +36,10 @@ Para probar con datos ficticios, sin tocar una instalación productiva:
 
 Móvil: tarjetas en una columna, filtros apilados, contacto con corte de líneas y controles de al menos 48 px; no hay tabla ancha que obligue a desplazamiento horizontal. Se revisó CSS/estructura y respuesta HTTP con agente móvil. La revisión visual y de interacción en navegadores/dispositivos queda para la etapa final.
 
+## Enlace iCal de ocupación
+
+En `/admin/cabanas/[id]`, debajo de las temporadas, el panel «Calendario iCal (solo ocupación)» genera el enlace de suscripción de la cabaña. Sin enlace muestra «Generar enlace»; con enlace muestra desde cuándo está activo y el botón «Rotar enlace», que exige marcar una confirmación porque el anterior deja de funcionar. Tras generar o rotar se muestra la URL con un botón «Copiar»; por seguridad no vuelve a mostrarse al recargar. El detalle del contenido y sus límites está en [Calendario](calendario.md).
+
 ## Cargar y administrar el catálogo de desarrollo
 
 La migración nueva `202611140004_development_seed` agrega únicamente la marca de carga demo. Conserva las tres migraciones anteriores y todas sus restricciones. Ya está aplicada en la base local de desarrollo; no se cargaron datos demo en esa base durante esta etapa.

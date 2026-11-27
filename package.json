@@ -11,7 +11,7 @@
     "typecheck": "tsc --noEmit",
     "db:validate": "prisma validate",
     "db:generate": "prisma generate",
-    "test": "tsx --conditions=react-server --test tests/domain.test.ts tests/notifications.test.ts tests/local-db-safety.test.ts tests/whatsapp.test.ts tests/maintenance-cli.test.ts",
+    "test": "tsx --conditions=react-server --test tests/domain.test.ts tests/notifications.test.ts tests/local-db-safety.test.ts tests/whatsapp.test.ts tests/maintenance-cli.test.ts tests/calendar-feed.test.ts",
     "db:deploy": "prisma migrate deploy",
     "postinstall": "prisma generate",
     "db:local:setup": "node scripts/local-db.mjs setup",

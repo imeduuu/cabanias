@@ -64,6 +64,9 @@ test("PostgreSQL invariants and concurrent writers", { skip: !process.env.TEST_D
         assert.match(constraint.definition, /EXCLUDE USING gist/);
         assert.ok(constraint.definition.includes("'[)'"));
       }
+      const feedChecks = await db.$queryRaw<{ definition: string }[]>`
+        SELECT pg_get_constraintdef(oid) AS definition FROM pg_constraint WHERE conname = 'calendar_feed_token_hash'`;
+      assert.equal(feedChecks.length, 1);
       const triggers = await db.$queryRaw<{ tgname: string }[]>`SELECT tgname FROM pg_trigger WHERE NOT tgisinternal`;
       for (const name of ["request_validation", "cabin_terms", "request_occupancy", "block_lock", "block_occupancy", "occupancy_internal"]) {
         assert.ok(triggers.some(trigger => trigger.tgname === name), `Missing trigger ${name}`);

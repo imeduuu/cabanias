@@ -169,7 +169,7 @@ async function main() {
     compose("--profile", "test", "up", "-d", "--wait", "--force-recreate", "postgres-test");
     try {
       await verify(value, "test"); migrate(value);
-      run(process.execPath, [resolve("node_modules/tsx/dist/cli.mjs"), "--conditions=react-server", "--test", "--test-concurrency=1", "tests/domain.test.ts", "tests/local-db-safety.test.ts", "tests/postgres.test.ts", "tests/maintenance.test.ts", "tests/auth.test.ts"],
+      run(process.execPath, [resolve("node_modules/tsx/dist/cli.mjs"), "--conditions=react-server", "--test", "--test-concurrency=1", "tests/domain.test.ts", "tests/local-db-safety.test.ts", "tests/calendar-feed.test.ts", "tests/postgres.test.ts", "tests/calendar-feed-postgres.test.ts", "tests/maintenance.test.ts", "tests/auth.test.ts"],
         { ...process.env, DATABASE_URL: configuredUrl("dev"), TEST_DATABASE_URL: value });
     } finally {
       compose("--profile", "test", "stop", "postgres-test");

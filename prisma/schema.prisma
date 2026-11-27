@@ -150,8 +150,17 @@ model Cabin {
   requests          BookingRequest[]
   blocks            ManualBlock[]
   occupancies       Occupancy[]
+  calendarFeed      CabinCalendarFeed?
   createdAt         DateTime          @default(now()) @db.Timestamptz(3)
   updatedAt         DateTime          @updatedAt @db.Timestamptz(3)
+}
+
+model CabinCalendarFeed {
+  cabinId   String   @id @db.Uuid
+  cabin     Cabin    @relation(fields: [cabinId], references: [id], onDelete: Cascade)
+  tokenHash String   @unique
+  createdAt DateTime @default(now()) @db.Timestamptz(3)
+  rotatedAt DateTime @default(now()) @db.Timestamptz(3)
 }
 
 model CabinImage {

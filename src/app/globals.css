@@ -15,3 +15,4 @@
 footer.admin-disclaimer{background:transparent}
 
 .whatsapp-contact{margin-top:16px}.whatsapp-contact small{display:block;margin-top:6px}
+.feed-result{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:18px}.feed-url{flex:1 1 320px;min-width:0;min-height:46px;padding:10px;border:1px solid #a8b6a1;border-radius:4px;font:inherit;background:#f6f8f2;color:#283c34}.feed-result .notice{flex-basis:100%;margin:0}

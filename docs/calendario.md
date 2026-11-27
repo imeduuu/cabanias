@@ -21,3 +21,15 @@ Cómo probar con datos ficticios:
 4. Para probar el choque con una reserva, enviar otra solicitud en un período distinto y confirmarla desde `/admin/solicitudes`. Intentar bloquear ese intervalo debe fallar sin modificar la reserva. Un bloqueo que comienza exactamente en la salida excluida puede crearse.
 
 Límites: vista informativa sin actualización en tiempo real; recargar para ver cambios de otras pestañas. Se muestran hasta **500 solicitudes y 500 bloqueos por período**, con aviso explícito si la vista queda parcial; crear bloqueos siempre comprueba todos los registros. No se deben inferir huecos libres a partir de una vista truncada. No hay arrastrar/soltar, exportación, edición de reservas ni pagos o notificaciones. Se verificaron HTTP, datos y reglas; la revisión visual completa de navegadores sigue pendiente.
+
+### Feed iCal (suscripción externa)
+
+Cada cabaña puede publicar su ocupación en `/api/calendar/<token>.ics` para suscribirla desde Google Calendar, Apple Calendar u otros.
+
+- Incluye las reservas `CONFIRMED` y los bloqueos manuales, todos como evento «Ocupado». No incluye solicitudes pendientes, rechazadas ni canceladas, ni nombres, correos, teléfonos, motivos de bloqueo, montos o ids de solicitud.
+- Las horas se publican en UTC (`Z`) tal como están guardadas, y `DTEND` es la salida exacta (excluida), igual que los intervalos `[inicio, salida)`. Cambiar los horarios de entrada o salida en la configuración no altera reservas pasadas.
+- Ventana de 90 días atrás a 730 días adelante, con un máximo de 5000 eventos (si se supera, se trunca sin aviso).
+- Se genera desde `/admin/cabanas/[id]`, en «Calendario iCal (solo ocupación)». La URL completa se muestra una sola vez; en la base solo se guarda su hash. Rotar el enlace exige confirmación e invalida el anterior: hay que volver a suscribirse con la URL nueva.
+- El feed funciona aunque la cabaña esté despublicada o archivada.
+- Los clientes de calendario guardan copias y actualizan con demora (Google puede tardar de 8 a 24 horas), y rotar no borra lo ya descargado.
+- Quien tenga la URL ve las fechas ocupadas: no la compartas en público. El token puede quedar en los registros de proxies o CDN. Cualquier token inválido responde el mismo 404.

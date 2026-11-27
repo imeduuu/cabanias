@@ -14,13 +14,15 @@ npm run db:generate
 npm run db:deploy
 ```
 
-`db:deploy` ejecuta `prisma migrate deploy` y aplica las migraciones versionadas disponibles (la quinta queda pendiente en desarrollo hasta que el dueño decida aplicarla). No usar `db push`: omitiría las restricciones y triggers SQL escritos a mano. Tampoco usar `migrate resolve --applied` para simular una ejecución. La primera migración se generó con `prisma migrate diff --from-empty --to-schema prisma/schema.prisma --script`; la segunda agrega las reglas que Prisma no representa. Las migraciones futuras deben preservar esas reglas.
+`db:deploy` ejecuta `prisma migrate deploy` y aplica las migraciones versionadas disponibles (la novena, `202611270001_calendar_feed`, queda pendiente en desarrollo hasta ejecutar `npm run db:local:migrate`). No usar `db push`: omitiría las restricciones y triggers SQL escritos a mano. Tampoco usar `migrate resolve --applied` para simular una ejecución. La primera migración se generó con `prisma migrate diff --from-empty --to-schema prisma/schema.prisma --script`; la segunda agrega las reglas que Prisma no representa. Las migraciones futuras deben preservar esas reglas.
 
 `src/lib/db.ts` provee el cliente solo para servidor. `src/lib/admin-data.ts` protege cada lectura administrativa con `requireAdmin()`, al igual que cada acción en `src/app/admin/manage-actions.ts`. `src/lib/public-data.ts` entrega la configuración pública y solo cabañas `PUBLISHED`, sin datos de autenticación ni reservas.
 
 Los servicios internos de configuración y precios se usan desde acciones autenticadas y validan los cambios antes de guardarlos. Las temporadas usan fechas locales `[inicio, fin)`, sin superposición por cabaña; reemplazan la tarifa base, no se acumulan.
 
 La columna opcional `BusinessSettings.whatsappNumber` guarda el número público en formato E.164 y la restricción `business_whatsapp_e164` rechaza otros formatos; las filas existentes quedan en `NULL`.
+
+La tabla `CabinCalendarFeed` (migración `202611270001_calendar_feed`) guarda, a lo más una fila por cabaña, el hash SHA-256 del token del feed iCal (`tokenHash`, único, con el CHECK `calendar_feed_token_hash` de 64 caracteres hexadecimales), `createdAt` y `rotatedAt`; se borra en cascada con la cabaña. La migración se generó con `prisma migrate diff --from-schema --to-schema`, sin conectarse a ninguna base, y el CHECK se agregó a mano. Es aditiva: no toca `Occupancy`, los triggers de dominio ni los `EXCLUDE USING gist`. Queda pendiente en desarrollo hasta ejecutar `npm run db:local:migrate`; en `cabanias_test` la aplica `npm run test:postgres`.
 
 ### Reglas de intervalos y precios
 

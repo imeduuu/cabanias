@@ -36,6 +36,11 @@ export async function getAdminCabin(id: string) {
   if (!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(id)) return null;
   return getDb().cabin.findUnique({ where: { id }, include: { images: { orderBy: { position: "asc" } }, amenities: { include: { amenity: true } }, seasonalRates: { orderBy: { startDate: "asc" } } } });
 }
+export async function getCalendarFeedStatus(cabinId: string) {
+  await requireAdmin();
+  // Never select tokenHash: the page only needs to know whether a link exists and since when.
+  return getDb().cabinCalendarFeed.findUnique({ where: { cabinId }, select: { createdAt: true, rotatedAt: true } });
+}
 export async function getAdminSettings() {
   await requireAdmin();
   return getDb().businessSettings.findUnique({ where: { id: 1 } });

@@ -81,6 +81,7 @@ Códigos de salida: `0` correcto, `1` destino rechazado, identidad de la base di
 - `/admin/solicitudes`: listado filtrable de solicitudes; `/admin/solicitudes/[id]`: detalle y gestión de estado.
 - `/admin/configuracion`: edición de identidad, contacto público, número de WhatsApp opcional en formato internacional, correo para avisos, textos, horarios y políticas del negocio. El correo para avisos es independiente del contacto público y del acceso administrativo.
 - `/admin/calendario`: calendario de reservas, solicitudes y bloqueos manuales.
+- `/api/calendar/<token>.ics`: feed iCal de solo lectura con la ocupación de una cabaña (reservas confirmadas y bloqueos como «Ocupado», sin datos personales). El token se genera y rota en `/admin/cabanas/[id]`; se muestra una sola vez. Tras actualizar el código, el desarrollo necesita `npm run db:local:migrate` para aplicar la migración `202611270001_calendar_feed`.
 
 El panel y sus acciones requieren autenticación en el servidor. Las solicitudes públicas quedan pendientes hasta que el administrador las gestiona; los detalles de operación están en [Reservas](docs/reservas.md) y [Panel](docs/panel.md).
 
