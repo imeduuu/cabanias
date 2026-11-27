@@ -25,6 +25,7 @@ Abre http://localhost:3000. Para cargar el catálogo ficticio de desarrollo, eje
 ## Comandos
 
 - `npm run dev`: servidor de desarrollo.
+- `SITE_URL`: URL canónica pública, por ejemplo `https://reservas.ejemplo.cl`; define enlaces absolutos de metadata, Open Graph, sitemap y JSON-LD (por defecto `http://localhost:3000`).
 - `npm run build` y `npm start`: compilar y servir producción.
 - `npm run typecheck`: comprobar tipos.
 - `npm run lint`: revisar el código con ESLint y las reglas oficiales de Next.js.

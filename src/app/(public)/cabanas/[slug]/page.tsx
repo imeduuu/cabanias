@@ -4,6 +4,16 @@ import { getPublishedCabin, getBusiness } from "@/lib/public-data";
 import { money, modeLabel } from "@/lib/format";
 import { BookingForm } from "@/components/booking-form";
 import { randomUUID } from "node:crypto";
+import type { Metadata } from "next";
+import { getSiteUrl } from "@/config/site";
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+ const { slug } = await params;
+ const [cabin, business] = await Promise.all([getPublishedCabin(slug), getBusiness()]);
+ if (!cabin) return { title: "Cabaña no encontrada" };
+ return { title: cabin.name, description: cabin.description,
+  openGraph: { type: "website", title: `${cabin.name} | ${business.name}`, description: cabin.description,
+   url: new URL(`/cabanas/${cabin.slug}`, getSiteUrl()), images: [{ url: cabin.image, alt: cabin.gallery[0]?.alt ?? cabin.name }] } };
+}
 export default async function CabinPage({params}: {params: Promise<{slug: string}>}) {
  const {slug} = await params;
  const [cabin, business] = await Promise.all([getPublishedCabin(slug), getBusiness()]);

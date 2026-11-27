@@ -1,3 +1,13 @@
+## Etapa 28: metadata y rastreo de buscadores (27 de noviembre de 2026)
+
+Se conectan metadata title, description y Open Graph a `BusinessSettings` en la portada y a cada cabaña publicada en su ficha, con la primera imagen ordenada como portada. Se agregan `sitemap.xml` con inicio y solo cabañas `PUBLISHED`, `robots.txt` que permite el sitio y excluye `/admin`, `/login` y `/api`, y JSON-LD `LodgingBusiness` en el inicio. `SITE_URL` documenta la URL absoluta canónica.
+
+Archivos: `src/config/site.ts`, `src/modules/seo/sitemap.ts`, `src/app/layout.tsx`, `src/app/(public)/page.tsx`, `src/app/(public)/cabanas/[slug]/page.tsx`, `src/app/sitemap.ts`, `src/app/robots.ts`, `tests/seo.test.ts`, `package.json`, `.env.example`, `README.md`, `docs/deployment.md` e `IMPLEMENTACION.md`.
+
+Verificaciones: `npm test` (41 aprobadas), `npm run typecheck` y `npm run build` correctos. El primer build detectó que el sitemap consultaba PostgreSQL durante prerender; se marcó dinámico para consultar al solicitarlo.
+
+Límites: `SITE_URL` usa `http://localhost:3000` como fallback para desarrollo; producción debe configurar el dominio canónico HTTPS.
+
 ## Etapa 27: preparación para despliegue standalone (27 de noviembre de 2026)
 
 Se habilita `output: "standalone"` para producción conservando los `distDir` aislados de E2E y pruebas HTTP de autenticación. Se agrega una imagen Docker multi-etapa con usuario `nextjs` sin privilegios y `.dockerignore` que excluye `.env*` y `.local`. `GET /api/health` verifica PostgreSQL con `SELECT 1` y respuestas genéricas sin filtrar errores. La guía de despliegue documenta variables, HTTPS, `btree_gist`, migraciones solo con `db:deploy`, cuenta inicial, tareas programadas y lista de validación. Se habilita acceso remoto de forma explícita para `admin:create` y `maintenance:cleanup`, con rechazo de bases locales/de prueba.

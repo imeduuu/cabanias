@@ -13,6 +13,8 @@ Configura estas variables en el gestor de secretos del host/Compose. No las incl
 
 El `.dockerignore` excluye `.env*` y `.local`; la imagen se construye desde `Dockerfile` multi-etapa y ejecuta Next como usuario `nextjs` sin privilegios. Pasa los secretos al contenedor en tiempo de ejecución. Usa un volumen persistente para los datos PostgreSQL; la imagen de la aplicación no debe almacenar datos persistentes. El puerto 3000 queda detrás de Caddy y no se publica directamente a Internet.
 
+`SITE_URL` define la URL canónica HTTPS del sitio; configúrala en producción para generar correctamente Open Graph, el sitemap y JSON-LD.
+
 ## Preparar PostgreSQL
 
 Usa PostgreSQL 17 o una versión compatible aprobada por el hosting. La migración inicial instala `btree_gist`; valida que la extensión esté disponible en el servidor:
