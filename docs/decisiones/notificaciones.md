@@ -59,6 +59,8 @@ Política aplicada para **la copia adicional de la outbox**:
 - Envío correcto: borrar el contenido/destinatario de la fila inmediatamente después de registrar éxito; el worker purga los metadatos técnicos 30 días después del envío.
 - Fallo definitivo tras 3 intentos: conservar la fila con el contenido mínimo hasta 30 días desde su creación para diagnóstico; el worker la purga después. No se guardan métricas agregadas en esta implementación.
 
+`npm run maintenance:cleanup` agrega una regla de respaldo: borra filas `SENT` con más de 90 días desde `sentAt`. No cambia la purga de 30 días del worker y no incluye filas `ERROR`, `PENDING` ni `PROCESSING`.
+
 La retención de la outbox no sustituye ni amplía la política de conservación de `BookingRequest`, que contiene los datos originales de la solicitud y hoy no tiene una caducidad automática documentada. Definir o cambiar la retención de esas solicitudes requiere una decisión de privacidad independiente; no eliminarlas como efecto lateral de purgar correos.
 
 ## Enganches en `src/modules/bookings/service.ts`

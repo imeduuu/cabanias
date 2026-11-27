@@ -35,6 +35,39 @@ Abre http://localhost:3000. Para cargar el catálogo ficticio de desarrollo, eje
 - `npm run notifications:send`: enviar notificaciones pendientes mediante SMTP. Ejecútalo periódicamente fuera del proceso web; requiere `SMTP_*` y `DATABASE_URL`.
 - `npm run test:e2e`: recrear `cabanias_test`, compilar en `.local/next-e2e` y ejecutar Playwright en Chromium de escritorio y móvil. Requiere las variables locales de base de datos configuradas y Chromium instalado (`npx playwright install chromium`).
 - `npm run db:seed:demo`: cargar datos ficticios de desarrollo de forma explícita.
+- `npm run maintenance:cleanup -- [--apply] [--batch-size=<n>]`: limpieza de mantenimiento; sin opciones solo simula. Ver [Mantenimiento programado](#mantenimiento-programado).
+
+## Mantenimiento programado
+
+`npm run maintenance:cleanup` borra filas vencidas que ya no sirven. Solo toca estas tablas, con cortes estrictos (`<`; una fila justo en el corte se conserva):
+
+- `RateLimit`: contadores de cuota cuya última actividad fue hace más de 1 hora.
+- `Session` y `Verification`: filas con `expiresAt` anterior al momento de la ejecución.
+- `NotificationOutbox`: solo las enviadas (`SENT`) con `sentAt` de hace más de 90 días. Es un respaldo: el worker de notificaciones ya purga a los 30 días. Las filas `ERROR`, `PENDING` y `PROCESSING` no se tocan.
+
+Nunca modifica `BookingRequest` ni `BookingSubmission` (los registros idempotentes no se borran).
+
+Uso:
+
+```bash
+npm run maintenance:cleanup                        # simulación: solo cuenta, no borra
+npm run maintenance:cleanup -- --apply             # borra, en lotes de 500 filas
+npm run maintenance:cleanup -- --apply --batch-size=1000
+```
+
+El `--` es necesario para que npm pase las opciones al script. Empieza siempre con la simulación. El tamaño de lote admite de 1 a 10000. Por seguridad solo funciona contra la base local de desarrollo (`127.0.0.1:54329/cabanias_dev`, usuario `cabanias_local`, validada con `DATABASE_URL`); rechaza destinos remotos y `cabanias_test`.
+
+Frecuencia recomendada: una vez al día, fuera del proceso web. Ejemplos (ajusta la ruta):
+
+```cron
+15 3 * * * cd /ruta/a/cabanias && npm run maintenance:cleanup -- --apply >> /var/log/cabanias-cleanup.log 2>&1
+```
+
+```bat
+schtasks /Create /SC DAILY /ST 03:15 /TN "Cabanias limpieza" /TR "cmd /c cd /d C:\ruta\cabanias && npm run maintenance:cleanup -- --apply"
+```
+
+Códigos de salida: `0` correcto, `1` destino rechazado, identidad de la base distinta o error de base de datos, `2` argumentos inválidos. Dos ejecuciones simultáneas no se corrompen (los lotes usan `FOR UPDATE SKIP LOCKED`), pero conviene evitar que se solapen.
 
 ## Rutas
 
