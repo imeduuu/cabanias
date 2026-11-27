@@ -1,3 +1,13 @@
+## Etapa 26: decisión inicial de hosting (27 de noviembre de 2026)
+
+Se documenta una propuesta de hosting para presupuesto USD 0: VM elegible OCI Always Free con Docker Compose, Node 22, PostgreSQL 17 y `btree_gist`, Caddy/HTTPS, cron del host y volúmenes persistentes; `pg_dump` cifrado a R2 para copias externas. Se comparan Railway, Render, Fly.io y VPS pagados, y se explicitan los límites que impiden tratar la opción gratuita como producción confiable. La app aún no implementa carga de imágenes; mantiene URLs HTTPS y recursos existentes, con R2 como posible destino futuro.
+
+Archivos: `docs/decisiones/hosting.md` e `IMPLEMENTACION.md`.
+
+Verificaciones: revisión de requisitos en `package.json`, migración SQL de `btree_gist`, comandos documentados en README, esquema actual de imágenes y documentación oficial de Oracle, Cloudflare, Railway, Render y Fly.io. No se ejecutaron pruebas porque el cambio es documentación y no modifica código ni configuración ejecutable.
+
+Límites: la propuesta depende de disponibilidad de capacidad Always Free, operación manual y servicios externos para DNS/SMTP. Antes de aceptar reservas reales faltan despliegue, validación de cron y SMTP, monitoreo y prueba de restauración. Los costos y cuotas se deben volver a comprobar antes de desplegar.
+
 ## Etapa 25: anonimización de solicitudes terminadas (27 de noviembre de 2026)
 
 `maintenance:cleanup` ahora cuenta en simulación y, con `--apply`, anonimiza el nombre, correo y teléfono de solicitudes `REJECTED`, `CANCELLED` o `CONFIRMED` cuya salida ocurrió hace más del plazo mensual configurado (24 meses por defecto). `/admin/configuracion` permite elegir de 1 a 1200 meses. Se conserva la solicitud, su FK con `BookingSubmission`, fechas, cabaña, estado, huéspedes, total y desglose. Se agregó una migración aditiva con CHECK de rango y se documentó la política para el dueño.
