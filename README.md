@@ -88,6 +88,7 @@ El panel y sus acciones requieren autenticación en el servidor. Las solicitudes
 
 ## Índice de documentación
 
+- [Despliegue](docs/deployment.md)
 - [Reservas, disponibilidad, precios e idempotencia](docs/reservas.md)
 - [Panel, catálogo y configuración](docs/panel.md)
 - [Calendario y bloqueos manuales](docs/calendario.md)

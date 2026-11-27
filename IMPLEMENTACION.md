@@ -1,3 +1,13 @@
+## Etapa 27: preparación para despliegue standalone (27 de noviembre de 2026)
+
+Se habilita `output: "standalone"` para producción conservando los `distDir` aislados de E2E y pruebas HTTP de autenticación. Se agrega una imagen Docker multi-etapa con usuario `nextjs` sin privilegios y `.dockerignore` que excluye `.env*` y `.local`. `GET /api/health` verifica PostgreSQL con `SELECT 1` y respuestas genéricas sin filtrar errores. La guía de despliegue documenta variables, HTTPS, `btree_gist`, migraciones solo con `db:deploy`, cuenta inicial, tareas programadas y lista de validación. Se habilita acceso remoto de forma explícita para `admin:create` y `maintenance:cleanup`, con rechazo de bases locales/de prueba.
+
+Archivos: `next.config.ts`, `Dockerfile`, `.dockerignore`, `src/app/api/health/route.ts`, `scripts/local-db-safety.mjs`, `scripts/create-admin.ts`, `scripts/maintenance-cleanup.ts`, `docs/deployment.md`, `README.md` e `IMPLEMENTACION.md`.
+
+Verificaciones: `npm test` (40 aprobadas), `npm run typecheck`, `npm run build` y `npm run test:postgres` (44 aprobadas en `cabanias_test`; migraciones de prueba aplicadas solo allí) correctos. `next build` incluyó `/api/health` como ruta dinámica. No se ejecutó `docker build`.
+
+Límites: no se desplegó ni se aprovisionó infraestructura; falta probar la imagen Docker y validar HTTPS, SMTP, tareas programadas, backups y restauración en el entorno elegido.
+
 ## Etapa 26: decisión inicial de hosting (27 de noviembre de 2026)
 
 Se documenta una propuesta de hosting para presupuesto USD 0: VM elegible OCI Always Free con Docker Compose, Node 22, PostgreSQL 17 y `btree_gist`, Caddy/HTTPS, cron del host y volúmenes persistentes; `pg_dump` cifrado a R2 para copias externas. Se comparan Railway, Render, Fly.io y VPS pagados, y se explicitan los límites que impiden tratar la opción gratuita como producción confiable. La app aún no implementa carga de imágenes; mantiene URLs HTTPS y recursos existentes, con R2 como posible destino futuro.
@@ -530,3 +540,5 @@ El servidor temporal se detuvo al finalizar. No se ejecutaron migraciones, gener
 No hubo navegador de pruebas disponible. Se verificaron compilacion, tipos, esquema y respuestas HTTP; queda pendiente la inspeccion visual en dispositivos reales. Los estilos incluyen ajustes para movil, tablet, escritorio y movimiento reducido.
 
 Las carpetas `node_modules/` y `.next/` y el archivo `tsconfig.tsbuildinfo` son artefactos locales ignorados, no codigo fuente.
+
+\n

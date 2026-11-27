@@ -3,11 +3,12 @@ import { input, password } from "@inquirer/prompts";
 import { PrismaPg } from "@prisma/adapter-pg";
 import { PrismaClient } from "../src/generated/prisma/client";
 import { createInitialAdministrator } from "../src/modules/auth/core";
-import { assertLocalUrl } from "./local-db-safety.mjs";
+import { assertLocalUrl, assertProductionUrl } from "./local-db-safety.mjs";
 
 async function main() {
   if (!process.stdin.isTTY || !process.stdout.isTTY) throw new Error("Usa una terminal interactiva. No se aceptan contraseñas por argumentos, archivos o pipes.");
-  assertLocalUrl(process.env.DATABASE_URL, "dev");
+  if (process.env.NODE_ENV === "production") assertProductionUrl(process.env.DATABASE_URL);
+  else assertLocalUrl(process.env.DATABASE_URL, "dev");
   const db = new PrismaClient({ adapter: new PrismaPg({ connectionString: process.env.DATABASE_URL! }) });
   try {
     if (await db.administrator.count()) throw new Error("Ya existe la cuenta administradora; no se reemplazó.");
