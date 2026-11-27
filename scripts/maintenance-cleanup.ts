@@ -10,6 +10,7 @@ const LABELS: Record<CleanupTable, string> = {
   session: "Sesiones expiradas",
   verification: "Verificaciones expiradas",
   notification: "Notificaciones enviadas hace más de 90 días",
+  bookingPersonalData: "Datos personales de solicitudes terminadas fuera del plazo de conservación",
 };
 
 async function main(args: CleanupArgs) {
@@ -24,18 +25,18 @@ async function main(args: CleanupArgs) {
     const report = await runCleanup(db, { apply: args.apply, batchSize: args.batchSize });
     const entries = (Object.keys(LABELS) as CleanupTable[]).map(table => [table, report.results[table]] as const);
     if (!report.apply) {
-      console.log(`Modo simulación: no se borró ninguna fila. Destino: ${target}.`);
+      console.log(`Modo simulación: no se cambió ninguna fila. Destino: ${target}.`);
       console.log(`Referencia: ${report.now.toISOString()}`);
       for (const [table, result] of entries) console.log(`- ${LABELS[table]}: ${result.matched}`);
       const total = entries.reduce((sum, [, result]) => sum + result.matched, 0);
-      console.log(`Total que se borraría: ${total}. Para borrar, ejecuta: npm run maintenance:cleanup -- --apply`);
+      console.log(`Total que se limpiaría: ${total}. Para aplicar, ejecuta: npm run maintenance:cleanup -- --apply`);
     } else {
       console.log(`Limpieza aplicada (lotes de ${args.batchSize} filas). Destino: ${target}.`);
       console.log(`Referencia: ${report.now.toISOString()}`);
-      for (const [table, result] of entries) console.log(`- ${LABELS[table]}: borradas ${result.deleted} en ${result.batches} lotes`);
-      console.log(`Total borrado: ${entries.reduce((sum, [, result]) => sum + result.deleted, 0)}.`);
+      for (const [table, result] of entries) console.log(`- ${LABELS[table]}: modificadas ${result.deleted} en ${result.batches} lotes`);
+      console.log(`Total modificado: ${entries.reduce((sum, [, result]) => sum + result.deleted, 0)}.`);
     }
-    console.log("Los registros idempotentes (BookingSubmission) y las solicitudes nunca se modifican.");
+    console.log("Se conservan las solicitudes, fechas, cabaña, precio, desglose y BookingSubmission; solo se anonimiza nombre, correo y teléfono.");
   } finally {
     await db.$disconnect();
   }

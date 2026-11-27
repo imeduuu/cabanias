@@ -65,5 +65,6 @@ export function settingsInput(form: FormData) {
     location: text(form, "location", 200), logoUrl: logo ? imageUrl(logo) : null,
     contactEmail: email, notificationEmail, contactPhone: text(form, "contactPhone", 40, false) || null, whatsappNumber, ...colors,
     cancellationPolicy: text(form, "cancellationPolicy", 10000), checkInHour: number(form, "checkInHour", 0, 23),
-    checkOutHour: number(form, "checkOutHour", 0, 23), homeTexts: Object.fromEntries(homeKeys.map(key => [key, text(form, key, 3000)])) };
+    checkOutHour: number(form, "checkOutHour", 0, 23), bookingPersonalDataRetentionMonths: number(form, "bookingPersonalDataRetentionMonths", 1, 1200),
+    homeTexts: Object.fromEntries(homeKeys.map(key => [key, text(form, key, 3000)])) };
 }

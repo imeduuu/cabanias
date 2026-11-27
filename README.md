@@ -39,23 +39,24 @@ Abre http://localhost:3000. Para cargar el catálogo ficticio de desarrollo, eje
 
 ## Mantenimiento programado
 
-`npm run maintenance:cleanup` borra filas vencidas que ya no sirven. Solo toca estas tablas, con cortes estrictos (`<`; una fila justo en el corte se conserva):
+`npm run maintenance:cleanup` limpia filas vencidas y anonimiza datos personales de solicitudes terminadas. Los cortes son estrictos (`<`; una fila justo en el corte se conserva):
 
 - `RateLimit`: contadores de cuota cuya última actividad fue hace más de 1 hora.
 - `Session` y `Verification`: filas con `expiresAt` anterior al momento de la ejecución.
 - `NotificationOutbox`: solo las enviadas (`SENT`) con `sentAt` de hace más de 90 días. Es un respaldo: el worker de notificaciones ya purga a los 30 días. Las filas `ERROR`, `PENDING` y `PROCESSING` no se tocan.
+- Nombre, correo y teléfono de solicitudes `REJECTED`, `CANCELLED` o `CONFIRMED` cuya salida supera el plazo configurable de `/admin/configuracion` (24 meses por defecto). Se conservan la solicitud, sus fechas, cabaña, precio, desglose y `BookingSubmission`.
 
-Nunca modifica `BookingRequest` ni `BookingSubmission` (los registros idempotentes no se borran).
+No elimina `BookingRequest` ni `BookingSubmission`; solo anonimiza los tres datos de contacto indicados.
 
 Uso:
 
 ```bash
-npm run maintenance:cleanup                        # simulación: solo cuenta, no borra
-npm run maintenance:cleanup -- --apply             # borra, en lotes de 500 filas
+npm run maintenance:cleanup                        # simulación: no modifica datos
+npm run maintenance:cleanup -- --apply             # limpia y anonimiza, en lotes de 500 filas
 npm run maintenance:cleanup -- --apply --batch-size=1000
 ```
 
-El `--` es necesario para que npm pase las opciones al script. Empieza siempre con la simulación. El tamaño de lote admite de 1 a 10000. Por seguridad solo funciona contra la base local de desarrollo (`127.0.0.1:54329/cabanias_dev`, usuario `cabanias_local`, validada con `DATABASE_URL`); rechaza destinos remotos y `cabanias_test`.
+El `--` es necesario para que npm pase las opciones al script. La simulación es el modo predeterminado. El tamaño de lote admite de 1 a 10000. Por seguridad solo funciona contra la base local de desarrollo (`127.0.0.1:54329/cabanias_dev`, usuario `cabanias_local`, validada con `DATABASE_URL`); rechaza destinos remotos y `cabanias_test`. Consulta [Privacidad de solicitudes](docs/privacidad-solicitudes.md) para conocer el alcance de la anonimización.
 
 Frecuencia recomendada: una vez al día, fuera del proceso web. Ejemplos (ajusta la ruta):
 

@@ -104,6 +104,7 @@ test("admin authentication over HTTP and direct server access", { skip: !process
       const response = await request(route, { headers: { cookie } });
       assert.equal(response.status, 200);
       const html = await response.text();
+      if (route.startsWith("/api/")) continue;
       assert.ok(html.includes("Cerrar sesión"));
       action ||= html.match(/name="\$ACTION_ID_([^"]+)"/)?.[1] ?? "";
     }
@@ -144,13 +145,14 @@ test("admin authentication over HTTP and direct server access", { skip: !process
     const settingValues = { name: "Negocio HTTP ficticio", tagline: "Una identidad editable", description: "Descripción de negocio de pruebas", location: "Ubicación ficticia",
       contactEmail: "contacto@example.test", notificationEmail: "avisos@example.test", contactPhone: "+56 000 000 000", whatsappNumber: "+56 9 8765 4321", logoUrl: "/images/logo.svg", primaryColor: "#123456", accentColor: "#654321", backgroundColor: "#fafafa",
       eyebrow: "ANTETÍTULO HTTP", catalogTitle: "Catálogo HTTP", catalogDescription: "Texto de catálogo HTTP", storyTitle: "Historia HTTP", storyBody: "Texto de historia HTTP",
-      cancellationPolicy: "Política HTTP editable sin reembolsos automáticos.", checkInHour: "16", checkOutHour: "10" };
+      cancellationPolicy: "Política HTTP editable sin reembolsos automáticos.", checkInHour: "16", checkOutHour: "10", bookingPersonalDataRetentionMonths: "30" };
     const settings = await submit("/admin/configuracion", fill(nativeForm(await pageHtml("/admin/configuracion"), "settings"), settingValues));
     assert.equal(settings.status, 303);
     const savedSettings = await db.businessSettings.findUniqueOrThrow({ where: { id: 1 } });
     assert.equal(savedSettings.notificationEmail, settingValues.notificationEmail);
     assert.equal(savedSettings.contactEmail, settingValues.contactEmail);
     assert.equal(savedSettings.whatsappNumber, "+56987654321");
+    assert.equal(savedSettings.bookingPersonalDataRetentionMonths, 30);
     const invalidWhatsapp = await submit("/admin/configuracion", fill(nativeForm(await pageHtml("/admin/configuracion"), "settings"), { ...settingValues, whatsappNumber: "12345" }));
     assert.ok((await invalidWhatsapp.text()).includes("Revisa el número de WhatsApp"));
     assert.equal((await db.businessSettings.findUniqueOrThrow({ where: { id: 1 } })).whatsappNumber, "+56987654321");

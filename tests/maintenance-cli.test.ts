@@ -4,6 +4,7 @@ import { spawnSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { parseCleanupArgs } from "../src/modules/maintenance/cli-args";
+import { subtractCalendarMonths } from "../src/modules/maintenance/cleanup";
 
 const tsx = resolve("node_modules/tsx/dist/cli.mjs");
 const script = resolve("scripts/maintenance-cleanup.ts");
@@ -18,6 +19,11 @@ test("cleanup arguments have safe defaults and reject invalid input", () => {
   for (const bad of [["--batch-size=0"], ["--batch-size=10001"], ["--batch-size=abc"], ["--batch-size=1.5"], ["--force"], ["apply"]]) {
     assert.throws(() => parseCleanupArgs(bad), Error, bad.join(" "));
   }
+});
+
+test("booking retention subtracts Santiago calendar months and clamps month ends", () => {
+  assert.equal(subtractCalendarMonths(new Date("2026-11-04T12:00:00.000Z"), 2).toISOString(), "2026-09-04T13:00:00.000Z");
+  assert.equal(subtractCalendarMonths(new Date("2026-03-31T12:00:00.000Z"), 1).toISOString(), "2026-02-28T12:00:00.000Z");
 });
 
 test("cleanup command exits with code 2 on invalid arguments", () => {
@@ -40,9 +46,12 @@ test("cleanup command rejects remote and test destinations before connecting, wi
   }
 });
 
-test("cleanup module never references idempotency or request tables", () => {
+test("cleanup retains booking records and idempotency relationships while anonymizing only personal fields", () => {
   const source = readFileSync("src/modules/maintenance/cleanup.ts", "utf8");
-  for (const forbidden of ["BookingSubmission", "bookingSubmission", "BookingRequest", "bookingRequest"]) {
-    assert.ok(!source.includes(forbidden), `cleanup.ts must not mention ${forbidden}`);
-  }
+  assert.ok(!source.includes("BookingSubmission") && !source.includes("bookingSubmission"));
+  assert.match(source, /UPDATE "BookingRequest"/);
+  assert.match(source, /"guestName" = 'Solicitud anonimizada'/);
+  assert.match(source, /"guestEmail" = 'anonimizado\+'/);
+  assert.match(source, /"guestPhone" = NULL/);
+  assert.doesNotMatch(source, /DELETE FROM "BookingRequest"/);
 });

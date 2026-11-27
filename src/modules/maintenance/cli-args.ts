@@ -26,7 +26,7 @@ export function parseCleanupArgs(argv: string[]): CleanupArgs {
 
 export const CLEANUP_USAGE = `Uso: npm run maintenance:cleanup -- [--apply] [--batch-size=<n>]
 
-  (sin opciones)     Modo simulación: cuenta las filas que se borrarían, sin borrar nada.
-  --apply            Borra las filas vencidas, en lotes.
+  (sin opciones)     Modo simulación: cuenta filas vencidas, sin cambiar nada.
+  --apply            Aplica la limpieza y anonimiza datos personales vencidos, en lotes.
   --batch-size=<n>   Filas por lote, entre 1 y ${MAX_BATCH_SIZE} (por defecto ${DEFAULT_BATCH_SIZE}).
   --help             Muestra esta ayuda.`;

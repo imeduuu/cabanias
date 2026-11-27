@@ -5,12 +5,12 @@ import { createHash, randomUUID } from "node:crypto";
 import { PrismaPg } from "@prisma/adapter-pg";
 import { PrismaClient } from "../src/generated/prisma/client";
 import { assertLocalUrl } from "../scripts/local-db-safety.mjs";
-import { runCleanup, SENT_NOTIFICATION_RETENTION_MS, RATE_LIMIT_STALE_MS } from "../src/modules/maintenance/cleanup";
+import { runCleanup, SENT_NOTIFICATION_RETENTION_MS, RATE_LIMIT_STALE_MS, subtractCalendarMonths } from "../src/modules/maintenance/cleanup";
 
 const HOUR = 3_600_000;
 const DAY = 24 * HOUR;
 
-test("maintenance cleanup removes only expired rows and never touches bookings", { skip: !process.env.TEST_DATABASE_URL }, async () => {
+test("maintenance cleanup removes expired rows and leaves booking data outside the retention policy intact", { skip: !process.env.TEST_DATABASE_URL }, async () => {
   assertLocalUrl(process.env.TEST_DATABASE_URL, "test");
   const db = new PrismaClient({ adapter: new PrismaPg({ connectionString: process.env.TEST_DATABASE_URL! }) });
   const now = new Date();
@@ -118,5 +118,63 @@ test("maintenance cleanup removes only expired rows and never touches bookings",
     } finally {
       await db.$disconnect();
     }
+  }
+});
+
+test("booking personal data cleanup defaults to dry-run and preserves booking and submission records", { skip: !process.env.TEST_DATABASE_URL }, async () => {
+  assertLocalUrl(process.env.TEST_DATABASE_URL, "test");
+  const db = new PrismaClient({ adapter: new PrismaPg({ connectionString: process.env.TEST_DATABASE_URL! }) });
+  const now = new Date("2036-06-30T12:00:00.000Z"), cabinId = randomUUID(), prefix = `privacy-${randomUUID()}`;
+  const requestIds: string[] = [];
+  try {
+    await db.businessSettings.update({ where: { id: 1 }, data: { bookingPersonalDataRetentionMonths: 24 } });
+    await db.cabin.create({ data: { id: cabinId, slug: `privacy-${cabinId}`, name: "Privacy test cabin", description: "Fixture",
+      mode: "HOURLY", capacity: 2, bedrooms: 1, publicationStatus: "PUBLISHED", baseRateClp: 1000 } });
+    const endedAt = subtractCalendarMonths(now, 25);
+    const create = async (status: "PENDING" | "REJECTED" | "CANCELLED" | "CONFIRMED", endsAt: Date) => {
+      const row = await db.bookingRequest.create({ data: { cabinId, mode: "HOURLY", startsAt: new Date(+endsAt - 3_600_000), endsAt,
+        guestName: prefix, guestEmail: `${prefix}@example.test`, guestPhone: "+56912345678", guests: 1,
+        estimatedTotalClp: 2500, pricingSnapshot: { subtotal: 2500, lineItems: [{ amount: 2500 }] } } });
+      requestIds.push(row.id);
+      if (status !== "PENDING") return db.bookingRequest.update({ where: { id: row.id }, data: { status } });
+      return row;
+    };
+    const rejected = await create("REJECTED", endedAt);
+    const cancelled = await create("CANCELLED", endedAt);
+    const confirmed = await create("CONFIRMED", endedAt);
+    const pending = await create("PENDING", endedAt);
+    const boundary = await create("REJECTED", subtractCalendarMonths(now, 24));
+    const submissionKey = createHash("sha256").update(prefix).digest("hex");
+    await db.bookingSubmission.create({ data: { keyHash: submissionKey, payloadHash: submissionKey, requestId: rejected.id } });
+
+    const dry = await runCleanup(db, { apply: false, now });
+    assert.equal(dry.results.bookingPersonalData.matched, 3);
+    assert.equal(dry.results.bookingPersonalData.deleted, 0);
+    assert.equal((await db.bookingRequest.findUniqueOrThrow({ where: { id: rejected.id } })).guestName, prefix);
+
+    const original = await db.bookingRequest.findUniqueOrThrow({ where: { id: rejected.id } });
+    const applied = await runCleanup(db, { apply: true, batchSize: 2, now });
+    assert.equal(applied.results.bookingPersonalData.deleted, 3);
+    for (const id of [rejected.id, cancelled.id, confirmed.id]) {
+      const row = await db.bookingRequest.findUniqueOrThrow({ where: { id } });
+      assert.equal(row.guestName, "Solicitud anonimizada");
+      assert.match(row.guestEmail, /^anonimizado\+.*@anonimizado\.invalid$/);
+      assert.equal(row.guestPhone, null);
+      assert.equal(+row.startsAt, +original.startsAt);
+      assert.equal(+row.endsAt, +original.endsAt);
+      assert.equal(row.cabinId, cabinId);
+      assert.equal(row.estimatedTotalClp, 2500);
+      assert.deepEqual(row.pricingSnapshot, original.pricingSnapshot);
+      assert.equal(row.status === "CONFIRMED", id === confirmed.id);
+    }
+    assert.equal((await db.bookingRequest.findUniqueOrThrow({ where: { id: pending.id } })).guestName, prefix);
+    assert.equal((await db.bookingRequest.findUniqueOrThrow({ where: { id: boundary.id } })).guestName, prefix);
+    assert.equal((await db.bookingSubmission.findUniqueOrThrow({ where: { keyHash: submissionKey } })).requestId, rejected.id);
+    assert.equal((await runCleanup(db, { apply: true, now })).results.bookingPersonalData.deleted, 0);
+  } finally {
+    await db.bookingSubmission.deleteMany({ where: { requestId: { in: requestIds } } });
+    await db.bookingRequest.deleteMany({ where: { cabinId } });
+    await db.cabin.deleteMany({ where: { id: cabinId } });
+    await db.$disconnect();
   }
 });

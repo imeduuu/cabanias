@@ -65,6 +65,7 @@ model BusinessSettings {
   currency           String   @default("CLP")
   checkInHour        Int      @default(15)
   checkOutHour       Int      @default(11)
+  bookingPersonalDataRetentionMonths Int @default(24)
   updatedAt          DateTime @updatedAt @db.Timestamptz(3)
 }
 

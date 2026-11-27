@@ -23,6 +23,7 @@ export function SettingsEditor({ settings: s }: { settings: Awaited<ReturnType<t
     <section className="admin-panel"><h2>Horarios y políticas</h2><p>Moneda CLP · Zona horaria America/Santiago</p><div className="form-grid">
       <Field label="Hora de entrada por noche (0–23)" name="checkInHour" type="number" min={0} max={23} step={1} defaultValue={s?.checkInHour ?? 15} required/>
       <Field label="Hora de salida por noche (0–23)" name="checkOutHour" type="number" min={0} max={23} step={1} defaultValue={s?.checkOutHour ?? 11} required/>
+      <Field label="Conservar datos personales de solicitudes terminadas (meses)" name="bookingPersonalDataRetentionMonths" type="number" min={1} max={1200} step={1} defaultValue={s?.bookingPersonalDataRetentionMonths ?? 24} required/>
     </div><TextArea label="Política de cancelación" name="cancellationPolicy" defaultValue={s?.cancellationPolicy} maxLength={10000} required/><p className="muted">Este texto es informativo. No se realizan reembolsos automáticos.</p></section>
   </ActionForm>;
 }

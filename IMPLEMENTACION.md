@@ -1,3 +1,13 @@
+## Etapa 25: anonimización de solicitudes terminadas (27 de noviembre de 2026)
+
+`maintenance:cleanup` ahora cuenta en simulación y, con `--apply`, anonimiza el nombre, correo y teléfono de solicitudes `REJECTED`, `CANCELLED` o `CONFIRMED` cuya salida ocurrió hace más del plazo mensual configurado (24 meses por defecto). `/admin/configuracion` permite elegir de 1 a 1200 meses. Se conserva la solicitud, su FK con `BookingSubmission`, fechas, cabaña, estado, huéspedes, total y desglose. Se agregó una migración aditiva con CHECK de rango y se documentó la política para el dueño.
+
+Archivos: `prisma/schema.prisma`, `prisma/migrations/202611270002_booking_personal_data_retention/migration.sql`, `src/modules/maintenance/cleanup.ts`, `src/modules/maintenance/cli-args.ts`, `scripts/maintenance-cleanup.ts`, `src/modules/management/validation.ts`, `src/modules/settings/service.ts`, `src/components/settings-editor.tsx`, `tests/maintenance.test.ts`, `tests/maintenance-cli.test.ts`, `tests/auth.test.ts`, `README.md`, `docs/privacidad-solicitudes.md`, `docs/base-de-datos.md` e `IMPLEMENTACION.md`.
+
+Verificaciones: `npm run db:generate`, `npm run db:validate`, `npm test` (40 aprobadas), `npm run typecheck` y `npm run build` correctos; `npm run test:postgres` aprobó 44 pruebas (0 fallidas, 0 omitidas), incluida la prueba HTTP de configuración, la anonimización por estado y plazo, el dry-run y la conservación de la FK con `BookingSubmission`. La migración se aplicó solo a `cabanias_test`, nunca a `cabanias_dev`.
+
+Límites: no se alteran correos destinatarios ni datos personales ya guardados para notificaciones. El lote cuenta actualizaciones como filas «modificadas» en la salida del comando.
+
 ## Etapa 24: exportación CSV de solicitudes (27 de noviembre de 2026)
 
 Se agrega «Exportar CSV» en `/admin/solicitudes`, conservando los filtros vigentes de estado y período de estadía y exportando todos los resultados coincidentes. La API valida los mismos filtros y exige `requireAdmin()`; la consulta vuelve a exigir administrador antes de leer los datos. Incluye cabaña, modalidad, inicio, salida, huéspedes, nombre, correo, teléfono, estado en español, total CLP y fecha de envío en hora de Santiago. La descarga es UTF-8 con BOM y neutraliza prefijos de fórmula `=`, `+`, `-` y `@`, además de entrecomillar campos CSV.

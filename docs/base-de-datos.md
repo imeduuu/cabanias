@@ -81,3 +81,5 @@ El script guarda contraseñas en `.local/dev-password` y `.local/test-password`,
 `test:postgres` no cambia la URL de desarrollo del archivo `.env`; pasa la conexión de pruebas solo al proceso de migración correspondiente. Cada ejecución recrea únicamente `postgres-test` y limpia ese contenedor incluso si las pruebas fallan. No ejecuta `DROP DATABASE`, `migrate reset` ni toca el volumen de desarrollo.
 
 Para volver a trabajar tras detener Docker, basta `npm run db:local:up`. Se comprobó la persistencia deteniendo y recreando el contenedor de desarrollo y verificando que las migraciones seguían aplicadas. No usar `docker compose down --volumes` si quieres conservar los datos. El catálogo y la identidad se leen desde PostgreSQL y el sitio recibe solicitudes pendientes, sin confirmarlas automáticamente.
+`BusinessSettings.bookingPersonalDataRetentionMonths` guarda el plazo de conservación de los datos personales de solicitudes terminadas (1 a 1200 meses, por defecto 24). La migración `202611270002_booking_personal_data_retention` agrega la columna con un valor inicial para filas existentes y una restricción de rango; no altera las reglas de ocupación.
+
