@@ -12,6 +12,7 @@ export default async function Requests({searchParams}: {searchParams: Promise<Qu
  }
  const {requests, total} = await listAdminRequests(filters);
  function pageLink(page: number) { const params = new URLSearchParams(); if(filters.status) params.set("status",filters.status); if(filters.fromText) params.set("from",filters.fromText); if(filters.toText) params.set("to",filters.toText); params.set("page",String(page)); return `/admin/solicitudes?${params}`; }
+ const exportParams = new URLSearchParams(); if(filters.status) exportParams.set("status",filters.status); if(filters.fromText) exportParams.set("from",filters.fromText); if(filters.toText) exportParams.set("to",filters.toText);
  return <><p className="eyebrow">RESERVAS</p><h1>Solicitudes</h1><p className="intro">Revisa los datos guardados y gestiona cada solicitud desde su detalle.</p>
  <form className="admin-panel request-filters" method="get" action="/admin/solicitudes">
  <label className="form-field">Estado<select name="status" defaultValue={filters.status ?? ""}><option value="">Todos los estados</option>{Object.entries(requestStatuses).map(([value,label])=><option key={value} value={value}>{label}</option>)}</select></label>
@@ -21,6 +22,7 @@ export default async function Requests({searchParams}: {searchParams: Promise<Qu
  <p className="muted filter-help">Incluye estadías que coinciden con cualquier parte de estos días en America/Santiago. Se filtra por período de estadía, no por fecha de envío.</p>
  </form>
  <p role="status">{total} solicitudes · Página {filters.page} de {Math.max(1, Math.ceil(total / 20))}</p>
+ <p><a className="button secondary" href={`/api/admin/solicitudes/csv${exportParams.size ? `?${exportParams}` : ""}`}>Exportar CSV</a></p>
  <div className="request-list">{requests.map(request=><article className="admin-panel request-card" key={request.id}>
  <div className="request-card-heading"><h2><Link href={`/admin/solicitudes/${request.id}`}>{request.cabin.name}</Link></h2><span className="badge">{requestStatuses[request.status]}</span></div>
  <dl className="request-facts"><div><dt>Huésped</dt><dd>{request.guestName} · {request.guests} personas</dd></div><div><dt>Modalidad</dt><dd>{request.mode === "NIGHTLY" ? "Por noche" : "Por hora"}</dd></div><div><dt>Inicio</dt><dd>{localPeriod(request.startsAt)}</dd></div><div><dt>Salida excluida</dt><dd>{localPeriod(request.endsAt)}</dd></div><div><dt>Total guardado</dt><dd>{money(request.estimatedTotalClp)}</dd></div></dl>

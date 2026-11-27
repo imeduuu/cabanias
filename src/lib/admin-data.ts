@@ -3,6 +3,7 @@ import { getDb } from "./db";
 import { requireAdmin } from "./require-admin";
 import type { RequestFilters } from "@/modules/bookings/admin-view";
 import type { Prisma } from "../generated/prisma/client";
+import { csvRequestWhere } from "@/modules/bookings/csv";
 
 export async function listAdminRequests(filters: RequestFilters) {
   await requireAdmin();
@@ -15,6 +16,12 @@ export async function listAdminRequests(filters: RequestFilters) {
     getDb().bookingRequest.count({ where }),
   ]);
   return { requests, total };
+}
+export async function listAdminRequestsForCsv(filters: RequestFilters) {
+  await requireAdmin();
+  return getDb().bookingRequest.findMany({ where: csvRequestWhere(filters), orderBy: [{ createdAt: "desc" }, { id: "desc" }],
+    select: { mode: true, startsAt: true, endsAt: true, guests: true, guestName: true, guestEmail: true, guestPhone: true,
+      status: true, estimatedTotalClp: true, createdAt: true, cabin: { select: { name: true } } } });
 }
 export async function getAdminRequest(id: string) {
   await requireAdmin();

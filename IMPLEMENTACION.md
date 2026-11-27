@@ -1,3 +1,13 @@
+## Etapa 24: exportación CSV de solicitudes (27 de noviembre de 2026)
+
+Se agrega «Exportar CSV» en `/admin/solicitudes`, conservando los filtros vigentes de estado y período de estadía y exportando todos los resultados coincidentes. La API valida los mismos filtros y exige `requireAdmin()`; la consulta vuelve a exigir administrador antes de leer los datos. Incluye cabaña, modalidad, inicio, salida, huéspedes, nombre, correo, teléfono, estado en español, total CLP y fecha de envío en hora de Santiago. La descarga es UTF-8 con BOM y neutraliza prefijos de fórmula `=`, `+`, `-` y `@`, además de entrecomillar campos CSV.
+
+Archivos: `src/modules/bookings/csv.ts`, `src/lib/admin-data.ts`, `src/app/api/admin/solicitudes/csv/route.ts`, `src/app/admin/solicitudes/page.tsx`, `tests/csv.test.ts`, `tests/auth.test.ts`, `package.json`, `scripts/local-db.mjs` e `IMPLEMENTACION.md`.
+
+Verificaciones: `npm test` (39 aprobadas); `npm run typecheck` y `npm run build` correctos. `npm run test:postgres` no pudo iniciar: Docker no tiene un daemon disponible en este entorno; por eso la prueba HTTP de redirección sin sesión para `/api/admin/solicitudes/csv` quedó agregada a `tests/auth.test.ts`, pero no se ejecutó aquí.
+
+Límites: la exportación carga en memoria todas las solicitudes que coincidan; para los volúmenes actuales no impone un tope.
+
 ## Etapa 23: feed iCal de ocupación por cabaña (27 de noviembre de 2026)
 
 Cada cabaña puede tener un enlace secreto `/api/calendar/<token>.ics` con un feed iCal (RFC 5545) de solo lectura para suscribir calendarios externos. Muestra como «Ocupado» las reservas `CONFIRMED` y los bloqueos, leyendo `Occupancy` con solo `id`, `startsAt` y `endsAt`: no incluye nombres, contacto, motivos, montos ni ids de solicitud o bloqueo. Las horas van en UTC (`Z`) y `DTEND` es la salida guardada (excluida), así que los cambios de horario de Santiago no alteran los intervalos. Ventana de 90 días atrás a 730 adelante, con tope de 5000 eventos. El token (32 bytes aleatorios, 43 caracteres base64url) solo se guarda como SHA-256 en la tabla nueva `CabinCalendarFeed` (una fila por cabaña, `ON DELETE CASCADE`, CHECK `calendar_feed_token_hash`). Se genera o rota desde `/admin/cabanas/[id]`; la URL se muestra una sola vez y rotar exige confirmación. Un token mal formado, sin `.ics`, inexistente o rotado responde el mismo 404. Todas las respuestas llevan `Cache-Control: no-store`, `Referrer-Policy: no-referrer`, `X-Content-Type-Options: nosniff` y `X-Robots-Tag: noindex, nofollow`. El feed se sirve aunque la cabaña esté en borrador o archivada (decisión del dueño).

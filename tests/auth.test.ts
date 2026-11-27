@@ -49,7 +49,7 @@ test("admin authentication over HTTP and direct server access", { skip: !process
   let child: ReturnType<typeof spawn> | undefined;
   let startupLog = "";
   const request = (path: string, init: RequestInit = {}) => fetch(base + path, { redirect: "manual", signal: AbortSignal.timeout(30000), ...init });
-  const routes = ["/admin", "/admin/cabanas", "/admin/solicitudes", "/admin/configuracion"];
+  const routes = ["/admin", "/admin/cabanas", "/admin/solicitudes", "/admin/configuracion", "/api/admin/solicitudes/csv?status=PENDING&from=2035-01-01&to=2035-01-31"];
   try {
     process.env.BETTER_AUTH_URL = "https://admin.example.test";
     assert.equal(createRuntimeAuth(db).options.advanced?.useSecureCookies, true);
