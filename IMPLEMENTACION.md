@@ -1,3 +1,13 @@
+## Etapa 29: carga de imágenes de cabañas (27 de noviembre de 2026)
+
+Se añade carga autenticada de imágenes JPEG, PNG y WebP con comprobación de contenido, tamaño de 5 MiB y dimensiones de 320 a 6000 px por lado. Se eliminan metadatos EXIF/XMP y texto PNG antes del almacenamiento. El puerto usa filesystem configurable: `.local/uploads` en desarrollo y `/data/images` en OCI con volumen persistente. La URL sigue incorporándose a la galería con alt obligatorio; se mantienen las URLs existentes.
+
+Archivos: `src/modules/image-storage/`, `src/app/api/admin/imagenes/route.ts`, `src/app/api/images/[key]/route.ts`, `src/components/image-uploader.tsx`, `src/components/cabin-editor.tsx`, `tests/image-validation.test.ts`, `tests/e2e/admin-panel.spec.ts`, `Dockerfile`, `.env.example`, `docs/deployment.md`, `docs/decisiones/hosting.md`, `README.md`, `package.json`, `scripts/local-db.mjs` e `IMPLEMENTACION.md`.
+
+Verificaciones: `npm test` (47 aprobadas), `npm run typecheck`, `npm run build`, `npm run test:postgres` (44 aprobadas) y E2E aislada de carga/publicación/catálogo (1 aprobada). La ejecución E2E completa registró 59 aprobadas, 14 fallidas y 29 omitidas en varios proyectos de navegador; fuera del flujo de carga también fallaron pruebas de solicitudes y WebKit.
+
+Límites: el adaptador de hosting usa el filesystem persistente de la VM elegida; producción debe montar y respaldar `IMAGE_STORAGE_DIR`.
+
 ## Etapa 28: metadata y rastreo de buscadores (27 de noviembre de 2026)
 
 Se conectan metadata title, description y Open Graph a `BusinessSettings` en la portada y a cada cabaña publicada en su ficha, con la primera imagen ordenada como portada. Se agregan `sitemap.xml` con inicio y solo cabañas `PUBLISHED`, `robots.txt` que permite el sitio y excluye `/admin`, `/login` y `/api`, y JSON-LD `LodgingBusiness` en el inicio. `SITE_URL` documenta la URL absoluta canónica.

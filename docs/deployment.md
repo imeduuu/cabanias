@@ -7,11 +7,12 @@ La primera opción documentada es una VM de OCI Always Free con Docker Compose, 
 Configura estas variables en el gestor de secretos del host/Compose. No las incluyas en el repositorio, argumentos de comandos, logs ni imagen Docker. `DATABASE_URL` debe apuntar a PostgreSQL remoto con usuario de aplicación de privilegios mínimos; protege el transporte con TLS según el proveedor y restringe la red para que solo la VM pueda conectarse.
 
 - `DATABASE_URL`: cadena PostgreSQL de producción, con esquema `public`.
+- `IMAGE_STORAGE_DIR`: directorio persistente para imágenes (por defecto `/data/images` en producción); debe ser escribible por el usuario `nextjs` y montarse como volumen.
 - `BETTER_AUTH_URL`: URL pública canónica con `https://`, por ejemplo `https://reservas.ejemplo.cl`.
 - `BETTER_AUTH_SECRET`: secreto único y aleatorio de al menos 32 caracteres. Genera uno con un gestor de secretos; no reutilices el de desarrollo.
 - `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASSWORD`, `SMTP_FROM` y `SMTP_SECURE`: datos del proveedor SMTP. Usa remitente verificado; `SMTP_SECURE=true` para TLS implícito (habitualmente puerto 465) y `false` para STARTTLS (habitualmente 587), conforme al proveedor.
 
-El `.dockerignore` excluye `.env*` y `.local`; la imagen se construye desde `Dockerfile` multi-etapa y ejecuta Next como usuario `nextjs` sin privilegios. Pasa los secretos al contenedor en tiempo de ejecución. Usa un volumen persistente para los datos PostgreSQL; la imagen de la aplicación no debe almacenar datos persistentes. El puerto 3000 queda detrás de Caddy y no se publica directamente a Internet.
+El `.dockerignore` excluye `.env*` y `.local`; la imagen se construye desde `Dockerfile` multi-etapa y ejecuta Next como usuario `nextjs` sin privilegios. Pasa los secretos al contenedor en tiempo de ejecución. Usa volúmenes persistentes para PostgreSQL y `/data/images` (configurable con `IMAGE_STORAGE_DIR`); ambos deben incluirse en el respaldo. El puerto 3000 queda detrás de Caddy y no se publica directamente a Internet. Las cargas aceptan JPEG, PNG o WebP de hasta 5 MiB y entre 320 y 6000 px por lado; se retiran bloques EXIF/XMP y metadatos de texto PNG. En desarrollo se guardan por defecto en `.local/uploads`.
 
 `SITE_URL` define la URL canónica HTTPS del sitio; configúrala en producción para generar correctamente Open Graph, el sitemap y JSON-LD.
 

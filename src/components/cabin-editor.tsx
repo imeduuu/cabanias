@@ -2,9 +2,10 @@ import { ActionForm } from "./action-form";
 import { Field, TextArea } from "./admin-fields";
 import { saveCabinAction, seasonAction, deleteSeasonAction } from "@/app/admin/manage-actions";
 import type { getAdminCabin } from "@/lib/admin-data";
+import { ImageUploader } from "./image-uploader";
 type Cabin = NonNullable<Awaited<ReturnType<typeof getAdminCabin>>>;
 export function CabinEditor({ cabin }: { cabin?: Cabin }) {
-  return <section className="admin-panel"><h2>Ficha y tarifa base</h2>
+  return <><section className="admin-panel"><h2>Ficha y tarifa base</h2>
     <ActionForm action={saveCabinAction} label="Guardar cabaña" kind="cabin">
       <input type="hidden" name="id" value={cabin?.id ?? ""}/>
       <div className="form-grid">
@@ -19,8 +20,9 @@ export function CabinEditor({ cabin }: { cabin?: Cabin }) {
       <TextArea label="Descripción" name="description" defaultValue={cabin?.description} required/>
       <TextArea label="Servicios (uno por línea)" name="amenities" defaultValue={cabin?.amenities.map(a => a.amenity.name).join("\n")} maxLength={3000}/>
       <TextArea label="Imágenes (una por línea: URL | texto alternativo)" name="images" defaultValue={cabin?.images.map(i => `${i.url} | ${i.alt}`).join("\n")} maxLength={12000}/>
-      <p className="muted">El orden de las líneas define la galería; la primera imagen es la portada. Hasta 10 imágenes. Usa /images/... o URL HTTPS. No se suben archivos.</p>
-    </ActionForm></section>;
+      <p className="muted">El orden de las líneas define la galería; la primera imagen es la portada. Hasta 10 imágenes. Usa /images/... o URL HTTPS. Puedes subir archivos JPEG, PNG o WebP.</p>
+    </ActionForm></section>
+    {cabin && <ImageUploader cabinId={cabin.id}/>}</>;
 }
 export function SeasonEditor({ cabin }: { cabin: Cabin }) {
   function fields(season?: Cabin["seasonalRates"][number]) {

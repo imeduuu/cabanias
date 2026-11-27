@@ -1,4 +1,5 @@
 import { expect, test as base, type BrowserContext, type Page, type TestInfo } from "@playwright/test";
+import path from "node:path";
 
 const adminEmail = process.env.E2E_ADMIN_EMAIL;
 const adminPassword = process.env.E2E_ADMIN_PASSWORD;
@@ -198,5 +199,36 @@ test.describe("panel administrativo", () => {
     await expect(page.locator(".admin-cabins article").filter({ hasText: name }).getByText("Publicada")).toBeVisible();
     await page.goto("/cabanas");
     await expect(page.getByRole("link", { name, exact: true })).toBeVisible();
+  });
+
+  test("sube una imagen desde la ficha y la sirve en el catálogo", async ({ page }, testInfo) => {
+    const slug = `carga-e2e-${testInfo.project.name.replace(/[^a-z0-9]+/gi, "-").toLowerCase()}-${Date.now()}`.replace(/[^a-z0-9-]/g, "");
+    const name = `Cabaña con carga E2E ${testInfo.project.name}`;
+    await page.goto("/admin/cabanas/nueva");
+    await page.getByLabel("Nombre", { exact: true }).fill(name);
+    await page.getByLabel(/Ruta/).fill(slug);
+    await page.getByLabel("Capacidad de personas").fill("2");
+    await page.getByLabel("Dormitorios").fill("1");
+    await page.getByLabel("Tarifa base CLP por noche u hora").fill("85000");
+    await page.getByLabel("Descripción").fill("Cabaña de prueba de carga de imagen.");
+    await page.getByRole("button", { name: "Guardar cabaña" }).click();
+    await expect(page).toHaveURL(/\/admin\/cabanas\/[^?]+\?saved=1$/);
+    await page.getByLabel("Archivo de imagen").setInputFiles(path.join(process.cwd(), "artifacts/a11y-audit/360px-cabanas.png"));
+    await page.getByLabel("Texto alternativo", { exact: true }).fill("Bosque fotografiado para la prueba");
+    await page.getByRole("button", { name: "Subir y añadir a la galería" }).click();
+    await expect(page.locator(".image-uploader [role=status]")).toContainText("añadida a la galería");
+    await expect(page.getByLabel("Imágenes (una por línea: URL | texto alternativo)")).toHaveValue(/\/api\/images\/[0-9a-f-]{36}\.png \| Bosque fotografiado para la prueba/);
+    await page.getByRole("button", { name: "Guardar cabaña" }).click();
+    await expect(page).toHaveURL(/\/admin\/cabanas\/[^?]+\?saved=1$/);
+    await expect(page.locator('[data-management="cabin"] [role="alert"]')).toBeHidden();
+    await page.goto("/admin/cabanas");
+    const cabin = page.locator(".admin-cabins article").filter({ hasText: name });
+    await cabin.getByRole("button", { name: "Publicar" }).click();
+    await expect(cabin.getByText("Publicada")).toBeVisible();
+    await page.goto("/cabanas");
+    const card = page.locator(".cabin-card").filter({ hasText: name });
+    await expect(card.locator("img")).toHaveAttribute("src", /^\/api\/images\//);
+    await expect(card.locator("img")).toHaveAttribute("alt", "Bosque fotografiado para la prueba");
+    await expect.poll(() => card.locator("img").evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth > 0)).toBe(true);
   });
 });

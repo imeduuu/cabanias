@@ -21,6 +21,7 @@ export function identifier(form: FormData, key = "id") {
 }
 export function imageUrl(value: string) {
   if (/^\/images\/[a-zA-Z0-9/_.%\-]+$/.test(value)) return value;
+  if (/^\/api\/images\/[0-9a-f-]{36}\.(?:jpg|png|webp)$/i.test(value)) return value;
   try {
     const url = new URL(value);
     invariant(!url.username && !url.password && (url.protocol === "https:" ||

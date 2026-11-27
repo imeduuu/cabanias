@@ -22,7 +22,7 @@ function rows() { return getDb().cabin.findMany({ where: { publicationStatus: "P
 function toPublic(row: Row): Cabin & { gallery: { url: string; alt: string }[]; seasons: { name: string; startDate: string; endDate: string; rateClp: number }[] } {
   return { slug: row.slug, name: row.name, subtitle: row.description.slice(0, 100), description: row.description,
     mode: row.mode === "NIGHTLY" ? "night" : "hour", price: row.baseRateClp, guests: row.capacity, beds: row.bedrooms,
-    image: row.images[0]?.url ?? "/images/logo.svg", amenities: row.amenities.map(a => a.amenity.name),
+    image: row.images[0]?.url ?? "/images/logo.svg", imageAlt: row.images[0]?.alt ?? row.name, amenities: row.amenities.map(a => a.amenity.name),
     gallery: row.images.map(i => ({ url: i.url, alt: i.alt })),
     seasons: row.seasonalRates.map(s => ({ name: s.name, startDate: s.startDate.toISOString().slice(0, 10), endDate: s.endDate.toISOString().slice(0, 10), rateClp: s.rateClp })) };
 }

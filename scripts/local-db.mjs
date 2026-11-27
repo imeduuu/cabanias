@@ -112,7 +112,7 @@ function runE2e(value) {
         await delay(500);
       }
       if (!ready) throw new Error("Next no respondió en 127.0.0.1:3102 dentro del plazo.");
-      run(process.execPath, [resolve("node_modules/@playwright/test/cli.js"), "test", "--config", "playwright.config.ts"], env);
+      run(process.execPath, [resolve("node_modules/@playwright/test/cli.js"), "test", "--config", "playwright.config.ts", ...process.argv.slice(3)], env);
     } catch (error) {
       preserveArtifacts = true;
       throw error;
